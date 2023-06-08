@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Quinn\\Source\\Repos\\VTMUNC\\VTMUNC.csproj": {}
+    "C:\\Users\\Quinn\\source\\repos\\VTMUNC\\VTMUNC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Quinn\\Source\\Repos\\VTMUNC\\VTMUNC.csproj": {
+    "C:\\Users\\Quinn\\source\\repos\\VTMUNC\\VTMUNC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quinn\\Source\\Repos\\VTMUNC\\VTMUNC.csproj",
+        "projectUniqueName": "C:\\Users\\Quinn\\source\\repos\\VTMUNC\\VTMUNC.csproj",
         "projectName": "VTMUNC",
-        "projectPath": "C:\\Users\\Quinn\\Source\\Repos\\VTMUNC\\VTMUNC.csproj",
+        "projectPath": "C:\\Users\\Quinn\\source\\repos\\VTMUNC\\VTMUNC.csproj",
         "packagesPath": "C:\\Users\\Quinn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quinn\\Source\\Repos\\VTMUNC\\obj\\",
+        "outputPath": "C:\\Users\\Quinn\\source\\repos\\VTMUNC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Quinn\\AppData\\Roaming\\NuGet\\NuGet.Config",

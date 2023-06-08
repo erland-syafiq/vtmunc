@@ -1,6 +1,106 @@
 ﻿@{
     ViewData["Title"] = "About Page";
 }
-<h1>@ViewData["Title"]</h1>
+<style>
+    .about-text {
+        font-family: 'Playfair Display', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 85px;
+        color: #000000;
+    }
 
-<p>About us.</p>
+    .rectangle {
+        background: #3A506B;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        height: 300px; /* Adjust the height as needed */
+        position: relative;
+        z-index: 2;
+    }
+
+    .blankSpace {
+        background: white;
+    }
+
+    .rectangleText {
+        background: #F2F1E8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        top: 35%;
+        left: 10%;
+        width: 50%;
+        z-index: 3;
+        display: flex;
+        z-index: 1;
+        z-index: 3;
+        display: flex;
+        padding: 20px;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .columnMaroon {
+        position: absolute;
+        left: 72.36%;
+        right: 23.54%;
+        top: 0%;
+        bottom: 0%;
+        background: #630031;
+        height: 100vh;
+    }
+
+
+    .aboutText {
+        font-family: 'Source Sans 3';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: #000000;
+    }
+
+    .backgroundPhoto {
+        background: url('Media/Midjourney_Inspiration/Virginia_Tech_model_united_nations_conference_landscape.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mix-blend-mode: overlay;
+        height: 500px; /* Adjust the height as needed */
+    }
+
+</style>
+
+
+
+<div class="container">
+    <div class="columnMaroon"></div>
+    <div class="row">
+        <div class="col-12" style=" height: 10vh">
+            <div class="blankSpace"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="blankSpace d-flex align-items-center justify-content-center">
+                <h2 class="text-nowrap">About Us</h2>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="rectangle"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-7">
+            <div class="rectangleText d-flex align-items-center justify-content-center">
+                <h5>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
+                </h5>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="blankSpace"></div>
+        </div>
+    </div>
+</div>
