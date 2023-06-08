@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/VTMUNC.styles.css" asp-append-version="true" />
+    <style>
+        /* Highlighted Code - Start */
+        .navbar {
+            background-color: #630031 !important;
+        }
+        /* Highlighted Code - End */
+
+        /* Override text color to white */
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+        }
+
+    </style>
+    
 </head>
 <body>
     <header>
@@ -25,6 +42,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -37,11 +57,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - VTMUNC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+   
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
