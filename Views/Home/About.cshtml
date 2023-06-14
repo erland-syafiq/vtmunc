@@ -9,45 +9,58 @@
         font-size: 64px;
         line-height: 85px;
         color: #000000;
-    }
-
-    .rectangle {
-        background: #3A506B;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        height: 300px; /* Adjust the height as needed */
-        position: relative;
-        z-index: 2;
-    }
+    }    .
 
     .blankSpace {
         background: white;
     }
 
     .rectangleText {
-        background: #F2F1E8;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        position: absolute;
-        top: 35%;
-        left: 10%;
-        width: 50%;
-        z-index: 3;
-        display: flex;
-        z-index: 1;
-        z-index: 3;
+        background: #3A506B;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);            
+        z-index: 3;   
+        
         display: flex;
         padding: 20px;
         margin: 20px;
-        flex-direction: column;
+        
+        
+            }
+
+    .rectangleTextTwo {
+        background: #F2F1E8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 3;
+        display: flex;
+        padding: 20px;
+              
     }
 
+    
+
     .columnMaroon {
-        position: absolute;
+        position: fixed;
         left: 72.36%;
-        right: 23.54%;
-        top: 0%;
-        bottom: 0%;
+        right: 23.5%;
+        top: 0;
+        bottom: 0;
         background: #630031;
         height: 100vh;
+        z-index: -1;
+    }
+
+
+    .backgroundWhole {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: url(https://i.pinimg.com/originals/cb/b0/44/cbb04419fd5b036301cbfe4f5195de13.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+        z-index: -2;
     }
 
 
@@ -58,22 +71,27 @@
         font-size: 20px;
         line-height: 28px;
         color: #000000;
+        color: #F2F1E8;
     }
 
-    .backgroundPhoto {
-        background: url('Media/Midjourney_Inspiration/Virginia_Tech_model_united_nations_conference_landscape.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        mix-blend-mode: overlay;
-        height: 500px; /* Adjust the height as needed */
+
+    .secretariatInfo {        
+        background: #F2F1E8;
+        padding: 20px;
+        margin: 20px;
     }
+
 
 </style>
 
 
 
-<div class="container">
+<div class="container">    
+
     <div class="columnMaroon"></div>
+    <div class ="backgroundWhole"></div>
+
+
     <div class="row">
         <div class="col-12" style=" height: 10vh">
             <div class="blankSpace"></div>
@@ -81,26 +99,172 @@
     </div>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-12">
             <div class="blankSpace d-flex align-items-center justify-content-center">
                 <h2 class="text-nowrap">About Us</h2>
             </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col-12" style=" height: 5vh">
+            <div class="blankSpace"></div>
         </div>
-        <div class="col-8">
-            <div class="rectangle"></div>
+    </div>
+
+    <div class="row">        
+        <div class="col-12">
+            <div class="rectangleText d-flex flex-wrap">
+                <div class="blankSpace col-md-6">
+                    <img src="https://img.freepik.com/free-vector/illustration-diverse-people-arms-around-each-other_53876-26693.jpg?w=2000" class="img-fluid" />
+                </div>
+                <div class="rectangleTextTwo col-md-6 d-flex">
+                    <h5>
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium vo At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
+                    </h5>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="row">
+            <div class="col-12" style=" height: 10vh">
+                <div class="blankSpace"></div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="blankSpace d-flex align-items-center justify-content-center">
+                <h2 class="text-nowrap">Meet The Secretariat</h2>
+            </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-7">
-            <div class="rectangleText d-flex align-items-center justify-content-center">
-                <h5>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                </h5>
+        
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+                
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+                
+                <h6>email</h6>
             </div>
-        </div>
-        <div class="col-5">
-            <div class="blankSpace"></div>
-        </div>
+            </div>
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+
+                <h6>email</h6>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+
+                <h6>email</h6>
+            </div>
+            </div>
+        
     </div>
+
+    <div class="row">
+        
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+                
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+                
+                <h6>email</h6>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+
+                <h6>email</h6>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+
+                <h6>email</h6>
+            </div>
+            </div>
+        
+    </div>
+
+    <div class="row">
+        
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+                
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+                
+                <h6>email</h6>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+
+                <h6>email</h6>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="secretariatInfo">
+                <div class="text-center">
+                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                </div>
+
+                <h4>NAME LASTNAME</h4>
+                <h5>Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
+
+                <h6>email</h6>
+            </div>
+            </div>
+        
+    </div>
+
+
+
+
 </div>
