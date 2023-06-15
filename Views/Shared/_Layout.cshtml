@@ -15,11 +15,12 @@
         /* Highlighted Code - End */
 
         /* Override text color to white */
-        .navbar-nav .nav-link {
+        .customFont {
             color: white !important;
             font-family: 'Playfair Display';
             font-style: normal;
             font-weight: 400;
+            margin-right: 15px;
         }
 
     </style>
@@ -29,23 +30,16 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VTMUNC</a>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Globe_icon.svg/1200px-Globe_icon.svg.png" class="img-fluid" style="height: 25px; margin: 10px" />
+                <a class="navbar-brand customFont" asp-area="" asp-controller="Home" asp-action="Index">VTMUNC</a>               
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
-                        </li>
-                    </ul>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">                    
+                    <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                    <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="Committees">Committees</a>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
@@ -56,6 +50,40 @@
             @RenderBody()
         </main>
     </div>
+
+
+    <footer class="footer text-white mt-auto" style=" background-color: #630031;">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Globe_icon.svg/1200px-Globe_icon.svg.png" class="img-fluid" style="height: 25px; margin-right: 10px; margin-top: 45px; margin-bottom: 10px" />
+                        <h3 style="margin-top: 50px; margin-right: 10px; font-family: Playfair Display">VTMUNC 2024</h3>                        
+                    </div>
+                    <h6 style="font-family: Source Sans 3">Virginia Tech, Blacksburg, VA 24061</h6>
+                    <h6 style="font-family: Source Sans 3">secretariat@vtmunc.org</h6>
+                    <a href="https://www.instagram.com/vtmunc/?hl=eng" target="_blank">
+                        <img src="https://www.transparentpng.com/thumb/logo-instagram/SKq9yH-black-and-white-instagram-logo-png.png" class="img-fluid" style="height: 30px;" />
+                </a>                    
+            </div>
+            <div class="col-4">
+                
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="margin-top: 30px;  max-width: 100%">
+                        <iframe src="https://maps.google.com/maps?q=blacksburg&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                                style="border:0;  max-width: 100%"></iframe>
+                    </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex align-items-end justify-content-center">
+                    <h6 style="font-family: 'Playfair Display'">© All Rights Reserved 2023</h6>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

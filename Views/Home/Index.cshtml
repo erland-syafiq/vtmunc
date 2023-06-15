@@ -1,8 +1,44 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    .backgroundWhole {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: url(https://cms.accuweather.com/wp-content/uploads/2017/05/sunset.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;        
+        z-index: -2;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    .navbar {
+        background-color: transparent !important;
+    }
+</style>
+
+
+
+    <div class="container">
+        <div class="backgroundWhole"></div>
+        <div class="row" style="margin-bottom: 200px">
+            <div class="col-6">
+                <h3 style="margin-top: 25%; color: white; font-family: Playfair Display">
+                    Feb 2nd - Feb 4th
+                </h3>
+            <h1 style="color: white; font-family: Playfair Display; margin-bottom: 20px">
+                    VTMUNC 2024
+                </h1>
+            <h4 style="color: white; font-family: Playfair Display">
+                    The premier Model United Nation conference for high school students
+                </h4>
+            <div class="text-center" style="background-color: #630031; display: inline-block; margin-top: 10px;">
+                <a class="nav-link customFont d-flex justify-content-center" asp-area="Identity" asp-page="/Account/Register">Register Here</a>
+                </div>
+            
+                
+            </div>
+        </div>
+    </div>

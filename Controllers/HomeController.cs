@@ -18,7 +18,7 @@ namespace VTMUNC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Committees()
         {
             return View();
         }
