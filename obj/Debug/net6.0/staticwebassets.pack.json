@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\VTMUNC.bundle.scp.css"
     },
     {
+      "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Home1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Home1.jpg"
+    },
+    {
+      "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Virginia_Tech_model_united_nations_conference_landscape.png",
+      "PackagePath": "staticwebassets\\Images\\Virginia_Tech_model_united_nations_conference_landscape.png"
+    },
+    {
       "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -16,3 +16,34 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+h1 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 48px;
+}
+
+h3 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 36px;
+}
+
+h4 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 24px;
+}
+
+h5 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 16px;
+}
+
+p {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+}

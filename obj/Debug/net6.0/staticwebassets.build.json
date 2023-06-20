@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nR+Ed45EWCZb37T6X2MczufbToc2DLll+tBzatje6hg=",
+  "Hash": "F/s7c/cDY+ScNUSIhi8urlobh7IxKa60ZjTwIMlfwS4=",
   "Source": "VTMUNC",
   "BasePath": "_content/VTMUNC",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Home1.jpg",
+      "SourceId": "VTMUNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\",
+      "BasePath": "_content/VTMUNC",
+      "RelativePath": "Images/Home1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home1.jpg"
+    },
+    {
+      "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Virginia_Tech_model_united_nations_conference_landscape.png",
+      "SourceId": "VTMUNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\",
+      "BasePath": "_content/VTMUNC",
+      "RelativePath": "Images/Virginia_Tech_model_united_nations_conference_landscape.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Virginia_Tech_model_united_nations_conference_landscape.png"
     },
     {
       "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\js\\site.js",

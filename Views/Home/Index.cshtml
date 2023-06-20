@@ -1,8 +1,55 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    .navbar {
+        background-color: transparent !important;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+    .heroBackground {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-repeat: no-repeat;
+        background-image: url(../Images/Home1.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+
+    section.hero {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .heroContent {
+        color: white;
+        padding-top: 200px;
+    }
+
+    
+
+</style>
+
+
+
+
+<section class="hero container">
+    <div class="heroContent">
+        <h3>
+            Feb 2nd - Feb 4th
+        </h3>
+        <h1>
+            VTMUNC 2024
+        </h1>
+        <h4>
+            The premier Model United Nation conference for high school students
+        </h4>
+        <div class="text-center" style="background-color: #630031; display: inline-block; margin-top: 10px;">
+            <a class="nav-link customFont d-flex justify-content-center" asp-area="Identity" asp-page="/Account/Register">Register Here</a>
+        </div>
+        <div class="heroBackground"></div>
+    </div>
+</section>
