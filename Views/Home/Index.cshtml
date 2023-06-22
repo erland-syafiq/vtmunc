@@ -6,7 +6,6 @@
         background-color: transparent !important;
     }
 
-
     .heroBackground {
         position: absolute;
         top: 0px;
@@ -28,23 +27,35 @@
 
     .heroContent {
         color: white;
+        transform: translate(-5px, 0px);
     }
 
     .heroBtn {
-        background-color: #630031;
+        text-decoration: none;
         display: inline-block;
         margin-top: 10px;
         justify-content: center;
+        padding: 10px;
     }
 
+    .heroBtn > h4 {
+        margin-bottom: 0px;
+    }
+
+    .heroHighlightBox {
+        width: 19px;
+        height: 410px;
+        background-color: rgba(58, 80, 107, 32%);
+    }
     
+
 
 </style>
 
 
 
-
-<section class="hero container">
+<section class="hero">
+    <div class="heroHighlightBox"></div>
     <div class="heroContent">
         <h3>
             Feb 2nd - Feb 4th
@@ -55,9 +66,7 @@
         <h4>
             The premier Model United Nation conference for high school students
         </h4>
-        <div class="heroBtn text-center">
-            <h4><a class="nav-link d-flex justify-content-center" asp-area="Identity" asp-page="/Account/Register">Register Here</a></h4>
-        </div>
-        <div class="heroBackground"></div>
+        <a class="heroBtn btn-primary" asp-area="Identity" asp-page="/Account/Register"><h4>Register Here</h4></a>
     </div>
+    <div class="heroBackground"></div>
 </section>

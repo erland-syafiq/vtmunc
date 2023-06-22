@@ -1,16 +1,18 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+    --bs-primary-rgb: 99, 0, 49;
+    --bs-primary: rgb(var(--bs-primary-rgb));
 }
 
 h1 {
@@ -42,4 +44,14 @@ p {
     font-family: "Source Sans 3", sans-serif;
     font-size: 20px;
     margin: 0px;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: rgb(135, 0, 67);
+    border-color: rgb(135, 0, 67);
 }
