@@ -39,10 +39,48 @@ button.accept-policy {
   line-height: inherit;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+/* Footer */
+
+footer {
+    background-color: var(--bs-primary);
+    height: 400px;
+}
+
+.footerText > p {
+    color: #D0B2C1
+}
+
+.logoTitle {
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px
+}
+
+.logoTitle > img {
+    height: 25px;
+}
+
+.logoTitle > h4 {
+    color: white;
+    margin-left: 10px;
+}
+
+.footerSmallBody {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px; 
+}
+
+.footerText > a {
+    margin-bottom: 40px; 
+}
+
+.footerMap {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.footerMap > iframe {
+    border: 0;
+    max-width: 100%;
 }

@@ -40,10 +40,48 @@ button.accept-policy[b-9qdccbqvor] {
   line-height: inherit;
 }
 
-.footer[b-9qdccbqvor] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+/* Footer */
+
+footer[b-9qdccbqvor] {
+    background-color: var(--bs-primary);
+    height: 400px;
+}
+
+.footerText > p[b-9qdccbqvor] {
+    color: #D0B2C1
+}
+
+.logoTitle[b-9qdccbqvor] {
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px
+}
+
+.logoTitle > img[b-9qdccbqvor] {
+    height: 25px;
+}
+
+.logoTitle > h4[b-9qdccbqvor] {
+    color: white;
+    margin-left: 10px;
+}
+
+.footerSmallBody[b-9qdccbqvor] {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px; 
+}
+
+.footerText > a[b-9qdccbqvor] {
+    margin-bottom: 40px; 
+}
+
+.footerMap[b-9qdccbqvor] {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.footerMap > iframe[b-9qdccbqvor] {
+    border: 0;
+    max-width: 100%;
 }
