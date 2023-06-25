@@ -117,6 +117,9 @@ namespace VTMUNC.Areas.Identity.Pages.Account
             [MaxLength(255)]
             [Required]
             public string HeadDelegateName { get; set; } = string.Empty;
+
+            [Required]
+            public string PhoneNumber { get; set; } = string.Empty;
         }
 
 
@@ -138,6 +141,7 @@ namespace VTMUNC.Areas.Identity.Pages.Account
                 user.ClubName = Input.ClubName;
                 user.DelegationSize = Input.DelegationSize;
                 user.HeadDelegateName = Input.HeadDelegateName;
+                user.PhoneNumber = Input.PhoneNumber;
     
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
