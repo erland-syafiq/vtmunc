@@ -43,7 +43,6 @@ button.accept-policy[b-9qdccbqvor] {
 
 footer[b-9qdccbqvor] {
     background-color: var(--bs-primary);
-    height: 400px;
 }
 
 .footerText > p[b-9qdccbqvor] {
@@ -65,7 +64,7 @@ footer[b-9qdccbqvor] {
     margin-left: 10px;
 }
 
-.footerSmallBody[b-9qdccbqvor] {
+.disclaimerText[b-9qdccbqvor] {
     font-size: 15px;
     margin-top: 30px;
     margin-bottom: 20px; 

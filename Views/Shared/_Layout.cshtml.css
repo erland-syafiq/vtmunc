@@ -43,7 +43,6 @@ button.accept-policy {
 
 footer {
     background-color: var(--bs-primary);
-    height: 400px;
 }
 
 .footerText > p {
@@ -65,7 +64,7 @@ footer {
     margin-left: 10px;
 }
 
-.footerSmallBody {
+.disclaimerText {
     font-size: 15px;
     margin-top: 30px;
     margin-bottom: 20px; 
