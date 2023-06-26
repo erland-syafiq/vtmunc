@@ -43,6 +43,12 @@ button.accept-policy[b-9qdccbqvor] {
 
 footer[b-9qdccbqvor] {
     background-color: var(--bs-primary);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footerText[b-9qdccbqvor] {
+    padding-right: 100px;
 }
 
 .footerText > p[b-9qdccbqvor] {
@@ -51,8 +57,7 @@ footer[b-9qdccbqvor] {
 
 .logoTitle[b-9qdccbqvor] {
     margin-right: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .logoTitle > img[b-9qdccbqvor] {
@@ -68,10 +73,8 @@ footer[b-9qdccbqvor] {
     font-size: 15px;
     margin-top: 30px;
     margin-bottom: 20px; 
-}
-
-.footerText > a[b-9qdccbqvor] {
-    margin-bottom: 40px; 
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .footerMap[b-9qdccbqvor] {
@@ -81,5 +84,5 @@ footer[b-9qdccbqvor] {
 
 .footerMap > iframe[b-9qdccbqvor] {
     border: 0;
-    max-width: 100%;
+    width: 100%;
 }
