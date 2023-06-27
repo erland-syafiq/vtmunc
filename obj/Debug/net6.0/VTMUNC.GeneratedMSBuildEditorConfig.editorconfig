@@ -9,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VTMUNC
 build_property.RootNamespace = VTMUNC
-build_property.ProjectDir = C:\_Files\_Personal\Engineering\Web_Projects\ASP.NET\VTMUNC\
+build_property.ProjectDir = C:\Users\Quinn\source\repos\VTMUNC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\_Files\_Personal\Engineering\Web_Projects\ASP.NET\VTMUNC
+build_property.MSBuildProjectDirectory = C:\Users\Quinn\source\repos\VTMUNC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/Home/About.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/Home/Committees.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/Home/Committees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21taXR0ZWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/Home/Index.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/Shared/Error.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/_ViewImports.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/_ViewStart.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/_Files/_Personal/Engineering/Web_Projects/ASP.NET/VTMUNC/Views/Shared/_Layout.cshtml]
+[C:/Users/Quinn/source/repos/VTMUNC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9qdccbqvor
