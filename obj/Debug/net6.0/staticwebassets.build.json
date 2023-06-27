@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6p/iCWdkQGCBMkaVoJXVQoINlnR+R2rI4qibjf+dzbM=",
+  "Hash": "G90q8C6m6fLnUxq11C4B6DI26gt5HE1FyDTsFO+ofwg=",
   "Source": "VTMUNC",
   "BasePath": "_content/VTMUNC",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\About1.jpg",
+      "SourceId": "VTMUNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\",
+      "BasePath": "_content/VTMUNC",
+      "RelativePath": "Images/About1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\About1.jpg"
     },
     {
       "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Home1.jpg",

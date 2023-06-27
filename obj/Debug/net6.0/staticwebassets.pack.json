@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\VTMUNC.bundle.scp.css"
     },
     {
+      "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\About1.jpg",
+      "PackagePath": "staticwebassets\\Images\\About1.jpg"
+    },
+    {
       "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Home1.jpg",
       "PackagePath": "staticwebassets\\Images\\Home1.jpg"
     },
