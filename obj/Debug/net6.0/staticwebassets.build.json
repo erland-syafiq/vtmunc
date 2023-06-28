@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rx9ltObDHV7A+x7PdpevcmTHRWYcVzTa73is8KntnZg=",
+  "Hash": "ZuSs0XysTaiH1Dw4pEexrhV37a+9+l3tzip5vg3vojM=",
   "Source": "VTMUNC",
   "BasePath": "_content/VTMUNC",
   "Mode": "Default",
@@ -136,12 +136,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\Instagram.svg"
     },
     {
-      "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\logo_vtmunc.png",
+      "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Logo.png",
       "SourceId": "VTMUNC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\",
       "BasePath": "_content/VTMUNC",
-      "RelativePath": "Images/logo_vtmunc.png",
+      "RelativePath": "Images/Logo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,7 +150,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\logo_vtmunc.png"
+      "OriginalItemSpec": "wwwroot\\Images\\Logo.png"
     },
     {
       "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Virginia_Tech_model_united_nations_conference_landscape.png",
