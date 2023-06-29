@@ -3,6 +3,22 @@
 }
 <style>
     
+    section.aboutTeam {
+        height: calc(100vh - 61px);
+    }
+
+    .teamTitle {
+        text-align: center;
+        margin: 40px;
+    }
+    
+    .teamDescription {
+        text-align: justify;
+        text-justify: inter-word;
+        padding: 40px;
+        background-color: #F2F1E8;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
 
     .rectangleText {
         background: #3A506B;
@@ -12,9 +28,7 @@
         display: flex;
         padding: 20px;
         margin: 20px;
-        
-        
-            }
+    }
 
     .rectangleTextTwo {
         background: #F2F1E8;
@@ -24,8 +38,6 @@
         padding: 20px;
               
     }
-
-    
 
     .columnMaroon {
         position: absolute;
@@ -45,7 +57,7 @@
         left: 0;
         top: 61px;
         background: url("/Images/About1.jpg");
-        height: 100vh;
+        height: calc(100vh - 61px);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: -2;
@@ -61,37 +73,47 @@
 
 </style>
 
-<section class="aboutUs">
+<section class="aboutTeam">
 
     <div class="columnMaroon"></div>
     <div class ="backgroundWhole"></div>
 
     <div class="row">
-        <div class="col-12">
-            <div class="d-flex align-items-center justify-content-center">
-                <h2 style=" font-family: Playfair Display" class="text-nowrap">About Us</h2>
+        <div class="col-6">
+            <div class="row">
+                <h1 class="teamTitle">About Us</h1>
+            </div>
+            <div class="row teamDescription">
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium vo At vero eos et
+                    accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voAt vero eos et accusamus et
+                    iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+                    et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+                    deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+                    distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                    quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
+                    autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae
+                    sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+                    voluptatibus maiores alias consequatur aut perferendis doloribus asperiores.
+                </p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="rectangleText d-flex flex-wrap">
+                <div class="col-md-6">
+                    <img src="https://img.freepik.com/free-vector/illustration-diverse-people-arms-around-each-other_53876-26693.jpg?w=2000" class="img-fluid" />
+                </div>
+                <div>
+
+                
+                    <h5>
+                        </h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12">
-            <div class="rectangleText d-flex flex-wrap">
-                <div class="col-md-6">
-                    <img src="https://img.freepik.com/free-vector/illustration-diverse-people-arms-around-each-other_53876-26693.jpg?w=2000" class="img-fluid" />
-                </div>
-                <div class="rectangleTextTwo col-md-6 d-flex">
-                    <h5 style="font-family: Playfair Display">
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium vo At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    </h5>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12" style=" height: 10vh">
-            </div>
-        </div>
 
     </div>
 </section>
