@@ -2,15 +2,18 @@
     ViewData["Title"] = "About Page";
 }
 <style>
-    
+    /* About Team Section */
     section.aboutTeam {
         height: calc(100vh - 61px);
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .teamTitle {
         text-align: center;
-        margin-top: 150px;
+        margin-top: 110px;
         margin-bottom: 40px;
+        padding-right: 160px;
     }
     
     .teamDescription {
@@ -19,37 +22,22 @@
         padding: 40px;
         background-color: #F2F1E8;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        z-index: 0;
     }
 
-    .teamImage {
-
+    .teamDescriptionClm {
+        z-index: 1;
     }
 
     .teamImageHighlight {
         background: #3A506B;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        width: 777px;
-        height: 558px;
+        box-shadow: -160px 0px 0px #3A506B,
+                    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding-bottom: 40px;
+        width: 100%;
+        height: 90%;
     }
 
-    .rectangleText {
-        background: #3A506B;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);            
-        z-index: 3;   
-        
-        display: flex;
-        padding: 20px;
-        margin: 20px;
-    }
-
-    .rectangleTextTwo {
-        background: #F2F1E8;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        z-index: 3;
-        display: flex;
-        padding: 20px;
-              
-    }
 
     .columnMaroon {
         position: absolute;
@@ -63,7 +51,7 @@
     }
 
     
-    .backgroundWhole {
+    .teamBackground {
         position: absolute;
         width: 100%;
         left: 0;
@@ -88,29 +76,32 @@
 <section class="aboutTeam">
 
     <div class="columnMaroon"></div>
-    <div class="backgroundWhole"></div>
-    
+    <div class="teamBackground"></div>
+
 
     <div class="row">
-        <div class="col-5">
+        <div class="col-5 teamDescriptionClm">
             <div class="row">
                 <h1 class="teamTitle">About Us</h1>
             </div>
             <div class="row teamDescription">
                 <p>
                     At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium vo At vero eos et
-                    accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voAt vero eos et accusamus et
+                    accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium vo. At vero eos et accusamus et
                     iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
                     et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
                     deserunt mollitia animi, id est laborum et dolorum fuga. 
                 </p>
             </div>
         </div>
-        <div class="col-7">
-            <!--INSERT IMAGE HERE-->
+        <div class="col-7 teamImgClm">
+            <div class="teamImageHighlight">
+
+            </div>
         </div>
     </div>
-    <div class="row teamImageHighlight"></div>
+
+
 </section>
 
 
@@ -119,7 +110,7 @@
     <div class="row">
         <div class="col-12">
             <div class="d-flex align-items-center justify-content-center">
-                <h2 style=" font-family: Playfair Display" class="text-nowrap">Meet The Secretariat</h2>
+                <h2 class="text-nowrap">Meet The Secretariat</h2>
             </div>
         </div>
     </div>
@@ -131,9 +122,9 @@
                 <div class="text-center">
                     <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
                 </div>
-                <h4 style="  font-family: Playfair Display">Director General</h4>
-                <h4 style="  font-family: Playfair Display">Nekhita Kassey</h4>                
-                <h5 style="  font-family: Playfair Display">
+                <h4>Director General</h4>
+                <h4>Nekhita Kassey</h4>                
+                <h5>
                     She is a senior majoring in International Studies and EIT Management with a minor in Spanish. Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally, she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin, and a member of Collegiate Women in Business. Outside of school, she loves cooking, playing music, and spending time with friends! Nekhita is looking forward to welcoming everyone for the inaugural conference at VT in February and making this the best experience possible for all!
                 </h5>
                 

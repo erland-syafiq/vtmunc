@@ -21,16 +21,8 @@
       "PackagePath": "staticwebassets\\Images\\Logo.png"
     },
     {
-      "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Virginia_Tech_model_united_nations_conference_landscape.png",
-      "PackagePath": "staticwebassets\\Images\\Virginia_Tech_model_united_nations_conference_landscape.png"
-    },
-    {
       "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
       "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\js\\site.js",

@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\Images\Home1.jpg" />
-    <None Include="wwwroot\Images\Virginia_Tech_model_united_nations_conference_landscape.png" />
   </ItemGroup>
 
   <ItemGroup>
