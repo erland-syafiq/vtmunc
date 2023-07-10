@@ -48,13 +48,11 @@
         left: 72.36%;
         right: 23.5%;
         top: 61px;
-        bottom: 0;
         background: #630031;
-        height: 100vh;
+        height: calc(100vh - 61px);
         z-index: 1;
     }
 
-    
     .teamBackground {
         position: absolute;
         width: 100%;
@@ -67,11 +65,21 @@
         z-index: 0;
     }
 
-
     .secretariatInfo {        
         background: #F2F1E8;
         padding: 40px;
         margin-bottom: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .secretariatCard {
+        background: #F2F1E8;
+        padding: 40px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
 
     .secretariatEmail {
@@ -88,7 +96,7 @@
         margin-bottom: 20px;
     }
 
-    .secretariatInfo > p {
+    .secretariatCard > p {
         text-align: justify;
         text-justify: inter-word;
         font-size: 13px;
@@ -141,14 +149,13 @@
     <div class="row">
         
         <div class="col-md-4">
-            <div class="secretariatInfo">
+            <div class="secretariatCard">
                 <div>
                     <img class="secretariatImg" src="/Images/Secretariat_Headshots/nekhita.JPG" />
                 </div>
                 
                 <h4>Nekhita Kassey</h4>                
                 <h5>Director General</h5>
-                <br />
                 <p>
                     She is a senior majoring in International Studies and EIT Management with a minor in Spanish.
                     Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally,
