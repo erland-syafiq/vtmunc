@@ -26,7 +26,7 @@
     }
 
     .teamDescriptionClm {
-        z-index: 1;
+        z-index: 2;
     }
 
     .teamImageHighlight {
@@ -47,7 +47,7 @@
         bottom: 0;
         background: #630031;
         height: 100vh;
-        z-index: -1;
+        z-index: 1;
     }
 
     
@@ -60,16 +60,37 @@
         height: calc(100vh - 61px);
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: -2;
+        z-index: 0;
     }
 
 
     .secretariatInfo {        
         background: #F2F1E8;
-        padding: 20px;
+        padding: 30px;
         margin: 20px;
     }
 
+    .secretariatEmail {
+        font-style: italic;
+        font-family: "Playfair Display", sans-serif;
+        font-size: 16px;
+    }
+
+    .secretariatImg {
+    }
+
+    .secretariatImg > img{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+    }
+
+    .secretariatInfo > p {
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 13px;
+    }
 
 </style>
 
@@ -105,7 +126,7 @@
 </section>
 
 
-<div class="container">
+<section>
 
     <div class="row">
         <div class="col-12">
@@ -117,20 +138,27 @@
 
     <div class="row">
         
-            <div class="col-md-4">
+        <div class="col-md-4">
             <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+                <div class="secretariatImg">
+                    <img src="/Images/Secretariat_Headshots/nekhita.JPG" />
                 </div>
-                <h4>Director General</h4>
-                <h4>Nekhita Kassey</h4>                
-                <h5>
-                    She is a senior majoring in International Studies and EIT Management with a minor in Spanish. Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally, she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin, and a member of Collegiate Women in Business. Outside of school, she loves cooking, playing music, and spending time with friends! Nekhita is looking forward to welcoming everyone for the inaugural conference at VT in February and making this the best experience possible for all!
-                </h5>
                 
-                <h6 style=" font-family: Playfair Display" >nekhitakassey@vt.edu</h6>
+                <h4>Nekhita Kassey</h4>                
+                <h5>Director General</h5>
+                <br />
+                <p>
+                    She is a senior majoring in International Studies and EIT Management with a minor in Spanish.
+                    Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally,
+                    she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin,
+                    and a member of Collegiate Women in Business. Outside of school, she loves cooking, playing music,
+                    and spending time with friends! Nekhita is looking forward to welcoming everyone for the inaugural
+                    conference at VT in February and making this the best experience possible for all!
+                </p>
+                <br />
+                <h6 class="secretariatEmail">nekhitakassey@vt.edu</h6>
             </div>
-            </div>
+        </div>
         <div class="col-md-4">
             <div class="secretariatInfo">
                 <div class="text-center">
@@ -249,4 +277,4 @@
 
 
 
-</div>
+</section>

@@ -4,6 +4,10 @@ html {
     min-height: 100%;
 }
 
+body {
+    background: #EFE9E7;
+}
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;
