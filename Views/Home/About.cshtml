@@ -67,6 +67,24 @@
         z-index: 0;
     }
 
+    .secretariatTitle {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px; 
+    }
+
+    .secretariatTitle::after {
+        background-color: #DEBB8F;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 8px;
+        height: 20px; 
+        width: 100%;
+        transform: scaleX(1.1);
+        z-index: -1;
+    }
+
     .secretariatInfo {        
         background: #F2F1E8;
         padding: 40px;
@@ -115,7 +133,7 @@
     <div class="row">
         <div class="col-5 teamDescriptionClm">
             <div class="row">
-                <h1 class="teamTitle">About Us</h1>
+                <h1 class="teamTitle">About the Team</h1>
             </div>
             <div class="row teamDescription">
                 <p>
@@ -141,10 +159,8 @@
 <section>
 
     <div class="row">
-        <div class="col-12">
-            <div class="d-flex align-items-center justify-content-center">
-                <h2 class="text-nowrap">Meet The Secretariat</h2>
-            </div>
+        <div class="col-12 text-center">
+            <h2 class="text-nowrap secretariatTitle">Secretariat</h2>
         </div>
     </div>
 
@@ -167,7 +183,7 @@
             secretariatList.Add(new SecretariatAbout(
             "erland.jpg",
             "Erland Syafiq",
-            "Director of Technology",
+            "Co-Director of Technology",
             @"She is a senior majoring in International Studies and EIT Management with a minor in Spanish.
             Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally,
             she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin,
