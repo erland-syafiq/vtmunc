@@ -1,6 +1,8 @@
-﻿@{
+﻿@using VTMUNC.ViewModels;
+@{
     ViewData["Title"] = "About Page";
 }
+
 <style>
     /* About Team Section */
     section.aboutTeam {
@@ -65,6 +67,24 @@
         z-index: 0;
     }
 
+    .secretariatTitle {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px; 
+    }
+
+    .secretariatTitle::after {
+        background-color: #DEBB8F;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 8px;
+        height: 20px; 
+        width: 100%;
+        transform: scaleX(1.1);
+        z-index: -1;
+    }
+
     .secretariatInfo {        
         background: #F2F1E8;
         padding: 40px;
@@ -113,7 +133,7 @@
     <div class="row">
         <div class="col-5 teamDescriptionClm">
             <div class="row">
-                <h1 class="teamTitle">About Us</h1>
+                <h1 class="teamTitle">About the Team</h1>
             </div>
             <div class="row teamDescription">
                 <p>
@@ -139,151 +159,80 @@
 <section>
 
     <div class="row">
-        <div class="col-12">
-            <div class="d-flex align-items-center justify-content-center">
-                <h2 class="text-nowrap">Meet The Secretariat</h2>
-            </div>
+        <div class="col-12 text-center">
+            <h2 class="text-nowrap secretariatTitle">Secretariat</h2>
         </div>
     </div>
 
     <div class="row">
-        
-        <div class="col-md-4">
-            <div class="secretariatCard">
-                <div>
-                    <img class="secretariatImg" src="/Images/Secretariat_Headshots/nekhita.JPG" />
-                </div>
-                
-                <h4>Nekhita Kassey</h4>                
-                <h5>Director General</h5>
-                <p>
-                    She is a senior majoring in International Studies and EIT Management with a minor in Spanish.
-                    Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally,
-                    she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin,
-                    and a member of Collegiate Women in Business. Outside of school, she loves cooking, playing music,
-                    and spending time with friends! Nekhita is looking forward to welcoming everyone for the inaugural
-                    conference at VT in February and making this the best experience possible for all!
-                </p>
-                <br />
-                <h6 class="secretariatEmail">nekhitakassey@vt.edu</h6>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
-                </div>
-                <h4 style="  font-family: Playfair Display">Co-Director of Technology</h4>
-                <h4 style="  font-family: Playfair Display">Quinn Anderson</h4>
-                <h5 style="  font-family: Playfair Display">Quinn is a Junior from Chicago, Illinois, a truly incredible city. He is a computer science major, and worked with Erland to create this website (Hello!). When not involved in VTMUN, he loves hamocking and biking around the beautiful Blacksburg area, playing volleyball and soccer, along with playing and competing with the bagpipes. He is involved with the College of Engineering Dean’s Team, along with Student Alumni Association (LETS GO, HOKIES!). He is excited to be part in bringing the first ever Model United Nations conference to Virgina Tech! </h5>
+        @{
+            List<SecretariatAbout> secretariatList = new List<SecretariatAbout>();
 
-                <h6 style=" font-family: Playfair Display">quinnanderson@vt.edu</h6>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
+            secretariatList.Add(new SecretariatAbout(
+            "nekhita.JPG",
+            "Nekhita Kassey",
+            "Director General",
+            @"She is a senior majoring in International Studies and EIT Management with a minor in Spanish.
+            Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally,
+            she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin,
+            and a member of Collegiate Women in Business. Outside of school, she loves cooking, playing music,
+            and spending time with friends! Nekhita is looking forward to welcoming everyone for the inaugural
+            conference at VT in February and making this the best experience possible for all!",
+            "nekhitakassey@vt.edu"
+            ));
+            secretariatList.Add(new SecretariatAbout(
+            "erland.jpg",
+            "Erland Syafiq",
+            "Co-Director of Technology",
+            @"She is a senior majoring in International Studies and EIT Management with a minor in Spanish.
+            Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally,
+            she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin,
+            and a member of Collegiate Women in Business. Outside of school, she loves cooking, playing music,
+            and spending time with friends! Nekhita is looking forward to welcoming everyone for the inaugural
+            conference at VT in February and making this the best experience possible for all!",
+            "erland@vt.edu"
+            ));
+            secretariatList.Add(new SecretariatAbout(
+            "nekhita.JPG",
+            "Nekhita Kassey",
+            "Director General",
+            @"She is a senior majoring in International Studies and EIT Management with a minor in Spanish.
+            Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally,
+            she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin,
+            and a member of Collegiate Women in Business. Outside of school, she loves cooking, playing music,
+            and spending time with friends! Nekhita is looking forward to welcoming everyone for the inaugural
+            conference at VT in February and making this the best experience possible for all!",
+            "nekhitakassey@vt.edu"
+            ));
+            secretariatList.Add(new SecretariatAbout(
+            "nekhita.JPG",
+            "Nekhita Kassey",
+            "Director General",
+            @"She is a senior majoring in International Studies and EIT Management with a minor in Spanish.
+            Nekhita has been with VTMUN for three years and attended 4 collegiate conferences. Additionally,
+            she serves as treasurer for Amnesty International, an undergrad teaching assistant for Pamplin,
+            and a member of Collegiate Women in Business. Outside of school, she loves cooking, playing music,
+            and spending time with friends! Nekhita is looking forward to welcoming everyone for the inaugural
+            conference at VT in February and making this the best experience possible for all!",
+            "nekhitakassey@vt.edu"
+            ));
+        }
+        @foreach (var person in secretariatList) {
+            <div class="col-md-4">
+                <div class="secretariatCard">
+                    <div>
+                        <img class="secretariatImg" src="/Images/Secretariat_Headshots/@person.ImagePath" />
+                    </div>
+
+                    <h4>@person.Name</h4>
+                    <h5>@person.Position</h5>
+                    <p>
+                        @person.Bio
+                    </p>
+                    <br />
+                    <h6 class="secretariatEmail">@person.Email</h6>
                 </div>
-
-                <h4 style="  font-family: Playfair Display">NAME LASTNAME</h4>
-                <h5 style="  font-family: Playfair Display">Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
-
-                <h6 style=" font-family: Playfair Display">email</h6>
             </div>
-        </div>
-        
+        }
     </div>
-
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
-                </div>
-
-                <h4 style="  font-family: Playfair Display">NAME LASTNAME</h4>
-                <h5 style="  font-family: Playfair Display">Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
-
-                <h6 style=" font-family: Playfair Display">email</h6>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
-                </div>
-
-                <h4 style="  font-family: Playfair Display">NAME LASTNAME</h4>
-                <h5 style=" font-family: Playfair Display">Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
-
-                <h6 style="  font-family: Playfair Display">email</h6>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
-                </div>
-
-                <h4 style="  font-family: Playfair Display">NAME LASTNAME</h4>
-                <h5 style="  font-family: Playfair Display">Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
-
-                <h6 style="font-family: Playfair Display">email</h6>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
-                </div>
-
-                <h4 style="  font-family: Playfair Display">NAME LASTNAME</h4>
-                <h5 style="  font-family: Playfair Display">Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
-
-                <h6 style="  font-family: Playfair Display">email</h6>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
-                </div>
-
-                <h4 style="  font-family: Playfair Display">NAME LASTNAME</h4>
-                <h5 style="  font-family: Playfair Display">Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
-
-                <h6 style=" font-family: Playfair Display">email</h6>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="secretariatInfo">
-                <div class="text-center">
-                    <img src="https://www.pngkey.com/png/full/204-2049354_ic-account-box-48px-profile-picture-icon-square.png" class="img-fluid mx-auto" style="max-height: 150px; margin: 10px; padding: 10px;" />
-                </div>
-
-                <h4 style="  font-family: Playfair Display">NAME LASTNAME</h4>
-                <h5 style=" font-family: Playfair Display">Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!</h5>
-
-                <h6 style=" font-family: Playfair Display">email</h6>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div class="col-12" style=" height: 300px">
-            
-        </div>
-    </div>
-
-
-
-
 </section>

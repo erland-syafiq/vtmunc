@@ -4,22 +4,24 @@ namespace VTMUNC.ViewModels
 {
     public class SecretariatAbout
     {
-        public string? ImagePath { get; set; }
+        // The path is the path from "\Images\."
+        public string ImagePath { get; set; }
 
-        public string? Name { get; set; }
+        public string Name { get; set; }
 
-        public string? Position { get; set; }
+        public string Position { get; set; }
 
-        public string? Bio { get; set; }
+        // Description of the staff
+        public string Bio { get; set; }
 
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         public SecretariatAbout(
-            string? imagePath= null, 
-            string? name = null, 
-            string? position = null, 
-            string? bio = null, 
-            string? email = null)
+            string imagePath, 
+            string name, 
+            string position, 
+            string bio, 
+            string email)
         {
             ImagePath = imagePath;
             Name = name;
