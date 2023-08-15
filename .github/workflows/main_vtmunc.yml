@@ -31,6 +31,9 @@ jobs:
       - name: Install EF tool
         run: dotnet tool install -g dotnet-ef
 
+      - name: Generating EF Bundle
+        run: dotnet ef migrations bundle --configuration Bundle
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
