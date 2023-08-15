@@ -25,6 +25,12 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
+      - name: Install EF Core tool
+        run: dotnet tool install -g dotnet-ef
+    
+      - name: Generate Migration Bundle
+        run: dotnet ef migrations bundle --runtime linux-x64 -p DotNetCoreSqlDb/DotNetCoreSqlDb.csproj -o ${{env.DOTNET_ROOT}}/myapp/migrate
+
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
