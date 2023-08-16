@@ -35,7 +35,7 @@ jobs:
         run: setx PATH "%PATH%;C:\local\UserProfile\.dotnet\tools\dotnet-ef.exe"
 
       - name: Running Migrations
-        run: dotnet ef dtabase update
+        run: dotnet ef database update
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
