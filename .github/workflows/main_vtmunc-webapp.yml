@@ -35,7 +35,8 @@ jobs:
         run: setx PATH "%PATH%;C:\local\UserProfile\.dotnet\tools\dotnet-ef.exe"
 
       - name: Generate a bundle
-        run: dotnet ef migrations bundle
+        run: dotnet ef migrations bundle --verbose
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
