@@ -31,6 +31,9 @@ jobs:
       - name: Installing EF Tool
         run: dotnet tool install -g dotnet-ef
 
+      - name: Add Migration to path
+        run: setx PATH "%PATH%;C:\local\UserProfile\.dotnet\tools"
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
