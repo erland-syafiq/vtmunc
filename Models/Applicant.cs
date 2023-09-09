@@ -25,7 +25,7 @@ namespace VTMUNC.Models
         public String AdvisorRelation { get; set; }
 
         [MaxLength(1023)]
-        public String AdvisorOtherInformation { get; set; }
+        public String? AdvisorOtherInformation { get; set; }
 
         [MaxLength(255)]
         public String? HeadDelegateEmail { get; set; }
@@ -46,7 +46,7 @@ namespace VTMUNC.Models
         public String SchoolMailingAddress { get; set; }
 
         [MaxLength(511)]
-        public String NamesOfDelegates { get; set; }
+        public String? NamesOfDelegates { get; set; }
 
 
         [Required]
@@ -54,7 +54,7 @@ namespace VTMUNC.Models
         public bool IsAgreeWithTerms { get; set; }
 
         [MaxLength(1023)]
-        public String CommentsOrQuestions { get; set; }
+        public String? CommentsOrQuestions { get; set; }
 
         public Applicant()
         {
