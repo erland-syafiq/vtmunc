@@ -72,9 +72,10 @@
                 <input asp-for="NamesOfDelegates" class="form-control" />
                 <span asp-validation-for="NamesOfDelegates" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IsAgreeWithTerms">Agree to Terms</label>
-                <input asp-for="IsAgreeWithTerms" class="form-check-input" />
+
+            <div class="form-group custom-control custom-checkbox">
+                <input asp-for="IsAgreeWithTerms" class="custom-control-input" />
+                <label asp-for="IsAgreeWithTerms" class="custom-control-label">Agree to Terms</label>
                 <span asp-validation-for="IsAgreeWithTerms" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -42,7 +42,7 @@ button.accept-policy {
 /* Footer */
 
 footer {
-    background-color: var(--bs-primary);
+    background-color: var(--primary);
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -70,7 +70,6 @@ footer {
 }
 
 .disclaimerText {
-    font-size: 15px;
     margin-top: 30px;
     margin-bottom: 20px; 
     text-align: justify;

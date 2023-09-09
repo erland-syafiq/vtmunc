@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\Images\\Secretariat_Headshots\\taylor.JPG"
     },
     {
+      "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
       "Id": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

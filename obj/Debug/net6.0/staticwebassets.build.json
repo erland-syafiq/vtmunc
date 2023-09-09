@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q1jeiRiw+zuJ/lp36xj1ksObrL1NhoI5btH3/0aCOoE=",
+  "Hash": "++lB3XMrrH8Bqf/ubuEEY5kGpWFhJZYEWhPL/tncjf8=",
   "Source": "VTMUNC",
   "BasePath": "_content/VTMUNC",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\VTMUNC.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\css\\bootstrap.css",
+      "SourceId": "VTMUNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\",
+      "BasePath": "_content/VTMUNC",
+      "RelativePath": "css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
       "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\css\\site.css",
