@@ -10,6 +10,7 @@ namespace VTMUNC.Models
 
         [Required]
         [MaxLength(255)]
+        [EmailAddress]
         public String AdvisorEmail { get; set; }
 
         [Required]
@@ -28,6 +29,7 @@ namespace VTMUNC.Models
         public String? AdvisorOtherInformation { get; set; }
 
         [MaxLength(255)]
+        [EmailAddress]
         public String? HeadDelegateEmail { get; set; }
         [MaxLength(255)]
         public String? HeadDelegateName { get; set; }
@@ -48,19 +50,12 @@ namespace VTMUNC.Models
         [MaxLength(511)]
         public String? NamesOfDelegates { get; set; }
 
-
         [Required]
-        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree first!")]
+        [TermsOfServiceValidator]
         public bool IsAgreeWithTerms { get; set; }
 
         [MaxLength(1023)]
         public String? CommentsOrQuestions { get; set; }
-
-        public Applicant()
-        {
-
-        }
-
 
 
     }

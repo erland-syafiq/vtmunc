@@ -229,7 +229,7 @@ namespace VTMUNC.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Applicant");
+                    b.ToTable("Applicant", (string)null);
                 });
 
             modelBuilder.Entity("VTMUNC.Models.ApplicationUser", b =>

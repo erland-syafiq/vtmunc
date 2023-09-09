@@ -13,12 +13,12 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="AdvisorEmail" class="control-label"></label>
+                <label asp-for="AdvisorEmail" class="control-label">Advisor Email</label>
                 <input asp-for="AdvisorEmail" class="form-control" />
                 <span asp-validation-for="AdvisorEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AdvisorName" class="control-label"></label>
+                <label asp-for="AdvisorName" class="control-label">Advisor Name</label>
                 <input asp-for="AdvisorName" class="form-control" />
                 <span asp-validation-for="AdvisorName" class="text-danger"></span>
             </div>
@@ -72,10 +72,10 @@
                 <input asp-for="NamesOfDelegates" class="form-control" />
                 <span asp-validation-for="NamesOfDelegates" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsAgreeWithTerms" /> @Html.DisplayNameFor(model => model.IsAgreeWithTerms)
-                </label>
+            <div class="form-group">
+                <label asp-for="IsAgreeWithTerms">Agree to Terms</label>
+                <input asp-for="IsAgreeWithTerms" class="form-check-input" />
+                <span asp-validation-for="IsAgreeWithTerms" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CommentsOrQuestions" class="control-label"></label>
