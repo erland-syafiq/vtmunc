@@ -62,7 +62,7 @@ namespace VTMUNC.Controllers
             {
                 _context.Add(applicant);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Success));
             }
             return View(applicant);
         }
@@ -158,6 +158,12 @@ namespace VTMUNC.Controllers
         private bool ApplicantExists(int id)
         {
           return (_context.Applicant?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        // GET: Applicants/Success
+        public IActionResult Success()
+        {
+            return View();
         }
     }
 }
