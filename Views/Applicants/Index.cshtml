@@ -4,41 +4,26 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Delegations</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <div class="table-responsive">
     <table class="table table-sm table-striped">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.AdvisorEmail)
+                    School Name
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.AdvisorName)
+                    Advisor Email
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.AdvisorPhone)
+                    Advisor Name
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.AdvisorRelation)
+                    Advisor Phone
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.AdvisorOtherInformation)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.HeadDelegateEmail)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.HeadDelegateName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.HeadDelegatePhone)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.SchoolName)
+                    Advisor's Relation
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.DelegationSize)
@@ -47,21 +32,17 @@
                     @Html.DisplayNameFor(model => model.SchoolMailingAddress)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.NamesOfDelegates)
+                    Action
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.IsAgreeWithTerms)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CommentsOrQuestions)
-                </th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SchoolName)
+                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.AdvisorEmail)
                     </td>
@@ -75,34 +56,10 @@
                         @Html.DisplayFor(modelItem => item.AdvisorRelation)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.AdvisorOtherInformation)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.HeadDelegateEmail)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.HeadDelegateName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.HeadDelegatePhone)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.SchoolName)
-                    </td>
-                    <td>
                         @Html.DisplayFor(modelItem => item.DelegationSize)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.SchoolMailingAddress)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.NamesOfDelegates)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IsAgreeWithTerms)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CommentsOrQuestions)
                     </td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

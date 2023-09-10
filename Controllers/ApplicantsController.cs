@@ -21,7 +21,7 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> Index()
         {
               return _context.Applicant != null ? 
