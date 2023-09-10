@@ -7,7 +7,10 @@ namespace VTMUNC.Models
     {
         [Key]
         [Required]
-        public int Id { get; set; }  // must be public!
+        public int Id { get; set; }
+
+        [Required]
+        public DateTime Date { get; set; }
 
         [Required]
         [MaxLength(255)]
@@ -72,6 +75,10 @@ namespace VTMUNC.Models
         [DisplayName("Comments or Questions")]
         public String? CommentsOrQuestions { get; set; }
 
+
+        [Required]
+        [Range(0, 3, ErrorMessage = "InvoiceStatus can only be 0, 1, 2")]
+        public InvoiceStatus InvoiceStatus { get; set; } = InvoiceStatus.InvoiceNotSent;
 
     }
 }

@@ -1,10 +1,38 @@
-﻿@model IEnumerable<VTMUNC.Models.Applicant>
+﻿@using VTMUNC.ViewModels;
+@model ApplicantsDashboard;
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Delegations</h1>
+<style>
+    body {
+        background: var(--secondary-background);
+    }
+
+</style>
+
+<h2>Delegations</h2>
+
+<section class="Analysis">
+    <div class="row">
+        <div class="col-3">
+            <div class="card text-center">
+                <h4>Total Participants</h4>
+                <h2>@Model.TotalNumberOfParticipants</h2>
+            </div>
+            <div class="card text-center">
+                <h4>Number of Days Since a Sign Up</h4>
+                <h2>@Model.DaysSinceASignUp</h2>
+            </div>
+        </div>
+        <div class="col-6">
+            <h1>
+                
+            </h1>
+        </div>
+    </div>
+</section>
 
 <div class="table-responsive">
     <table class="table table-sm table-striped">
@@ -26,10 +54,10 @@
                     Advisor's Relation
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.DelegationSize)
+                    Delegation Size
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.SchoolMailingAddress)
+                    School's Address
                 </th>
                 <th>
                     Action
@@ -37,7 +65,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (Applicant item in Model)
             {
                 <tr>
                     <td>
