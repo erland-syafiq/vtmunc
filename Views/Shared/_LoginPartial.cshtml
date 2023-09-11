@@ -4,16 +4,13 @@
 
 
 
-<ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {   
         <a class="nav-link customFont" asp-area="" asp-controller="Applicants" asp-action="Index">Dashboard</a>
 
-        <li class="nav-item">
-            <form class="form-inline customFont" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-            </form>
-        </li>
+        <form class="form-inline " asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+        <button type="submit" class="btn btn-link nav-link customFont">Logout</button>
+        </form>
 @*    <li class="nav-item">
         <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
        </li>
@@ -28,4 +25,3 @@ else
         <a class="nav-link customFont" asp-area="Identity" asp-page="/Account/Login">Login</a>
     </li>*@
 }
-</ul>
