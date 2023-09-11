@@ -8,3 +8,7 @@
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.card > h2 {
+    color: var(--primary);
+}
