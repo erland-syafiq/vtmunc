@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "++lB3XMrrH8Bqf/ubuEEY5kGpWFhJZYEWhPL/tncjf8=",
+  "Hash": "nQ6btaKoWLMtVGBwa+WuputGxGdZtda6BTq6ng2S5dU=",
   "Source": "VTMUNC",
   "BasePath": "_content/VTMUNC",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Secretariat_Headshots\\nekhita.JPG"
+    },
+    {
+      "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Secretariat_Headshots\\nina.JPG",
+      "SourceId": "VTMUNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\",
+      "BasePath": "_content/VTMUNC",
+      "RelativePath": "Images/Secretariat_Headshots/nina.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Secretariat_Headshots\\nina.JPG"
     },
     {
       "Identity": "C:\\_Files\\_Personal\\Engineering\\Web_Projects\\ASP.NET\\VTMUNC\\wwwroot\\Images\\Secretariat_Headshots\\noah.JPG",
