@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using VTMUNC.Data;
 using VTMUNC.Models;
+using VTMUNC.ViewModels;
 
 namespace VTMUNC.Controllers
 {
@@ -24,13 +25,17 @@ namespace VTMUNC.Controllers
         //[Authorize]
         public async Task<IActionResult> Index()
         {
-              return _context.Applicant != null ? 
-                          View(await _context.Applicant.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Applicant'  is null.");
+            if (_context.Applicant == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.Applicant'  is null.");
+            }
+            List<Applicant> applicants = await _context.Applicant.ToListAsync();
+
+            return View(new ApplicantsDashboard(applicants));
         }
 
         // GET: Applicants/Details/5
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Applicant == null)
@@ -61,6 +66,8 @@ namespace VTMUNC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions")] Applicant applicant)
         {
+            applicant.Date = DateTime.Now;
+
             if (ModelState.IsValid)
             {
                 _context.Add(applicant);
@@ -71,7 +78,7 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants/Edit/5
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Applicant == null)
@@ -92,7 +99,7 @@ namespace VTMUNC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("Id,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions")] Applicant applicant)
         {
             if (id != applicant.Id)
@@ -124,7 +131,7 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants/Delete/5
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Applicant == null)
@@ -145,7 +152,7 @@ namespace VTMUNC.Controllers
         // POST: Applicants/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Applicant == null)

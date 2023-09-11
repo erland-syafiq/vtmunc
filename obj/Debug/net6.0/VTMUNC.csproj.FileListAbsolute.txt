@@ -514,3 +514,4 @@ C:\Users\Quinn\source\repos\VTMUNC\bin\Debug\net6.0\runtimes\unix\lib\net6.0\Sys
 C:\Users\Quinn\source\repos\VTMUNC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Quinn\source\repos\VTMUNC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Quinn\source\repos\VTMUNC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\_Files\_Personal\Engineering\Web_Projects\ASP.NET\VTMUNC\obj\Debug\net6.0\scopedcss\Views\Applicants\Index.cshtml.rz.scp.css
