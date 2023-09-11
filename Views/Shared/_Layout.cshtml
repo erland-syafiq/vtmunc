@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - VTMUNC</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/VTMUNC.styles.css" asp-append-version="true" />
 
@@ -48,6 +49,7 @@
                     <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                     <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="Committees">Committees</a>
+                    <a class="nav-link customFont" asp-area="" asp-controller="Applicants" asp-action="Create">Register</a>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
@@ -69,8 +71,10 @@
                         <img src="/Images/Logo.png" />
                         <h4>VTMUNC 2024</h4>
                     </div>
-                    <p> Virginia Tech, Blacksburg, VA 24061</p>
-                    <p> chargedaffairs@vtmunc.org</p>
+                    <p> 
+                        Virginia Tech, Blacksburg, VA 24061 <br>
+                        chargedaffairs@vtmunc.org
+                    </p>
 
                     <p class="disclaimerText">
                         Although this organization has members who are Virginia Tech students and may have University employees 

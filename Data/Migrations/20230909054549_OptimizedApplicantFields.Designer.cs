@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VTMUNC.Data;
 
@@ -11,9 +12,10 @@ using VTMUNC.Data;
 namespace VTMUNC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230909054549_OptimizedApplicantFields")]
+    partial class OptimizedApplicantFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -178,6 +180,7 @@ namespace VTMUNC.Data.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("AdvisorOtherInformation")
+                        .IsRequired()
                         .HasMaxLength(1023)
                         .HasColumnType("nvarchar(1023)");
 
@@ -192,6 +195,7 @@ namespace VTMUNC.Data.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("CommentsOrQuestions")
+                        .IsRequired()
                         .HasMaxLength(1023)
                         .HasColumnType("nvarchar(1023)");
 
@@ -214,6 +218,7 @@ namespace VTMUNC.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("NamesOfDelegates")
+                        .IsRequired()
                         .HasMaxLength(511)
                         .HasColumnType("nvarchar(511)");
 
@@ -229,7 +234,7 @@ namespace VTMUNC.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Applicant", (string)null);
+                    b.ToTable("Applicant");
                 });
 
             modelBuilder.Entity("VTMUNC.Models.ApplicationUser", b =>

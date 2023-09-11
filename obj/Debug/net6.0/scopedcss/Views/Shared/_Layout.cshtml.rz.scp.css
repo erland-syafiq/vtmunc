@@ -42,7 +42,7 @@ button.accept-policy[b-9qdccbqvor] {
 /* Footer */
 
 footer[b-9qdccbqvor] {
-    background-color: var(--bs-primary);
+    background-color: var(--primary);
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -70,7 +70,6 @@ footer[b-9qdccbqvor] {
 }
 
 .disclaimerText[b-9qdccbqvor] {
-    font-size: 15px;
     margin-top: 30px;
     margin-bottom: 20px; 
     text-align: justify;

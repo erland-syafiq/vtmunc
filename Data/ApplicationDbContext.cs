@@ -15,5 +15,7 @@ namespace VTMUNC.Data
         {
             base.OnModelCreating(builder);
         }
+
+        public DbSet<VTMUNC.Models.Applicant>? Applicant { get; set; }
     }
 }

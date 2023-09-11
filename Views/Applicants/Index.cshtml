@@ -1,0 +1,114 @@
+﻿@model IEnumerable<VTMUNC.Models.Applicant>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AdvisorEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdvisorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdvisorPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdvisorRelation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdvisorOtherInformation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeadDelegateEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeadDelegateName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeadDelegatePhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DelegationSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolMailingAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NamesOfDelegates)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAgreeWithTerms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentsOrQuestions)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdvisorEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdvisorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdvisorPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdvisorRelation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdvisorOtherInformation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HeadDelegateEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HeadDelegateName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HeadDelegatePhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SchoolName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DelegationSize)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SchoolMailingAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NamesOfDelegates)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsAgreeWithTerms)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CommentsOrQuestions)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

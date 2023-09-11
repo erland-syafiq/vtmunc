@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VTMUNC.Data;
 
@@ -11,9 +12,10 @@ using VTMUNC.Data;
 namespace VTMUNC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230906202540_inital setup applicants")]
+    partial class initalsetupapplicants
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -169,67 +171,62 @@ namespace VTMUNC.Data.Migrations
 
                     b.Property<string>("AdvisorEmail")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AdvisorName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AdvisorOtherInformation")
-                        .HasMaxLength(1023)
-                        .HasColumnType("nvarchar(1023)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AdvisorPhone")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AdvisorRelation")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CommentsOrQuestions")
-                        .HasMaxLength(1023)
-                        .HasColumnType("nvarchar(1023)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DelegationSize")
-                        .HasColumnType("int");
+                    b.Property<string>("DelegationSize")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HeadDelegateEmail")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HeadDelegateName")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HeadDelegatePhone")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsAgreeWithTerms")
                         .HasColumnType("bit");
 
                     b.Property<string>("NamesOfDelegates")
-                        .HasMaxLength(511)
-                        .HasColumnType("nvarchar(511)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SchoolMailingAddress")
                         .IsRequired()
-                        .HasMaxLength(511)
-                        .HasColumnType("nvarchar(511)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SchoolName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Applicant", (string)null);
+                    b.ToTable("Applicant");
                 });
 
             modelBuilder.Entity("VTMUNC.Models.ApplicationUser", b =>
