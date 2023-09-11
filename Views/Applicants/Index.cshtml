@@ -52,19 +52,16 @@
         <thead>
             <tr>
                 <th>
-                    School Name
+                    Date
+                </th>
+                <th>
+                    School
                 </th>
                 <th>
                     Advisor Email
                 </th>
                 <th>
                     Advisor Name
-                </th>
-                <th>
-                    Advisor Phone
-                </th>
-                <th>
-                    Advisor's Relation
                 </th>
                 <th>
                     Delegation Size
@@ -82,25 +79,22 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.SchoolName)
+                        @Html.DisplayFor(modelItem => item.Date)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.AdvisorEmail)
+                        @Html.DisplayFor(modelItem => item.SchoolName)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.AdvisorName)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.AdvisorPhone)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.AdvisorRelation)
+                        @Html.DisplayFor(modelItem => item.AdvisorEmail)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.DelegationSize)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.SchoolMailingAddress)
+                        @Html.DisplayFor(modelItem => item.InvoiceStatus);
                     </td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
