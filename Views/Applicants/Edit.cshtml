@@ -14,6 +14,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
+                <label asp-for="Date">Date Signed Up</label>
+                <input asp-for="Date" class="form-control" type="date" name="selectedDate">
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="AdvisorEmail" class="control-label"></label>
                 <input asp-for="AdvisorEmail" class="form-control" />
                 <span asp-validation-for="AdvisorEmail" class="text-danger"></span>
@@ -82,6 +87,15 @@
                 <label asp-for="CommentsOrQuestions" class="control-label"></label>
                 <input asp-for="CommentsOrQuestions" class="form-control" />
                 <span asp-validation-for="CommentsOrQuestions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InvoiceStatus" class="control-label">Select Invoice Status:</label>
+                <select asp-for="InvoiceStatus" class="form-control">
+                    @foreach (InvoiceStatus status in Enum.GetValues(typeof(InvoiceStatus)))
+                    {
+                        <option value="@((int)status)">@status</option>
+                    }
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
