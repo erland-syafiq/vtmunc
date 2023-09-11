@@ -5,6 +5,9 @@
     ViewData["Title"] = "Index";
 }
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
 <style>
     body {
         background: var(--secondary-background);
@@ -26,10 +29,20 @@
                 <h2>@Model.DaysSinceASignUp</h2>
             </div>
         </div>
-        <div class="col-6">
-            <h1>
-                
-            </h1>
+        <div class="col-6 text-center">
+            <div class="card">
+                <canvas id="participantsChart">
+                </canvas>
+            </div>
+            <h4>
+                Total Number of Delegates
+            </h4>
+        </div>
+        <div class="col-3">
+            <div class="card text-center">
+                <h4>Applicants' Invoice Status</h4>
+                <canvas id="invoiceStatusChart"></canvas>
+            </div>
         </div>
     </div>
 </section>
@@ -100,3 +113,62 @@
     </table>
 
 </div>
+
+<script>
+    // Participant Line Chart
+    const participantChart = document.getElementById('participantsChart')
+    new Chart(participantChart, {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'Total Number of Participants',
+                data: @Html.Raw(Model.getParticipantsChartData()),
+                borderWidth: 1,
+                borderColor: '#630031',
+                pointBackgroundColor: '#630031', 
+                pointBorderWidth: 2, 
+                borderSize: 2,
+
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    type: 'time',
+                    time: {
+                        unit: 'day',
+                        displayFormats: {
+                            day: 'yyyy-MM-dd'
+                        },
+                        distribution: 'linear',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Signup Date'
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                }
+            }
+        }
+    });
+
+    const invoiceStatusChart = document.getElementById("invoiceStatusChart");
+  
+    new Chart(invoiceStatusChart, {
+        type: 'doughnut',
+        data: {
+            labels: ['Invoice Not Sent', 'Payment not Received', 'Payment Received'],
+            datasets: [{
+                data: @Html.Raw(Model.getInvoiceStatusData()),
+                backgroundColor: ['#DC3545', '#FFC107', '#28A745'], // Colors for each segment
+                borderWidth: 1, // Border width of the segments
+                borderColor: 'white', // Border color of the segments
+            }],
+        },
+        options: {
+            cutout: '60%', // Size of the hole in the center (60% creates a donut)
+        },
+    })
+</script>
