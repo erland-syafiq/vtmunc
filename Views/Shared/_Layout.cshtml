@@ -56,11 +56,22 @@
         </nav>
     </header>
 
-    <div class="container contentBackground">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @if (ViewData["mainContainer"] != null)
+    {
+        <div class="contentBackground">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    }
+    else
+    {
+        <div class="container contentBackground">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    }
 
 
     <footer>
