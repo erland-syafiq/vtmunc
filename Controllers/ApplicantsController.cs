@@ -100,7 +100,7 @@ namespace VTMUNC.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //[Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions")] Applicant applicant)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Date,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions,InvoiceStatus")] Applicant applicant)
         {
             if (id != applicant.Id)
             {
