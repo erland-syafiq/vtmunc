@@ -27,9 +27,7 @@ The following dependencies are required to set up and run this project:
 
 - **.NET SDK**: This project is built using .NET 6.0. You will need to install the .NET 6.0 SDK to build and run the application. You can download it from [the official .NET website](https://dotnet.microsoft.com/download/dotnet/6.0).
 
-- **Entity Framework**: Entity Framework is used for data access and database interactions in this project. It simplifies working with relational databases and allows you to define your data model using C# classes. Entity Framework Core is the latest version, and it's included as part of the .NET SDK. No additional installation is required; you can start using it in your project right away.
-
-Certainly, here's a section for updating the database with migrations added to the "Getting Started" section:
+- **Entity Framework**: Entity Framework is used for data access and database interactions in this project. It simplifies working with relational databases and allows you to define your data model using C# classes. Entity Framework Core is the latest version, and it's included as part of the .NET SDK. No additional installation is required; you can start using it in your this project right away.
 
 ## Getting Started
 
