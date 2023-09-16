@@ -2,7 +2,7 @@
 
 ## Description
 
-The VTMUNC Webapp serves as the online platform for the Virginia Tech Model United Nations Conference. It provides a centralized space for participants and delegates to register, access committee information, and discover the benefits of joining VTMUNC. The web application is built using the ASP.NET MVC architecture.
+The VTMUNC web application serves as the online platform for the Virginia Tech Model United Nations Conference. It provides a centralized space for participants and delegates to register, access committee information, and discover the benefits of joining VTMUNC. The web application is built using the ASP.NET MVC architecture. The web application is linked here: [vtmunc.org](https://vtmunc.org).
 
 ## Table of Contents
 
