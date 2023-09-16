@@ -4,6 +4,27 @@
     ViewData["Title"] = "Create";
 }
 
+<style>
+    h1 {
+        color: #630031;  /* Text color */
+        margin-top: 50px;
+    }
+
+    h4 {
+        color: #630031; /* Text color */
+        margin-top: 50px;
+    }
+    h5 {
+        margin-top: 25px;
+    }
+    .form-group input[type="submit"] {
+        margin-top: 25px;
+        font-family: "Playfair Display", sans-serif;
+    }
+
+
+</style>
+
 <h1>Registration</h1>
 
 <h4>Dear Advisors and Independent Delegates,</h4>
@@ -122,7 +143,7 @@
             <div class = "row">
                 <div class="col-md-12">
                     <h5>Names of Delegates (please respond in a list format) [Not required]</h5>
-                    <input asp-for="NamesOfDelegates" class="form-control" />
+                    <textarea asp-for="NamesOfDelegates" class="form-control" style= "height: 125px;"></textarea>
                     <span asp-validation-for="NamesOfDelegates" class="text-danger"></span>
                 </div>
             </div>
@@ -135,7 +156,7 @@
             <div class="form-group custom-control custom-checkbox">
                 
                 <input asp-for="IsAgreeWithTerms" class="custom-control-input" />
-                <label asp-for="IsAgreeWithTerms" class="custom-control-label">Agree to Terms</label>
+                <label class="custom-control-label"></label>
                 <span asp-validation-for="IsAgreeWithTerms" class="text-danger"></span>
             </div>
 
