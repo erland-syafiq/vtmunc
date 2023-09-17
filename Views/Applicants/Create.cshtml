@@ -6,22 +6,27 @@
 
 <style>
     h1 {
-        color: #630031;  /* Text color */
+        color: var(--primary);
         margin-top: 50px;
     }
 
     h4 {
-        color: #630031; /* Text color */
+        color: var(--primary);
         margin-top: 50px;
     }
+
     h5 {
         margin-top: 25px;
     }
+
     .form-group input[type="submit"] {
         margin-top: 25px;
         font-family: "Playfair Display", sans-serif;
     }
 
+    textarea.form-control {
+        height: 125px !important;
+    }
 
 </style>
 
@@ -141,7 +146,7 @@
             <div class = "row">
                 <div class="col-md-12">
                     <h5>Names of Delegates (please respond in a list format) [Not required]</h5>
-                    <textarea asp-for="NamesOfDelegates" class="form-control" style= "height: 125px;"></textarea>
+                    <textarea asp-for="NamesOfDelegates" class="form-control" style= ""></textarea>
                     <span asp-validation-for="NamesOfDelegates" class="text-danger"></span>
                 </div>
             </div>
@@ -161,7 +166,7 @@
                 <div class="col-md-12">
                     <h4>Comments or Questions?</h4>
                     <p>If you have any comments or questions, please write them below!</p>
-                    <input asp-for="CommentsOrQuestions" class="form-control" />
+                    <textarea asp-for="CommentsOrQuestions" class="form-control"></textarea>
                     <span asp-validation-for="CommentsOrQuestions" class="text-danger"></span>
                 </div>
             </div>
