@@ -1,2 +1,12 @@
 
+:root {
+    --primary-background: #EFE9E7;
+    --secondary-background: #F2F1E8;
+    --tertiary: #DEBB8F;
+}
 
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #2B2B29;
+    background: #F8F8F8;
+}

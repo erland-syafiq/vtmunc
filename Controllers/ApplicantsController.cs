@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using VTMUNC.Data;
 using VTMUNC.Models;
+using VTMUNC.ViewModels;
 
 namespace VTMUNC.Controllers
 {
@@ -21,12 +22,16 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-              return _context.Applicant != null ? 
-                          View(await _context.Applicant.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Applicant'  is null.");
+            if (_context.Applicant == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.Applicant'  is null.");
+            }
+            List<Applicant> applicants = await _context.Applicant.ToListAsync();
+
+            return View(new ApplicantsDashboard(applicants));
         }
 
         // GET: Applicants/Details/5
@@ -61,6 +66,8 @@ namespace VTMUNC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions")] Applicant applicant)
         {
+            applicant.Date = DateTime.Now;
+
             if (ModelState.IsValid)
             {
                 _context.Add(applicant);
@@ -93,7 +100,7 @@ namespace VTMUNC.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions")] Applicant applicant)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Date,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions,InvoiceStatus")] Applicant applicant)
         {
             if (id != applicant.Id)
             {

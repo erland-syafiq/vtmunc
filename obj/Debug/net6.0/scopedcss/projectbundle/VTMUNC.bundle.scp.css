@@ -1,3 +1,18 @@
+/* _content/VTMUNC/Views/Applicants/Index.cshtml.rz.scp.css */
+
+.card[b-lkxl8i9075] {
+    border: solid var(--primary);
+    background: var(--primary-background);
+    box-shadow: -5px 5px 0px 0px var(--tertiary);
+    padding: 40px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.card > h2[b-lkxl8i9075] {
+    color: var(--primary);
+}
 /* _content/VTMUNC/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

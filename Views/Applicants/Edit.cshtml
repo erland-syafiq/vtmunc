@@ -14,6 +14,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="AdvisorEmail" class="control-label"></label>
                 <input asp-for="AdvisorEmail" class="form-control" />
                 <span asp-validation-for="AdvisorEmail" class="text-danger"></span>
@@ -84,6 +89,16 @@
                 <span asp-validation-for="CommentsOrQuestions" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="InvoiceStatus" class="control-label"></label>
+                <select asp-for="InvoiceStatus" class="form-control">
+                    @foreach (InvoiceStatus status in Enum.GetValues(typeof(InvoiceStatus)))
+                    {
+                        <option value="@((int)status)">@status</option>
+                    }
+                </select>
+                <span asp-validation-for="InvoiceStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
@@ -95,5 +110,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
