@@ -5,7 +5,24 @@
 }
 
 <style>
-    body{
+    h1 {
+        color: var(--primary);
+    }
+
+    h4 {
+        color: var(--primary);
+    }
+
+    .form-group input[type="submit"] {
+        margin-top: 25px;
+        font-family: "Playfair Display", sans-serif;
+    }
+
+    textarea.form-control {
+        height: 125px !important;
+    }
+
+    body {
         background-color: var(--secondary-background);
     }
 
@@ -14,41 +31,40 @@
     }
 
     .group > .row {
-        margin-bottom: 10px
+        margin-bottom: 20px
     }
 </style>
 
-<h1>Registration</h1>
 
-<div class="group">
-    <h4>Dear Advisors and Independent Delegates,</h4>
-    <p>Thank you for your registration for VTMUNC! For independent delegates that are staying in Blacksburg overnight, please contact Delaney Morgan, our charge d’affairs on chargedaffaires@vtmunc.org, so we can send you a liability waiver form.</p>
-
-</div>
-
-<div class="group">
-    <h4>Payment Information,</h4>
-    <p>
-        Once you have completed this form, we will send you an invoice. Your delegation’s registration will only be complete when you paid this invoice. Those invoices must be paid two weeks after the registration page.<br />
-        Late registration: The latest to pay January 26th<br />
-        <br />
-        Individual Delegates<br />
-        Early Registration: September to October 29th $50<br />
-        Normal Registration: October 30th to December 10th $60<br />
-        Late Registration: December 11th to January 19th $70<br />
-        <br />
-        Delegation Fees (a group of more than 3 people) <br />
-        Early: $60 <br />
-        Normal: $70 <br />
-        Late: $80<br />
-    </p>
-</div>
-
-
-
-<hr />
 <div class="row">
     <div class="col-md-12">
+
+        <h1>Registration</h1>
+
+        <div class="group">
+            <h4>Dear Advisors and Independent Delegates,</h4>
+            <p>Thank you for your registration for VTMUNC! For independent delegates that are staying in Blacksburg overnight, please contact Delaney Morgan, our charge d’affairs on chargedaffaires@vtmunc.org, so we can send you a liability waiver form.</p>
+
+        </div>
+
+        <div class="group">
+            <h4>Payment Information,</h4>
+            <p>
+                Once you have completed this form, we will send you an invoice. Your delegation’s registration will only be complete when you paid this invoice. Those invoices must be paid two weeks after the registration page.<br />
+                Late registration: The latest to pay January 26th<br />
+                <br />
+                Individual Delegates<br />
+                Early Registration: September to October 29th $50<br />
+                Normal Registration: October 30th to December 10th $60<br />
+                Late Registration: December 11th to January 19th $70<br />
+                <br />
+                Delegation Fees (a group of more than 3 people) <br />
+                Early: $60 <br />
+                Normal: $70 <br />
+                Late: $80<br />
+            </p>
+        </div>
+
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="group">
@@ -73,7 +89,7 @@
                         <span asp-validation-for="AdvisorPhone" class="text-danger"></span>
                     </div>
                     <div class="col-md-5">
-                        <h5>Describe your relation to the school</h5>
+                        <h5>Describe your relation to the school (Teacher, Parent, etc)</h5>
                         <input asp-for="AdvisorRelation" class="form-control" />
                         <span asp-validation-for="AdvisorRelation" class="text-danger"></span>
                     </div>
@@ -109,15 +125,12 @@
                     </div>
                 </div>
             </div>
-           
-       
-            
 
             <div class="group">
                 <h4>School and Organizational Info.</h4>
                 <p>
                     Please provide the following information about your school and organization. Independent delegates are kindly asked to list “NA” under “School Name” and to use their personal address instead of a school address.<br />
-                    <br />
+
                     If, after submitting this form, you would like to add or drop delegates, please reach out to our Chargé d'Affaires, Delaney Moran, chargedaffaires@vtmunc.org <br />
                 </p>
 
@@ -145,7 +158,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h5>Names of Delegates (please respond in a list format) [Not required]</h5>
-                        <input asp-for="NamesOfDelegates" class="form-control" />
+                        <textarea asp-for="NamesOfDelegates" class="form-control"> </textarea>
                         <span asp-validation-for="NamesOfDelegates" class="text-danger"></span>
                     </div>
                 </div>
@@ -160,7 +173,7 @@
 
                 <div class="form-group custom-control custom-checkbox">
                     <input asp-for="IsAgreeWithTerms" class="custom-control-input" />
-                    <label asp-for="IsAgreeWithTerms" class="custom-control-label">Agree to Terms</label>
+                    <label asp-for="IsAgreeWithTerms" class="custom-control-label">&nbsp;</label>
                     <span asp-validation-for="IsAgreeWithTerms" class="text-danger"></span>
                 </div>
             </div>
@@ -170,7 +183,7 @@
                     <div class="col-md-12">
                         <h4>Comments or Questions?</h4>
                         <p>If you have any comments or questions, please write them below!</p>
-                        <input asp-for="CommentsOrQuestions" class="form-control" />
+                        <textarea asp-for="CommentsOrQuestions" class="form-control"> </textarea>
                         <span asp-validation-for="CommentsOrQuestions" class="text-danger"></span>
                     </div>
                 </div>
