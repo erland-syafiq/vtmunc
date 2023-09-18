@@ -98,28 +98,6 @@ namespace VTMUNC.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-
-            // School Info
-            [Required]
-            [MaxLength(255)]
-            public string SchoolName { get; set; } = string.Empty;
-
-            [Required]
-            [MaxLength(255)]
-            public string ClubName { get; set; } = string.Empty;
-
-            [Required]
-            [Range(0, 255)]
-            public int DelegationSize { get; set; }
-
-            // Head Delegate Information
-
-            [MaxLength(255)]
-            [Required]
-            public string HeadDelegateName { get; set; } = string.Empty;
-
-            [Required]
-            public string PhoneNumber { get; set; } = string.Empty;
         }
 
 
@@ -137,12 +115,6 @@ namespace VTMUNC.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                user.SchoolName = Input.SchoolName;
-                user.ClubName = Input.ClubName;
-                user.DelegationSize = Input.DelegationSize;
-                user.HeadDelegateName = Input.HeadDelegateName;
-                user.PhoneNumber = Input.PhoneNumber;
-    
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
