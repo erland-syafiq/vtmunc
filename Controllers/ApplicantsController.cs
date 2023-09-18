@@ -12,6 +12,7 @@ using VTMUNC.ViewModels;
 
 namespace VTMUNC.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ApplicantsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,7 +23,6 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants
-        [Authorize]
         public async Task<IActionResult> Index()
         {
             if (_context.Applicant == null)
@@ -35,7 +35,6 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants/Details/5
-        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Applicant == null)
@@ -54,6 +53,7 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -64,6 +64,7 @@ namespace VTMUNC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([Bind("Id,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions")] Applicant applicant)
         {
             applicant.Date = DateTime.Now;
@@ -78,7 +79,6 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants/Edit/5
-        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Applicant == null)
@@ -99,7 +99,6 @@ namespace VTMUNC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Date,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions,InvoiceStatus")] Applicant applicant)
         {
             if (id != applicant.Id)
@@ -131,7 +130,6 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants/Delete/5
-        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Applicant == null)
@@ -152,7 +150,6 @@ namespace VTMUNC.Controllers
         // POST: Applicants/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Applicant == null)
