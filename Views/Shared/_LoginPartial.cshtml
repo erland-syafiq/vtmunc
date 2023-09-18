@@ -2,23 +2,25 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-
-
 @if (SignInManager.IsSignedIn(User))
-{   
+{
+    if (User.IsInRole("Secretariat"))
+    {
         <a class="nav-link customFont" asp-area="" asp-controller="Applicants" asp-action="Index">Dashboard</a>
+    }
 
-        <form class="form-inline " asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
         <button type="submit" class="btn btn-link nav-link customFont">Logout</button>
-        </form>
-@*    <li class="nav-item">
+    </form>
+    @*    
+        <li class="nav-item">
         <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
        </li>
     *@
 }
 else
 {
-@*    <li class="nav-item">
+    @*    <li class="nav-item">
         <a class="nav-link customFont" asp-area="Identity" asp-page="/Account/Register">Register</a>
     </li>
     <li class="nav-item">
