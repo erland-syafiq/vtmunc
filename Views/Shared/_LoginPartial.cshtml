@@ -4,7 +4,7 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    if (User.IsInRole("Secretariat"))
+    if (User.IsInRole("Secretariat") || User.IsInRole("Admin"))
     {
         <a class="nav-link customFont" asp-area="" asp-controller="Applicants" asp-action="Index">Dashboard</a>
     }
