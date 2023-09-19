@@ -174,6 +174,7 @@ namespace VTMUNC.Controllers
         }
 
         // GET: Applicants/Success
+        [AllowAnonymous]
         public IActionResult Success()
         {
             return View();
