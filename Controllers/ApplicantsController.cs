@@ -68,6 +68,7 @@ namespace VTMUNC.Controllers
         public async Task<IActionResult> Create([Bind("Id,AdvisorEmail,AdvisorName,AdvisorPhone,AdvisorRelation,AdvisorOtherInformation,HeadDelegateEmail,HeadDelegateName,HeadDelegatePhone,SchoolName,DelegationSize,SchoolMailingAddress,NamesOfDelegates,IsAgreeWithTerms,CommentsOrQuestions")] Applicant applicant)
         {
             applicant.Date = DateTime.Now;
+            applicant.InvoiceStatus = 0;
 
             if (ModelState.IsValid)
             {
@@ -75,7 +76,8 @@ namespace VTMUNC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Success));
             }
-            return View(applicant);
+            // Create a fail page
+            return RedirectToAction(nameof(Success));
         }
 
         // GET: Applicants/Edit/5
