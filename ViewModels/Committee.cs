@@ -1,4 +1,6 @@
-﻿namespace VTMUNC.ViewModels
+﻿using System;
+
+namespace VTMUNC.ViewModels
 {
     public class Committee
     {
@@ -20,6 +22,27 @@
             ChairB = chairB;
         }
 
+        public Committee(
+            string name, 
+            string imagePath, 
+            string executiveSummary,
+            string imagePathChairA,
+            string nameChairA,
+            string positionChairA,
+            string bioChairA,
+            string emailChairA,
+            string imagePathChairB,
+            string nameChairB,
+            string positionChairB,
+            string bioChairB,
+            string emailChairB)
+        {
+            Name = name;
+            ImagePath = imagePath;
+            ExecutiveSummary = executiveSummary;
+            ChairA = new Staff(imagePathChairA, nameChairA, positionChairA, bioChairA, emailChairA);
+            ChairB = new Staff(imagePathChairB, nameChairB, positionChairB, bioChairB, emailChairB);
+        }
 
     }
 }
