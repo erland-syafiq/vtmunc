@@ -2,7 +2,7 @@
 
 namespace VTMUNC.ViewModels
 {
-    public class SecretariatAbout
+    public class Staff
     {
         // The path is the path from "\Images\."
         public string ImagePath { get; set; }
@@ -16,7 +16,7 @@ namespace VTMUNC.ViewModels
 
         public string Email { get; set; }
 
-        public SecretariatAbout(
+        public Staff(
             string imagePath, 
             string name, 
             string position, 
