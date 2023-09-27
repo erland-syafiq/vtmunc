@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using VTMUNC.ViewModels;
 
 namespace VTMUNC.Controllers
@@ -7,7 +8,14 @@ namespace VTMUNC.Controllers
     public class CommitteesController : Controller
     {
 
-        List<Committee> _committees = new List<Committee>();
+        private readonly List<Committee> _committees;
+
+        public CommitteesController() {
+            _committees = new List<Committee>()
+            {
+                // Insert new committees here e.g: new Committee(args),
+            };
+        }
 
         // GET: CommitteesController
         public ActionResult Index()
@@ -15,10 +23,20 @@ namespace VTMUNC.Controllers
             return View(_committees);
         }
 
-        // GET: CommitteesController/Details/5
-        public ActionResult Details(int id)
+        // GET: CommitteesController/Details/<url-name>
+        public ActionResult Details(string urlName)
         {
-            return View();
+            if (urlName == null)
+            {
+                return NotFound();
+            }
+
+            var applicant = _committees.Find(item => item.UrlName == urlName);
+            if (applicant == null)
+            {
+                return NotFound();
+            }
+            return View(applicant);
         }
     }
 }
