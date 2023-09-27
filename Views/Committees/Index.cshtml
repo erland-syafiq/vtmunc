@@ -1,0 +1,89 @@
+﻿@using VTMUNC.ViewModels;
+@model IEnumerable<Committee>
+@{
+    ViewData["Title"] = "About Page";
+}
+
+<style>
+
+    .secretariatTitle {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .secretariatTitle::after {
+        background-color: #DEBB8F;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 8px;
+        height: 20px;
+        width: 100%;
+        transform: scaleX(1.1);
+        z-index: -1;
+    }
+
+    .secretariatInfo {
+        background: #F2F1E8;
+        padding: 40px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .secretariatCard {
+        padding: 40px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border: solid var(--primary);
+        background: var(--primary-background);
+        box-shadow: -8px 12px 0px 0px var(--tertiary);
+    }
+
+    .secretariatEmail {
+        font-style: italic;
+        font-family: "Playfair Display", sans-serif;
+        font-size: 16px;
+    }
+
+    .secretariatImg {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+        margin-bottom: 20px;
+    }
+
+    .secretariatCard > p {
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 13px;
+    }
+
+</style>
+
+
+<section>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="text-nowrap secretariatTitle">Committees</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var committee in Model)
+        {
+            <div class="col-md-4">
+                <div class="secretariatCard">
+                    <div>
+                        <img class="secretariatImg" src="/Images/Chair_Headshots/@committee.ImagePath" />
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+</section>
