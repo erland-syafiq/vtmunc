@@ -1,10 +1,106 @@
-﻿@using VTMUNC.ViewModels
+﻿@using VTMUNC.ViewModels;
 @model Committee
+
+<style>
+    .secretariatCard {
+        padding: 40px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border: solid var(--primary);
+        background: var(--primary-background);
+        box-shadow: -8px 12px 0px 0px var(--tertiary);
+    }
+
+    .secretariatEmail {
+        font-style: italic;
+        font-family: "Playfair Display", sans-serif;
+        font-size: 16px;
+    }
+
+    .secretariatImg {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+        margin-bottom: 20px;
+       
+    }
+
+    .committeeImg {
+        height: 88px;        
+        object-fit: cover;        
+        margin-bottom: 30px;
+        box-shadow: -20px 16px 0px 0px #DEBB8F;
+        margin-left: 20px;
+    }
+
+    .committeeTitle {        
+        justify-content: center;
+        align-items: center;    
+        margin-top: 20px;
+    }
+
+    .heroBtn {
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        justify-content: center;
+        padding: 10px;
+        margin-top: 40px;
+    }
+
+</style>
+
 
 <section>
     <div class="row">
-        <div class="col-12 text-center">
-            <h2 class="text-nowrap secretariatTitle">Info</h2>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="committeeImg" src="/Images/@Model.ImagePath" />
+                </div>
+                <div class="col-md-9 committeeTitle">
+                    <h3>@Model.Name</h3>
+                </div>                
+            </div>
+            
+            <p style="margin-top: 20px">@Model.ExecutiveSummary</p>
+            <a class="btn btn-primary btn-lg heroBtn">
+                <h5 style="color:white;  transform: translate(0px, 3px); ">
+                    Background Guide
+                </h5>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <div class="secretariatCard">
+                <div>
+                    <img class="secretariatImg" src="/Images/Secretariat_Headshots/@Model.ChairA.ImagePath" />
+                </div>
+
+                <h4>@Model.ChairA.Name</h4>
+                <h5>@Model.ChairA.Position</h5>
+                <br>
+                <p>
+                    @Model.ChairA.Bio
+                </p>
+                <h6 class="secretariatEmail">@Model.ChairA.Email</h6>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="secretariatCard">
+                <div>
+                    <img class="secretariatImg" src="/Images/Secretariat_Headshots/@Model.ChairB.ImagePath" />
+                </div>
+
+                <h4>@Model.ChairB.Name</h4>
+                <h5>@Model.ChairB.Position</h5>
+                <br>
+                <p>
+                    @Model.ChairB.Bio
+                </p>
+                <h6 class="secretariatEmail">@Model.ChairB.Email</h6>
+            </div>
         </div>
     </div>
 </section>
