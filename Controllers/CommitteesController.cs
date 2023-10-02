@@ -14,6 +14,7 @@ namespace VTMUNC.Controllers
             _committees = new List<Committee>()
             {
                 // Insert new committees here e.g: new Committee(args),
+                new Committee("Harry Potter", "fakeimage", "testing", "imagechair", "namechair", "poschair", "biochair", "emailchair", "imagechair", "namechair", "poschair", "biochair", "emailchair"),
             };
         }
 
