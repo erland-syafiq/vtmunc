@@ -14,17 +14,32 @@ namespace VTMUNC.Controllers
             _committees = new List<Committee>()
             {
                 // Insert new committees here e.g: new Committee(args),
-                new Committee("Harry Potter", "fakeimage", "testing", "imagechair", "namechair", "poschair", "biochair", "emailchair", "imagechair", "namechair", "poschair", "biochair", "emailchair"),
+                new Committee(
+                    "Harry Potter", 
+                    "fakeimage", 
+                    "testing", 
+                    "imagechair", 
+                    "namechair", 
+                    "poschair", 
+                    "biochair", 
+                    "emailchair", 
+                    "imagechair", 
+                    "namechair", 
+                    "poschair", 
+                    "biochair", 
+                    "emailchair"
+                    ),
             };
         }
 
-        // GET: CommitteesController
+        // GET: Committees
         public ActionResult Index()
         {
             return View(_committees);
         }
 
-        // GET: CommitteesController/Details/<url-name>
+        // GET: Committees/<url-name>
+        [HttpGet("Committees/{urlName}")]
         public ActionResult Details(string urlName)
         {
             if (urlName == null)
