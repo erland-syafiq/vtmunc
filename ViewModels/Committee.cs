@@ -18,7 +18,7 @@ namespace VTMUNC.ViewModels
         public Committee(string name, string imagePath, string executiveSummary, Staff chairA, Staff chairB)
         {
             Name = name;
-            UrlName = name.Replace(" ", "-").ToLower();
+            UrlName = name.Replace(" ", "-");
             ImagePath = imagePath;
             ExecutiveSummary = executiveSummary;
             ChairA = chairA;
@@ -41,7 +41,7 @@ namespace VTMUNC.ViewModels
             string emailChairB)
         {
             Name = name;
-            UrlName = name.Replace(" ", "-").ToLower();
+            UrlName = name.Replace(" ", "-");
             ImagePath = imagePath;
             ExecutiveSummary = executiveSummary;
             ChairA = new Staff(imagePathChairA, nameChairA, positionChairA, bioChairA, emailChairA);
