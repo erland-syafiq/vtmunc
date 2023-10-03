@@ -27,7 +27,8 @@ namespace VTMUNC.Controllers
                     "namechair", 
                     "poschair",
                     " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!", 
-                    "emailchair"
+                    "emailchair",
+                    "Committees.pdf"
                     ),
             };
         }

@@ -15,7 +15,9 @@ namespace VTMUNC.ViewModels
         public Staff ChairA { get; set; }
         public Staff ChairB { get; set; }
 
-        public Committee(string name, string imagePath, string executiveSummary, Staff chairA, Staff chairB)
+        public string BackgroundGuide { get; set; }
+
+        public Committee(string name, string imagePath, string executiveSummary, Staff chairA, Staff chairB, string backgroundGuide)
         {
             Name = name;
             UrlName = name.Replace(" ", "-");
@@ -23,6 +25,7 @@ namespace VTMUNC.ViewModels
             ExecutiveSummary = executiveSummary;
             ChairA = chairA;
             ChairB = chairB;
+            BackgroundGuide = backgroundGuide;
         }
 
         public Committee(
@@ -38,7 +41,8 @@ namespace VTMUNC.ViewModels
             string nameChairB,
             string positionChairB,
             string bioChairB,
-            string emailChairB)
+            string emailChairB,
+            string backgroundGuide)
         {
             Name = name;
             UrlName = name.Replace(" ", "-");
@@ -46,6 +50,7 @@ namespace VTMUNC.ViewModels
             ExecutiveSummary = executiveSummary;
             ChairA = new Staff(imagePathChairA, nameChairA, positionChairA, bioChairA, emailChairA);
             ChairB = new Staff(imagePathChairB, nameChairB, positionChairB, bioChairB, emailChairB);
+            BackgroundGuide = backgroundGuide;
         }
 
     }
