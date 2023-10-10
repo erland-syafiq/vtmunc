@@ -17,7 +17,7 @@
         margin-bottom: 40px;
         padding-right: 160px;
     }
-    
+
     .teamDescription {
         text-align: justify;
         text-justify: inter-word;
@@ -33,15 +33,13 @@
 
     .teamImageHighlight {
         background: #3A506B;
-        box-shadow: -160px 0px 0px #3A506B,
-                    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: -160px 0px 0px #3A506B, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         padding-bottom: 40px;
         width: 100%;
         height: 90%;
     }
 
-    .teamImgClm 
-    {
+    .teamImgClm {
         z-index: 1;
     }
 
@@ -70,22 +68,22 @@
     .secretariatTitle {
         position: relative;
         display: inline-block;
-        padding-bottom: 10px; 
+        padding-bottom: 10px;
     }
 
-    .secretariatTitle::after {
-        background-color: #DEBB8F;
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 8px;
-        height: 20px; 
-        width: 100%;
-        transform: scaleX(1.1);
-        z-index: -1;
-    }
+        .secretariatTitle::after {
+            background-color: #DEBB8F;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 8px;
+            height: 20px;
+            width: 100%;
+            transform: scaleX(1.1);
+            z-index: -1;
+        }
 
-    .secretariatInfo {        
+    .secretariatInfo {
         background: #F2F1E8;
         padding: 40px;
         margin-bottom: 40px;
@@ -138,19 +136,18 @@
             </div>
             <div class="row teamDescription">
                 <p>
-                    VT Model UN, initiated four years ago by recent high school graduates, embodies a steadfast commitment to 
-                    fostering an enriching and creative environment based on United Nations principles. Our thriving community 
+                    VT Model UN, initiated four years ago by recent high school graduates, embodies a steadfast commitment to
+                    fostering an enriching and creative environment based on United Nations principles. Our thriving community
                     of young leaders champions inclusion, integrity, humility, and humanity, establishing a lasting tradition at
-                    Virginia Tech. Embrace this opportunity with an open mind and a collaborative spirit, stepping into the roles 
-                    of diplomats, honing skills like public speaking, critical thinking, and teamwork. Effective diplomacy hinges 
-                    on understanding diverse perspectives and finding common ground. Whether you're a seasoned veteran or a 
+                    Virginia Tech. Embrace this opportunity with an open mind and a collaborative spirit, stepping into the roles
+                    of diplomats, honing skills like public speaking, critical thinking, and teamwork. Effective diplomacy hinges
+                    on understanding diverse perspectives and finding common ground. Whether you're a seasoned veteran or a
                     first-time participant, we invite you to wholeheartedly embrace this experience and expand your horizons.
                 </p>
             </div>
         </div>
         <div class="col-7 teamImgClm">
             <div class="teamImageHighlight">
-
             </div>
         </div>
     </div>
@@ -172,26 +169,16 @@
             List<Staff> secretariatList = new List<Staff>();
 
 
-            secretariatList.Add(new Staff(
-            "taylor.JPG",
-            "Taylor White",
-            "Director of Logistics",
-            @"Taylor is a Junior from Richmond, Virginia. She is studying international relations and is a
-            member of the Mu Alpha Chapter of Delta Sigma Theta Sorority. She has a whopping nine years of 
-            Model UN experience and has competed at ten conferences. Running a conference has been a dream of
-            hers since 6th grade and she is thrilled to be part of the inaugural VT conference and meet energetic 
-            students who also share the same passion as hers. She loves MUN because of the ability to meet people 
-            both from VT and other delegations.",
-            "wtaylor21@vt.edu"
-            ));
-            secretariatList.Add(new Staff(
+
+            secretariatList.Add(new SecretariatAbout(
             "nekhita.JPG",
             "Nekhita Kassey",
             "Director General",
             @"Nekhita is a senior majoring in International Studies and EIT Management with a minor in Spanish, from Richmond. Additionally, she serves as treasurer for Amnesty International, is an undergrad teaching assistant for Pamplin, and she is a member of Collegiate Women in Business. Outside of school, she loves cooking, playing classical piano music, and going to local concerts! Nekhita is looking forward to welcoming everyone for the inaugural conference at Virginia Tech in February and making this the best experience possible for all!",
             "nekhitakassey@vt.edu"
-            ));            
-            secretariatList.Add(new Staff(
+            ));
+      
+            secretariatList.Add(new SecretariatAbout(
             "aaryan.JPG",
             "Aaryan Menon",
             "Secretary General",
@@ -205,12 +192,32 @@
             @"Prince is a senior from Fairfax, Virginia,  and is majoring in Business Entrepreneurship and International Relations and with a minor in Chinese. He brings six years of Model UN Conference experience, along with serving as the president of VTMUN the past three years. He is also the President of the class of 2023, a part of Amnesty International, a Tedx Virginia Tech Speaker, and a member of the Chinese American Association. He is delighted to give back to the local community and provide an exciting experience for students at VTMUNC!",
             "princewang7777@vt.edu"
             ));
-            secretariatList.Add(new Staff(
-            "caity.jpg",
-            "Caity Simmons",
+
+            secretariatList.Add(new SecretariatAbout(
+            "taylor.JPG",
+            "Taylor White",
+            "Director of Logistics",
+            @"Taylor is a Junior from Richmond, Virginia. She is studying international relations and is a
+        member of the Mu Alpha Chapter of Delta Sigma Theta Sorority. She has a whopping nine years of
+        Model UN experience and has competed at ten conferences. Running a conference has been a dream of
+        hers since 6th grade and she is thrilled to be part of the inaugural VT conference and meet energetic
+        students who also share the same passion as hers. She loves MUN because of the ability to meet people
+        both from VT and other delegations.",
+            "wtaylor21@vt.edu"
+            ));
+            secretariatList.Add(new SecretariatAbout(
+            "",
+            "Juan Camilo Bonilla",
             "Under Secretary General - Crisis",
-            @"Caity is a senior majoring in National Security and Foreign Affairs, and she is from Fredericksburg, Virginia. She has been involved in MUN since her freshman year of highschool, and outside of serving on the VTMUNC secretariat, she served on the board for VTMUN the past two years. Caity is also a member of the Virginia Tech Marching Band, the Marching Virginians! She loves giving impromptu speeches during crisis committees and she is thrilled to see everyone's creative ideas play out in their committees across the conference.",
-            "caitlynrs237"
+            @"Juan is a freshman from Barranquilla, Columbia, and is studying Communications. Over his MUN highschool career has attended 45 conferences, has chaired seven times, and was the Secretary General of MUNUN. His favorite part of MUN is traveling around and making friends! Outside of MUN, Juan is involved in the Mozaiko LLC, Collegiate Times, and the International Relations Organization. His fun fact is he can recite every single soccer World Cup Champion. He is excited for VTMUNC to share the marvelous passion of Model UN!",
+            "eresjcbsmun1210@vt.edu"
+            ));
+            secretariatList.Add(new SecretariatAbout(
+            "",
+            "Madeline Pedersen",
+            "Under Secretary General - Specialized",
+            @"Madeline Pedersen is a senior in Political Science with a minor in Philosophy from Franklin County, Virginia. She has spent four years in collegiate MUN and has won four awards! Her favorite part of MUN is some of her best friends she has met and traveling around to different colleges. Outside of MUN, she has an absurdly large board game collection, and is a huge fan of game nights. She is also secretary of the Firewatch at VT. She is excited to introduce difficult and complex topics to high schoolers and give them a platform to express themselves.",
+            "pedersenmk@vt.edu"
             ));
             secretariatList.Add(new Staff(
             "shriyia.png",
@@ -219,19 +226,19 @@
             @"Shriya Chemudupati is a Junior majoring in Cognitive and Behavioral Science from Richmond. She has been involved in Model UN since middle school, and even served as a chair USG-GA in high school. She is super excited to see the committees we've created as VTMUNC come to life during the conference, and loves giving the opportunity for delegates to adapt to whatever is being thrown your way as a delegate and the relationships you build along the way. She is also involved in Mock Trial, and the Phi Alpha Delta sorority at VT. ",
             "shriyac822@vt.edu"
             ));
-            secretariatList.Add(new Staff(
-            "noah.jpg",
-            "Noah Charness",
-            "Under Secretary General - Specialized",
-            @"Noah is a junior from West Bloomfield, Michigan and is an Aerospace Engineer. Outside of MUN, he is a member of the American Institution of Aeronautics and Astronautics and the Theme Park Engineering Design Team. He has been competing in Model UN since his freshman year of high school, and he loves playing a character that holds very different powers or beliefs than he does, and feels he is able to expand his ability to approach unique problems. He is excited to see all the unique and alternative solutions the students come up with. ",
-            "noahc25@vt.edu"
+            secretariatList.Add(new SecretariatAbout(
+            "katrina.jpg",
+            "Karina Gonzalez",
+            "Under Director General - Charity and Merch",
+            @"Karina is a junior from San Juan Texas, and she is majoring in Political Science and Economics, from Texas. Outside of MUN, Karina spends her time working with the Blacksburg Refugee Partnership as a volunteer (our VTMUNC philanthropy!), and as a member of the Defense Civilian Training Corp scholarship program. She loves MUN for getting to have real conversations about current events with people she is lucky enough to call friends, and Karina is eager for the philanthropy events that VTMUNC is hosting throughout the year! ",
+            "karinag@vt.edu"
             ));
             secretariatList.Add(new Staff(
             "delaney.jpeg",
             "Delaney Moran",
             "Charge D'Affaires",
             @"Delaney is a junior from Hershey, Pennsylvania and is studying Philosophy, Politics, & Economics and International Trade & Development. She recently started Model UN  as a freshman in college, but she has been drawn to it because of the community of people that have many different backgrounds and perspectives on the world. She loves that these people all have a common interest to make the world a better place. She is super excited to help host VTMUNC's first conference!",
-            "delaneym25@vt.edu"
+            "chargedaffaires@vtmunc.org"
             ));
             secretariatList.Add(new Staff(
             "alyssa.jpg",
@@ -240,18 +247,12 @@
             @"Alyssa is a senior majoring in Political Science from Dallas, Texas. Along with her role as treasurer of the secretariat, she is the current president of VTMUN and is a member of the sorority Kappa Kappa Gamma. Alyssa loves MUN as she has met her best friends through VTMUN & met some of her closest friends going to other conferences! She is excited to provide opportunities for VTMUNC delegates to make core memories. MUN conferences were her favorite part of high school and she hopes to have a part in someone else feeling the same way. ",
             "alyssab19@vt.edu"
             ));
-            secretariatList.Add(new Staff(
-            "katrina.jpg",
-            "Karina Gonzalez",
-            "Under Director General - Charity and Merch",
-            @"Karina is a junior from San Juan Texas, and she is majoring in Political Science and Economics, from Texas. Outside of MUN, Karina spends her time working with the Blacksburg Refugee Partnership as a volunteer (our VTMUNC philanthropy!), and as a member of the Defense Civilian Training Corp scholarship program. She loves MUN for getting to have real conversations about current events with people she is lucky enough to call friends, and Karina is eager for the philanthropy events that VTMUNC is hosting throughout the year! ",
-            "karinag@vt.edu"
-            ));
-            secretariatList.Add(new Staff(
+
+            secretariatList.Add(new SecretariatAbout(
             "nina.jpg",
             "Nina Ruback",
             "Under Director General - Marketing",
-            @"Nina is a junior from Newburg, New York. She is studying to be an Industrial and Systems Engineer. She serves as mentor for the Galipata program and the Center for the Enhancement of Engineering Diversity. She also is a part of the Amnesty International chapter at Virginia Tech. Nina loves Model UN due to the creativity you can have in the solutions to large-scale and real world problems along with the people you meet from all over the country. She is tremendously excited for Virginia Tech’s first ever iteration of VTMUNC!",
+            @"Nina is a junior from Newburgh, New York. She is studying to be an Industrial and Systems Engineer. She serves as mentor for the Galipata program and the Center for the Enhancement of Engineering Diversity. She also is a part of the Amnesty International chapter at Virginia Tech. Nina loves Model UN due to the creativity you can have in the solutions to large-scale and real world problems along with the people you meet from all over the country. She is tremendously excited for Virginia Tech’s first ever iteration of VTMUNC!",
             "nina21@vt.edu"
             ));
             secretariatList.Add(new Staff(
@@ -267,16 +268,17 @@
             "Co-Director of Technology",
             @"Quinn is a Junior from Chicago, Illinois. He is a computer science major, and worked with Erland to create this very website (Hello!). When not involved in VTMUN, he loves hammocking and biking around the beautiful Blacksburg area, playing volleyball and soccer, along with playing and competing with the bagpipes. He is involved with the College of Engineering Dean’s Team, along with Student Alumni Association. He is extremely excited to take part in bringing the first ever Model United Nations conference to Virginia Tech! ",
             "quinnanderson@vt.edu"
-            ));            
+            ));
 
         }
-        @foreach (var person in secretariatList) {
+        @foreach (var person in secretariatList)
+        {
             <div class="col-md-4">
                 <div class="secretariatCard">
                     <div>
                         <img class="secretariatImg" src="/Images/Secretariat_Headshots/@person.ImagePath" />
                     </div>
-                    
+
                     <h4>@person.Name</h4>
                     <h5>@person.Position</h5>
                     <br>
@@ -289,3 +291,4 @@
         }
     </div>
 </section>
+
