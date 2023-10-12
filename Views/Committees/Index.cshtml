@@ -74,8 +74,15 @@
     </div>
 
     <div class="row">
-        @foreach (var committee in Model)
+        <div class="col-12 text-center">
+            <h3 class="text-nowrap secretariatTitle">General Assembly</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        @for (int i = 2; i < 5 && i < Model.Count(); i++)
         {
+            var committee = Model.ElementAt(i);
             <a href= "Committees/@committee.UrlName" class="col-md-6">
                 <div class="secretariatCard">
                     <h3 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
@@ -89,4 +96,53 @@
             </a>
         }
     </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3 class="text-nowrap secretariatTitle">Crisis Committees</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        @for (int i = 0; i < 1 && i < Model.Count(); i++)
+        {
+            var committee = Model.ElementAt(i);
+            <a href="Committees/@committee.UrlName" class="col-md-6">
+                <div class="secretariatCard">
+                    <h3 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                        @committee.Name
+                    </h3>
+                    <div>
+                        <img class="secretariatImg" src="/Images/@committee.ImagePath" />
+                    </div>
+
+                </div>
+            </a>
+        }
+    </div> 
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3 class="text-nowrap secretariatTitle">Specialized Committees</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        @for (int i = 0; i < 1 && i < Model.Count(); i++)
+        {
+            var committee = Model.ElementAt(i);
+            <a href="Committees/@committee.UrlName" class="col-md-6">
+                <div class="secretariatCard">
+                    <h3 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                        @committee.Name
+                    </h3>
+                    <div>
+                        <img class="secretariatImg" src="/Images/@committee.ImagePath" />
+                    </div>
+
+                </div>
+            </a>
+        }
+    </div>
+
 </section>
