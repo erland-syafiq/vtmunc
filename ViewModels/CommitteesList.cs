@@ -18,7 +18,7 @@ namespace VTMUNC.ViewModels
             committeeCategories.Add(categoryName);
         }
 
-        public Committee Find(String urlName)
+        public Committee? Find(String urlName)
         {
             foreach (Committee[] committeeGroup in committees)
             {

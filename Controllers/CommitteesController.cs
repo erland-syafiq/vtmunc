@@ -62,7 +62,7 @@ namespace VTMUNC.Controllers
                     "jyo.jpg",
                     "Jyotsna Rathinam",
                     "Head Chair",
-                    "Hi everyone! I’m Jyotsna and I am so excited to be your head chair for the Commission on the Status of Women. I’m currently a senior at Virginia Tech double majoring in economics and international relations with minors in French and data science. I’ve been involved in MUN since my sophomore year of college and am currently my team’s GA training chair. I’ve always loved GA’s ability to have young people consider intricate solutions to real-world problems, and I feel like it’s not something that happens in many other settings. Prior to college I did a lot of debate and speech in high school with NSDA and loved it. Apart from MUN, I am also co-president and founder of VT’s chapter of Amnesty International, so I always enjoy talking about issues of equity and policy improvements! In my free time, I love reading, journaling, watching Netflix shows, doing henna, and making Spotify playlists (especially if they involve Beyoncé). I am thrilled to have been able to create a committee I feel so passionate about, and I look forward to seeing you all there!",
+                    "\r\nExcited to lead Commission on Status of Women! Senior at Virginia Tech, double major in econ & international relations, MUN enthusiast. Also, co-president of VT Amnesty International. Love reading, Netflix, henna, and Beyoncé playlists. Can't wait to see you all there!",
                     "jyorathinam@vt.edu",
                     "imagechair",
                     "null",

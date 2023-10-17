@@ -51,6 +51,10 @@
         margin-top: 40px;
     }
 
+    p {
+        font-size: 14px;
+    }
+
 </style>
 
 
@@ -66,53 +70,30 @@
                 </div>                
             </div>
             
-            <p style="margin-top: 20px; font-size: 14px">@Html.Raw(Model.ExecutiveSummary)</p>
+            <p style="margin-top: 20px">@Html.Raw(Model.ExecutiveSummary)</p>
             <a class="btn btn-primary btn-lg heroBtn" href="/BackgroundGuides/@Model.BackgroundGuide" target="_blank">
                 <h5 style="color:white;  transform: translate(0px, 3px); ">
                     Background Guide
                 </h5>
             </a>
         </div>
-
-        @if (@Model.ChairB.Name == "null")
-        {
-            <div class="col-md-1"></div>
-
-            <div class="col-md-4" >
-                <div class="secretariatCard">
-                    <div>
-                        <img class="secretariatImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
-                    </div>
-
-                    <h4>@Model.ChairA.Name</h4>
-                    <h5>@Model.ChairA.Position</h5>
-                    <br>
-                    <p>
-                        @Model.ChairA.Bio
-                    </p>
-                    <h6 class="secretariatEmail">@Model.ChairA.Email</h6>
+        <div class="col-md-3">
+            <div class="secretariatCard">
+                <div>
+                    <img class="secretariatImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
                 </div>
-            </div>
 
-            <div class="col-md-1"></div>
-        } 
-        else
+                <h4>@Model.ChairA.Name</h4>
+                <h5>@Model.ChairA.Position</h5>
+                <br>
+                <p>
+                    @Model.ChairA.Bio
+                </p>
+                <h6 class="secretariatEmail">@Model.ChairA.Email</h6>
+            </div>
+        </div>
+        @if (@Model.ChairB.Name != "null")
         {
-            <div class="col-md-3">
-                <div class="secretariatCard">
-                    <div>
-                        <img class="secretariatImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
-                    </div>
-
-                    <h4>@Model.ChairA.Name</h4>
-                    <h5>@Model.ChairA.Position</h5>
-                    <br>
-                    <p>
-                        @Model.ChairA.Bio
-                    </p>
-                    <h6 class="secretariatEmail">@Model.ChairA.Email</h6>
-                </div>
-            </div>
             <div class="col-md-3">
                 <div class="secretariatCard">
                     <div>
