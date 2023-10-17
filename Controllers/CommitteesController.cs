@@ -13,15 +13,35 @@ namespace VTMUNC.Controllers
 
         private readonly List<Committee> _committees;
 
-        public CommitteesController() {
+        public CommitteesController()
+        {
             _committees = new List<Committee>()
             {
                 // Insert new committees here e.g: new Committee(args),
                 //ga
                 new Committee(
                     "Committee for Development Policy",
-                    "cdp.jpg",
-                    "The Committee for Development Policy (CDP) is a subsidiary body of the United Nations Economic and Social Council (ECOSOC), which aims to provide independent advice based on a metric that studies several factors. Such factors include geographical and gender balance, which help monitor the developmental progression of countries labeled as the \"Least Developed Countries\" (LDC). This committee was first established in 1965 and is made up of 24 members who are nominated and appointed by the United Nations Secretary-General and by ECOSOC in their personal capacity. As a body of the United Nations, the first topic questions how to improve the economic stability in the Middle East, as there are glaring discrepancies in wealth across several states and within regions of those states. The second topic will promote discussion within the committee to debate methods to construct a balance in income across all genders. Within the Middle East, there is a large gap between the annual income earned by women when compared to the income earned by men. The committee aims to examine and create solutions to alleviate poverty for marginalized communities by creating and promoting access to  a plethora of resources such as education and legal services. The final topic discusses potential methods for upholding these solutions and services created within the Middle East. Delegates will discuss methods to maintain and sustain solutions to prevent implemented systems from failing. In addition, delegates will confer about principles which will heighten access to the resources for these systems across the entire region to enhance social, gender-based, and economic growth in the Middle East. This committee will allow delegates the opportunity to discuss and create methods of developmental growth and opportunity in the Middle East, as well as promote equal, accessible opportunities for anyone who needs them.",
+                    "development.png",
+                    @"The Committee for Development Policy (CDP) is a subsidiary body of 
+                    the United Nations Economic and Social Council (ECOSOC), which aims to
+                    provide independent advice based on a metric that studies several factors. 
+                    Such factors include geographical and gender balance, which help monitor the 
+                    developmental progression of countries labeled as the 'Least Developed 
+                    Countries' (LDC). This committee was first established in 1965 and is made 
+                    up of 24 members who are nominated and appointed by the United Nations Secretary-General and by ECOSOC in their personal capacity. 
+                    \n                    
+                    As a body of the United Nations, the first topic questions how to improve the economic stability in the Middle 
+                    East, as there are glaring discrepancies in wealth across several states and within regions of those states. The second 
+                    topic will promote discussion within the committee to debate methods to construct a balance in income across all genders. 
+                    Within the Middle East, there is a large gap between the annual income earned by women when compared to the income earned by men. 
+                    The committee aims to examine and create solutions to alleviate poverty for marginalized communities by creating and promoting 
+                    access to  a plethora of resources such as education and legal services. The final topic discusses potential methods for upholding 
+                    these solutions and services created within the Middle East. Delegates will discuss methods to maintain and sustain solutions to 
+                    prevent implemented systems from failing. In addition, delegates will confer about principles which will heighten access to the 
+                    resources for these systems across the entire region to enhance social, gender-based, and economic growth in the Middle East. 
+                    \n
+                    This committee will allow delegates the opportunity to discuss and create methods of developmental growth and opportunity in 
+                    the Middle East, as well as promote equal, accessible opportunities for anyone who needs them.",
                     "sumaijay.jpg",
                     "Sumaiyah Ali",
                     "Head Chair",
@@ -55,18 +75,18 @@ namespace VTMUNC.Controllers
 
                 //crisis 
                 new Committee(
-                    "American Revolution Historical Crisis", 
+                    "American Revolution Historical Crisis",
                     "revolution.jpg",
                     "The date is July 4,1776, and the American Colonies have just written and passed the Declaration of Independence at the meeting of the Second Continental Congress. The Revolutionary war is in its earliest stages, and battles have broken out already in the past year at Lexington and Concord and Bunker Hill. The Continental Army has been established for only a year, and the army still appears somewhat disorganized and battles have not reached an entirely large scale yet. Though the Revolutionary War was fought primarily by the opposing American Continental and British Armies, there are other parties that have stakes in this war. The American Colonies cannot be successful without aid from their potential French allies. As the war begins to unfold, will the British squash the revolution of the self-proclaimed independent American Colonists? Can the American patriots defend their brand new republic? How will other actors, such as European powers, loyalist colonists, indigenous people, impact and intervention in the conflict? It is up to this crisis committee to determine the course of the American Revolution, and decide on the future of the establishment of the independent United States of America.",
                     "liz.jpg",
-                    "Liz Mennitt", 
+                    "Liz Mennitt",
                     "Head Chair",
                     "Hey Guys! My name is Liz and I am a Senior at VT majoring in Political Science and minoring in Integrated Security. I am also dual enrolled in the Political Science Master’s program. I’ve been in MUN for 2 years and also participated in MUN in high school. ",
-                    "lizmennitt@vt.edu", 
-                    "imagechair", 
-                    "null", 
+                    "lizmennitt@vt.edu",
+                    "imagechair",
+                    "null",
                     "poschair",
-                    " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!", 
+                    " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!",
                     "emailchair",
                     "Committees.pdf"
                     ),
@@ -155,7 +175,7 @@ namespace VTMUNC.Controllers
                 //specialized
                 new Committee(
                     "Ancient Mythology Meets Modern America:Camp Half-Blood",
-                    "percyjackson.jpg",
+                    "mythology.jpg",
                     "Three years after the Second Giant War, Camp Half-Blood must train a new generation of demigods to defend themselves in a world where killer monsters and other mythological spirits and creatures are all too present. With the hero of Olympus, Percy Jackson, having mysteriously disappeared without a trace, the Greek demigods of Camp Half-Blood and their friends have become worried about his whereabouts. However, it seems that the gods don’t leave any time for concern, because Rachel Elizabeth Dare, the oracle of Delphi has arrived with a new prophecy from Mount Olympus for the demigods of Camp Halfblood to fulfill. Chiron, the acting camp director, has taken great lengths to keep the prophecy secret from anyone not directly called on by the prophecy (Something about the prophecy hitting too close to home? ) and has now gathered a group of campers to partake in this quest. What is the prophecy hiding? Is the safety of the world at stake again? Will more campers have to put their lives on the line to satisfy the disagreements of the deities? And perhaps most importantly, what happened to Percy Jackson?\r\n\r\nBalancing the political problems of Ancient Greece and the environment that is modern day New York, delegates will take on the roles of Greek demigods at Camp Half-Blood, and they shall be put to trials to balance the responsibilities of their Godly parenthood, their own goals, and perhaps most importantly, the fate of the future. \r\n",
                     "vihaan.CR2",
                     "Vihaan Ambre",
@@ -171,7 +191,7 @@ namespace VTMUNC.Controllers
                     ),
                 new Committee(
                     "Small Islands, Big Problems: Alliance of Small Island States (AOSIS)", //committee name
-                    "AOSIS.jpg", //committe pic
+                    "aosis.jpg", //committe pic
                     "The Alliance of Small Island States is a regional body committee at Virginia Tech Model United Nations Conference (VTMUNC I) where delegates will represent one of 39 member states, all of which are small islands underrepresented in international relations. In this committee, delegates will examine some of the world’s biggest problems through the lens of some of the world’s smallest voices: those who are disproportionately affected. \r\n\r\nThrough issues such as the sustainability of tourism and the importances of the Exclusive Economic Zones of small islands, delegates will consider issues from a new perspective that is often overlooked by the international community. AOSIS will build debate and diplomacy skills while challenging delegates to think about important issues from a non-Western point of view. \r\n", //exec summary
                     "anneli.jpg", //chair a pic
                     "Anneli Sample", //char a name

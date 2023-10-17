@@ -22,7 +22,7 @@ namespace VTMUNC.ViewModels
             Name = name;
             UrlName = name.Replace(" ", "-");
             ImagePath = imagePath;
-            ExecutiveSummary = executiveSummary;
+            ExecutiveSummary = executiveSummary.Replace("\\n", "<br><br>");
             ChairA = chairA;
             ChairB = chairB;
             BackgroundGuide = backgroundGuide;
@@ -47,7 +47,7 @@ namespace VTMUNC.ViewModels
             Name = name;
             UrlName = name.Replace(" ", "-");
             ImagePath = imagePath;
-            ExecutiveSummary = executiveSummary;
+            ExecutiveSummary = executiveSummary.Replace("\\n", "<br><br>");
             ChairA = new Staff(imagePathChairA, nameChairA, positionChairA, bioChairA, emailChairA);
             ChairB = new Staff(imagePathChairB, nameChairB, positionChairB, bioChairB, emailChairB);
             BackgroundGuide = backgroundGuide;
