@@ -34,7 +34,8 @@
     .teamImageHighlight {
         background: #3A506B;
         box-shadow: -160px 0px 0px #3A506B, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        padding-bottom: 40px;
+        padding-right: 40px;
+        padding-left: 20px;
         width: 100%;
         height: 90%;
     }
@@ -71,17 +72,17 @@
         padding-bottom: 10px;
     }
 
-        .secretariatTitle::after {
-            background-color: #DEBB8F;
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 8px;
-            height: 20px;
-            width: 100%;
-            transform: scaleX(1.1);
-            z-index: -1;
-        }
+    .secretariatTitle::after {
+        background-color: #DEBB8F;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 8px;
+        height: 20px;
+        width: 100%;
+        transform: scaleX(1.1);
+        z-index: -1;
+    }
 
     .secretariatInfo {
         background: #F2F1E8;
@@ -147,7 +148,8 @@
             </div>
         </div>
         <div class="col-7 teamImgClm">
-            <div class="teamImageHighlight">
+            <div class="teamImageHighlight d-flex align-items-center">
+                <img class="img-fluid" src="/Images/About Us Group Photo.JPG" />
             </div>
         </div>
     </div>

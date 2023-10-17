@@ -17,13 +17,13 @@ namespace VTMUNC.Controllers
             };
         }
 
-        // GET: CommitteesController
+        // GET: Committees
         public ActionResult Index()
         {
             return View(_committees);
         }
 
-        // GET: CommitteesController/Details/<url-name>
+        // GET: Committees/Details/<url-name>
         public ActionResult Details(string urlName)
         {
             if (urlName == null)
