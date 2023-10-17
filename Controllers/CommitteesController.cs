@@ -11,14 +11,15 @@ namespace VTMUNC.Controllers
     public class CommitteesController : Controller
     {
 
-        private readonly List<Committee> _committees;
+        private readonly CommitteesList _committees;
 
         public CommitteesController()
         {
-            _committees = new List<Committee>()
+            _committees = new CommitteesList();
+            
+            // General Assembly
+            _committees.AddCommitteeGroup("General Assembly", new Committee[]
             {
-                // Insert new committees here e.g: new Committee(args),
-                //ga
                 new Committee(
                     "Committee for Development Policy",
                     "development.png",
@@ -69,27 +70,27 @@ namespace VTMUNC.Controllers
                     " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!",
                     "emailchair",
                     "Committees.pdf"
-                    ),
+                    )});
 
-
-
-                //crisis 
+            // Crisis Committees
+            _committees.AddCommitteeGroup("Crisis Committees", new Committee[]
+            {
                 new Committee(
-                    "American Revolution Historical Crisis",
-                    "revolution.jpg",
-                    "The date is July 4,1776, and the American Colonies have just written and passed the Declaration of Independence at the meeting of the Second Continental Congress. The Revolutionary war is in its earliest stages, and battles have broken out already in the past year at Lexington and Concord and Bunker Hill. The Continental Army has been established for only a year, and the army still appears somewhat disorganized and battles have not reached an entirely large scale yet. Though the Revolutionary War was fought primarily by the opposing American Continental and British Armies, there are other parties that have stakes in this war. The American Colonies cannot be successful without aid from their potential French allies. As the war begins to unfold, will the British squash the revolution of the self-proclaimed independent American Colonists? Can the American patriots defend their brand new republic? How will other actors, such as European powers, loyalist colonists, indigenous people, impact and intervention in the conflict? It is up to this crisis committee to determine the course of the American Revolution, and decide on the future of the establishment of the independent United States of America.",
-                    "liz.jpg",
-                    "Liz Mennitt",
-                    "Head Chair",
-                    "Hey Guys! My name is Liz and I am a Senior at VT majoring in Political Science and minoring in Integrated Security. I am also dual enrolled in the Political Science Master’s program. I’ve been in MUN for 2 years and also participated in MUN in high school. ",
-                    "lizmennitt@vt.edu",
-                    "imagechair",
-                    "null",
-                    "poschair",
-                    " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!",
-                    "emailchair",
-                    "Committees.pdf"
-                    ),
+                        "American Revolution Historical Crisis",
+                        "revolution.jpg",
+                        "The date is July 4,1776, and the American Colonies have just written and passed the Declaration of Independence at the meeting of the Second Continental Congress. The Revolutionary war is in its earliest stages, and battles have broken out already in the past year at Lexington and Concord and Bunker Hill. The Continental Army has been established for only a year, and the army still appears somewhat disorganized and battles have not reached an entirely large scale yet. Though the Revolutionary War was fought primarily by the opposing American Continental and British Armies, there are other parties that have stakes in this war. The American Colonies cannot be successful without aid from their potential French allies. As the war begins to unfold, will the British squash the revolution of the self-proclaimed independent American Colonists? Can the American patriots defend their brand new republic? How will other actors, such as European powers, loyalist colonists, indigenous people, impact and intervention in the conflict? It is up to this crisis committee to determine the course of the American Revolution, and decide on the future of the establishment of the independent United States of America.",
+                        "liz.jpg",
+                        "Liz Mennitt",
+                        "Head Chair",
+                        "Hey Guys! My name is Liz and I am a Senior at VT majoring in Political Science and minoring in Integrated Security. I am also dual enrolled in the Political Science Master’s program. I’ve been in MUN for 2 years and also participated in MUN in high school. ",
+                        "lizmennitt@vt.edu",
+                        "imagechair",
+                        "null",
+                        "poschair",
+                        " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!",
+                        "emailchair",
+                        "Committees.pdf"
+                        ),
                 new Committee(
                     "Restoring Balance: The Legend of Korra",
                     "korra.jpg",
@@ -169,10 +170,12 @@ namespace VTMUNC.Controllers
                     "Hi guys! I’m a sophomore majoring in chemical engineering with minors in chemistry and green engineering. I’ve done MUN for awhile, starting in high school like y’all, and am on the board for VTMUN! I have loved Harry Potter since I read it as a kid, and am super excited to focus on this earlier era of the universe. ",
                     "sarahs04@vt.edu",
                     "Committees.pdf"
-                    ),
-                
+                    )});
 
-                //specialized
+
+            // Specialized
+            _committees.AddCommitteeGroup("Specialized", new Committee[]
+            {
                 new Committee(
                     "Ancient Mythology Meets Modern America:Camp Half-Blood",
                     "mythology.jpg",
@@ -204,49 +207,30 @@ namespace VTMUNC.Controllers
                     "", //chair b bio
                     "", //chair b email
                     "Committees.pdf" //background guide
-                    ),
-
-                //template
-                new Committee(
-                    "", //committee name
-                    "", //committe pic
-                    "", //exec summary
-                    "", //chair a pic
-                    "", //chair a name
-                    "", //chair a position
-                    "", //chair a bio
-                    "", //chair a email
-                    "", //chair b pic
-                    "", //chair b name
-                    "", //chair position                   
-                    "", //chair b bio
-                    "", //chair b email
-                    "" //background guide
-                    ),
-            };
-        }
-
-        // GET: Committees
-        public ActionResult Index()
-        {
-            return View(_committees);
-        }
-
-        // GET: Committees/<url-name>
-        [HttpGet("Committees/{urlName}")]
-        public ActionResult Details(string urlName)
-        {
-            if (urlName == null)
-            {
-                return NotFound();
-            }
-
-            var applicant = _committees.Find(item => item.UrlName == urlName);
-            if (applicant == null)
-            {
-                return NotFound();
-            }
-            return View(applicant);
-        }
+                    ) });
     }
+
+    // GET: Committees
+    public ActionResult Index()
+    {
+        return View(_committees);
+    }
+
+    // GET: Committees/<url-name>
+    [HttpGet("Committees/{urlName}")]
+    public ActionResult Details(string urlName)
+    {
+        if (urlName == null)
+        {
+            return NotFound();
+        }
+
+        var applicant = _committees.Find(urlName);
+        if (applicant == null)
+        {
+            return NotFound();
+        }
+        return View(applicant);
+    }
+}
 }
