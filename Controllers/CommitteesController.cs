@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Humanizer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
 using VTMUNC.ViewModels;
 
 namespace VTMUNC.Controllers
@@ -10,10 +13,216 @@ namespace VTMUNC.Controllers
 
         private readonly List<Committee> _committees;
 
-        public CommitteesController() {
+        public CommitteesController()
+        {
             _committees = new List<Committee>()
             {
                 // Insert new committees here e.g: new Committee(args),
+                //ga
+                new Committee(
+                    "Committee for Development Policy",
+                    "development.png",
+                    @"The Committee for Development Policy (CDP) is a subsidiary body of 
+                    the United Nations Economic and Social Council (ECOSOC), which aims to
+                    provide independent advice based on a metric that studies several factors. 
+                    Such factors include geographical and gender balance, which help monitor the 
+                    developmental progression of countries labeled as the 'Least Developed 
+                    Countries' (LDC). This committee was first established in 1965 and is made 
+                    up of 24 members who are nominated and appointed by the United Nations Secretary-General and by ECOSOC in their personal capacity. 
+                    \n                    
+                    As a body of the United Nations, the first topic questions how to improve the economic stability in the Middle 
+                    East, as there are glaring discrepancies in wealth across several states and within regions of those states. The second 
+                    topic will promote discussion within the committee to debate methods to construct a balance in income across all genders. 
+                    Within the Middle East, there is a large gap between the annual income earned by women when compared to the income earned by men. 
+                    The committee aims to examine and create solutions to alleviate poverty for marginalized communities by creating and promoting 
+                    access to  a plethora of resources such as education and legal services. The final topic discusses potential methods for upholding 
+                    these solutions and services created within the Middle East. Delegates will discuss methods to maintain and sustain solutions to 
+                    prevent implemented systems from failing. In addition, delegates will confer about principles which will heighten access to the 
+                    resources for these systems across the entire region to enhance social, gender-based, and economic growth in the Middle East. 
+                    \n
+                    This committee will allow delegates the opportunity to discuss and create methods of developmental growth and opportunity in 
+                    the Middle East, as well as promote equal, accessible opportunities for anyone who needs them.",
+                    "sumaijay.jpg",
+                    "Sumaiyah Ali",
+                    "Head Chair",
+                    "Hello! My name is Sumaiyah and I am a Virginia Tech Alumni. I graduated in 2023 with a degree in National Security and Foreign Affairs as well as a minor in Spanish. I was involved with VT MUN for two years and am so excited to stay involved as an alumni! ",
+                    "sumaiyaha19@vt.edu ",
+                    "imagechair",
+                    "null",
+                    "poschair",
+                    " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!",
+                    "emailchair",
+                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "Commission on the Status of Women ",
+                    "women.jpg",
+                    "The Commission on the Status of Women (CSW) is the primary intergovernmental body dedicated to promoting gender equality and women’s rights. The functional commission was established as part of the Economic and Social Commission (ECOSOC) in 1946 to address growing concerns about the United Nations’ ability to focus on gender equality. In March 2024, the 68th session of the commission will take place addressing how women in marginalized groups can achieve economic empowerment in the 21st century. For the purposes of this committee, the first topic addresses how to economically empower women in rural areas. Rural women are often the most economically disenfranchised and overlooked groups in their country. Delegates will have to grapple with how to create policies that enhance rural women’s access to social, legal, and economic services as well as how they can utilize leadership opportunities, entrepreneurship, and community participation to bolster their economic status. The second topic focuses on migrant women, another marginalized group facing increasingly difficult economic barriers. Migrant women often go under-compensated for their work because of a lack of immigration status or uncompensated homework. The third topic will focus on providing resources to eradicate maternal mortality, an issue prevalent among women in poverty. Maternal mortality, an issue found particularly in developing countries, is a pressing concern as the alarming rates of maternal deaths during pregnancy continue to rise due to complications during pregnancy and childbirth. Delegates are tasked with the responsibility of creating methods that will ensure quality access to universal maternal healthcare with the common goal of reducing maternal mortality rates. The UN possesses the ability to bring countries together to collaborate to uplift women economically when they are either forced or make the brave decision to leave their home country. This committee gives delegates the special opportunity to discuss critical issues regarding the equity and economic empowerment of marginalized women across the globe.  ",
+                    "jyo.jpg",
+                    "Jyotsna Rathinam",
+                    "Head Chair",
+                    "Hi everyone! I’m Jyotsna and I am so excited to be your head chair for the Commission on the Status of Women. I’m currently a senior at Virginia Tech double majoring in economics and international relations with minors in French and data science. I’ve been involved in MUN since my sophomore year of college and am currently my team’s GA training chair. I’ve always loved GA’s ability to have young people consider intricate solutions to real-world problems, and I feel like it’s not something that happens in many other settings. Prior to college I did a lot of debate and speech in high school with NSDA and loved it. Apart from MUN, I am also co-president and founder of VT’s chapter of Amnesty International, so I always enjoy talking about issues of equity and policy improvements! In my free time, I love reading, journaling, watching Netflix shows, doing henna, and making Spotify playlists (especially if they involve Beyoncé). I am thrilled to have been able to create a committee I feel so passionate about, and I look forward to seeing you all there!",
+                    "jyorathinam@vt.edu",
+                    "imagechair",
+                    "null",
+                    "poschair",
+                    " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!",
+                    "emailchair",
+                    "Committees.pdf"
+                    ),
+
+
+
+                //crisis 
+                new Committee(
+                    "American Revolution Historical Crisis",
+                    "revolution.jpg",
+                    "The date is July 4,1776, and the American Colonies have just written and passed the Declaration of Independence at the meeting of the Second Continental Congress. The Revolutionary war is in its earliest stages, and battles have broken out already in the past year at Lexington and Concord and Bunker Hill. The Continental Army has been established for only a year, and the army still appears somewhat disorganized and battles have not reached an entirely large scale yet. Though the Revolutionary War was fought primarily by the opposing American Continental and British Armies, there are other parties that have stakes in this war. The American Colonies cannot be successful without aid from their potential French allies. As the war begins to unfold, will the British squash the revolution of the self-proclaimed independent American Colonists? Can the American patriots defend their brand new republic? How will other actors, such as European powers, loyalist colonists, indigenous people, impact and intervention in the conflict? It is up to this crisis committee to determine the course of the American Revolution, and decide on the future of the establishment of the independent United States of America.",
+                    "liz.jpg",
+                    "Liz Mennitt",
+                    "Head Chair",
+                    "Hey Guys! My name is Liz and I am a Senior at VT majoring in Political Science and minoring in Integrated Security. I am also dual enrolled in the Political Science Master’s program. I’ve been in MUN for 2 years and also participated in MUN in high school. ",
+                    "lizmennitt@vt.edu",
+                    "imagechair",
+                    "null",
+                    "poschair",
+                    " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!",
+                    "emailchair",
+                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "Restoring Balance: The Legend of Korra",
+                    "korra.jpg",
+                    "Korra and Asami have returned from their mini vacation in the spirit world to find the human realm in complete disarray. Everyone had expected Kuvira’s army to dissipate after she was arrested, but instead, they have gathered themselves in the outskirts of the Earth Kingdom and are preparing to elect a new leader. Because of this, the expansion of Republic City has come to a halt as everyone fears the Earth Empire coming back. Meanwhile, travelers from around the world have come to visit the spirit portal in the heart of Republic City, and spirits are distressed by the number of humans invading their space without an Air Nomad guide. There is word that they may pose a revolution of their own, keeping humans away from their territory. Historically, this ragtag group of heroes has struggled to come to agreement on solutions, and many times will create additional problems before solving the original ones. Today, tensions are high, war is a serious possibility, and the people of this world are waiting for its leaders to take charge and help them. Delegates, can you all work together to figure out how to bring peace and harmony back to the physical world? ",
+                    "natilyn.jpg",
+                    "Natilyn Mann",
+                    "Head Chair",
+                    "Hello! I am a senior studying Animal and Poultry Sciences and have been involved with Model UN for 3 years. I am so excited to lead you all through an exciting committee focused on working together, solving problems, and not creating too much chaos. ",
+                    "natimann@vt.edu",
+                    "imagechair",
+                    "null",
+                    "poschair",
+                    " Passionate cook and skilled programmer, merging the art of culinary creation with the precision of coding. I constantly seek to balance creativity and logic. As your co-DoT, I’ll be there to fix any tech related issue you have. Have an amazing conference guys <3!",
+                    "emailchair",
+                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "One Count and Ten Thousand Systems: A Star Wars: the Clone Wars Committee",
+                    "starwars.png",
+                    "The Clone Wars have inflicted unprecedented destruction and chaos in the galaxy. The unwieldy galaxy-spanning Galactic Republic, governed from the Core worlds, has failed to provide effective governance in the outer rim despite heavy taxation. The Confederacy of Independent Systems, also called the Separatist Alliance, seeks to establish a decentralized government promoting free and fair trade, effective local governance, and individual rights. As the Separatist Alliance formed, powerful corporations offered their services to the CIS, supplying a droid army and starships to battle against the Republic’s hastily assembled Clone Army and Jedi generals.   After a year and a half of conflict, both sides have suffered devastating losses following an early Republic onslaught into the outer rim. Key military production has been shut down after the second battle of Geonosis, and with vital supply lines severed at Christophsis and Ryloth, the movement to establish a new independent government is in peril. Furthermore, reports from the frontlines of brutal atrocities have sparked internal dissent and called into question the manner in which the war is being conducted. The populace is divided on whether or not the current administration can win the war, much less doing so in a dignified way that represents the ideals the Confederacy was originally founded. So much so that a new faction in the Parliament has been formed calling for a swift, negotiated end to the war effort. It is up to a newly established joint session convening critical leaders of the Separatist Council, Parliament, and independent stakeholders to determine the fate of the Separatist Alliance and the galaxy itself. ",
+                    "willk.jpg",
+                    "William Kirshbom",
+                    "Crisis Director",
+                    "I am looking forward to bringing my seven years of MUN experience since middle school to the table alongside the rest of our team to deliver a thought provoking exploration of a science fiction universe that has been close to my heart since elementary school.  ",
+                    "wikirsh01@vt.edu",
+                    "evan.jpg",
+                    "Evan Marshall ",
+                    "Committee Chair",
+                    "Just a student aspiring to be a civil engineer and make functioning public transportation in this country. I joined Model UN last year because of my interest in geopolitics and to improve my skills in public speaking. Here’s to an exciting Clone Wars Committee!",
+                    "marshaet26@vt.edu",
+                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "Just Another Week in Paradise",
+                    "paradise.jpg",
+                    "The Kingdom of Hawaii, at once one of the most powerful nations in the Pacific, was at a precipice. On the sunny Monday morning of January 16, 1893; the USS Boston arrived in Oahu harbor and the agents of the Reform Party of Hawaii, primarily descendants of Americans and Europeans, began a 48-hour coup d’etat that would result in the end of the Hawaiian kingdom and a new American era for the islands. Though seemingly rapid and seamless in its execution, the Hawaiian coup was far from inevitable, and if things had played out just a little differently, the trajectory of the entire Pacific may have changed. Delegates will take up positions of both the Hawaiian government and the reform party, as well as powerful Pacific empires including Japan, the United Kingdom, and France; as the sun rises on just another week in paradise. ",
+                    "willl.jpg",
+                    "Will Letvin",
+                    "Head Chair",
+                    "Will is great!",
+                    "wletvin@vt.edu",
+                    "evan.jpg",
+                    "null",
+                    "Committee Chair",
+                    "Just a student aspiring to be a civil engineer and make functioning public transportation in this country. I joined Model UN last year because of my interest in geopolitics and to improve my skills in public speaking. Here’s to an exciting Clone Wars Committee!",
+                    "marshaet26@vt.edu",
+                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "The Wizarding War: Harry Potter Committee",
+                    "voldemart.jpg",
+                    "Set in the 1970s within British territory, the Order of the Phoenix has emerged as a secret society of wizards opposing the rise of the Dark Lord Voldemort and his Deatheaters. Founded by Albus Dumbledore, the organization has fought diligently against anti-muggle rhetoric and the violent ideology of Voldemort’s followers. Composed of well-known Aurors, professors, and public figures committed to the fight against the violent Death Eaters, the Order must fight to defeat the opposite side while staying alive and true to themselves. Meanwhile, the Death Eaters work to overthrow the current government and install their leader Voldemort as Minister of Magic. Now, in October of 1980, the Order is recovering from recent attacks and it has been announced that Regulus Black, the heir to the House of Black, is presumed dead. Rumors are circulating on the nature of his death and the secrets he might’ve held. Meanwhile, the Death Eater’s influence has been expanding across the UK. Will the Order succeed in upholding the current governmental system and defeat Voldemort, or will the Death Eaters come out victorious and establish Voldemort’s dark reign over the British wizarding world? This all depends on the way the committee utilizes their unique positions and powers; The war will come to an end with either side prevailing.",
+                    "holly.jpg",
+                    "Holly Johnson",
+                    "Crisis Director",
+                    "Hey y'all! I am a junior majoring in psychology with a minor in political science. I joined Model United Nations my freshman year at Virginia Tech. Like many of you, I was first introduced to the magical world of Harry Potter at a young age. It quickly became a formative part of my childhood. I’m so excited for this committee to delve into the first wizarding war and rewrite history. ",
+                    "Holly432@vt.edu",
+                    "sarahs.jpg",
+                    "Sarah Sass",
+                    "Head Chair",
+                    "Hi guys! I’m a sophomore majoring in chemical engineering with minors in chemistry and green engineering. I’ve done MUN for awhile, starting in high school like y’all, and am on the board for VTMUN! I have loved Harry Potter since I read it as a kid, and am super excited to focus on this earlier era of the universe. ",
+                    "sarahs04@vt.edu",
+                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "Trouble in Barbieland",
+                    "barbie.jpg",
+                    "Barbieland, as its namesake implies, is home to Barbies and Kens that coexist with their beautiful Dream Houses, beaches, and ubiquitous glamor. Stereotypical Barbie, after going through a journey of self-discovery, decided to go into the human realm to learn more about what they have to offer and see how far she can push herself. On Earth, she decides to go by Margot and attempts to start fresh, without the expectations of her former life in Barbieland. Although the transition was very difficult at first, Margot was determined to make women feel empowered and make a difference in society. After spending five years in the “real world” with brief stints as an astrophysicist, Congresswoman, UNICEF ambassador, and marine biologist, she gets an alarming message from Weird Barbie that Barbieland is in some kind of trouble. The message was vague yet urgent and requested Margot to return to Barbie Land as soon as she could. After reading this message, Margot feels anxious that Barbie Land is in trouble but knows that she is willing to do whatever it takes to help the place she calls home. As she prepares to come home, we urge all of you to prepare for the looming crisis ahead. Will it be kenough to save Barbie land?",
+                    "madi.jpg",
+                    "Madigan Voss",
+                    "Head Chair",
+                    "Hi everyone! My name is Madi Voss and I am a sophomore here at Virginia Tech. I have only been doing MUN for about a year and a half but I absolutely love it. As an International Relations major I have some super cool yet admittedly insane goals. If it was up to me I would 100% be the “leader of the universe.” However, I have accepted my mortal fate and will hopefully be working for an NGO or the Government in the near future. To be honest, I think a lot of other job paths are cooler but I’ve come into acceptance. While chairing this committee I really hope to use my position of leadership to inspire the delegates and help them bloom. To me the most important things in the world are acceptance and understanding, so come as you are to Barbieland, all are welcome..even Kens. On the topic of Barbie, my favorite part of the movie is totally when the Kens take over Barbieland, specifically when Barbie tells Ken she'll be his “short term, long distance girlfriend.” Oh boy I could relate with that one. I am so very excited to meet you all and I am already so proud. Sublime!",
+                    "madiv26@vt.edu",
+                    "sarahs.jpg",
+                    "null",
+                    "Head Chair",
+                    "Hi guys! I’m a sophomore majoring in chemical engineering with minors in chemistry and green engineering. I’ve done MUN for awhile, starting in high school like y’all, and am on the board for VTMUN! I have loved Harry Potter since I read it as a kid, and am super excited to focus on this earlier era of the universe. ",
+                    "sarahs04@vt.edu",
+                    "Committees.pdf"
+                    ),
+                
+
+                //specialized
+                new Committee(
+                    "Ancient Mythology Meets Modern America:Camp Half-Blood",
+                    "mythology.jpg",
+                    "Three years after the Second Giant War, Camp Half-Blood must train a new generation of demigods to defend themselves in a world where killer monsters and other mythological spirits and creatures are all too present. With the hero of Olympus, Percy Jackson, having mysteriously disappeared without a trace, the Greek demigods of Camp Half-Blood and their friends have become worried about his whereabouts. However, it seems that the gods don’t leave any time for concern, because Rachel Elizabeth Dare, the oracle of Delphi has arrived with a new prophecy from Mount Olympus for the demigods of Camp Halfblood to fulfill. Chiron, the acting camp director, has taken great lengths to keep the prophecy secret from anyone not directly called on by the prophecy (Something about the prophecy hitting too close to home? ) and has now gathered a group of campers to partake in this quest. What is the prophecy hiding? Is the safety of the world at stake again? Will more campers have to put their lives on the line to satisfy the disagreements of the deities? And perhaps most importantly, what happened to Percy Jackson?\r\n\r\nBalancing the political problems of Ancient Greece and the environment that is modern day New York, delegates will take on the roles of Greek demigods at Camp Half-Blood, and they shall be put to trials to balance the responsibilities of their Godly parenthood, their own goals, and perhaps most importantly, the fate of the future. \r\n",
+                    "vihaan.CR2",
+                    "Vihaan Ambre",
+                    "Head Chair",
+                    "Welcome y’all! As one of VT’s resident crisis delegates, I am very excited to be working with Sudhan to bring this committee to life at the inaugural VTMUNC. I am a big fan of trying something new, and I hope we can bring y’all a MUN experience unlike any other!",
+                    "vambre9864@vt.edu ",
+                    "sudhan.CR2",
+                    "Sudhan Vijayakumar ",
+                    "Crisis Director",
+                    "Nothing more needs to be said other than that I’m a huge Percy Jackson fan. I’ve read every book and wanted to take this chance to run a fun committee for the first ever VTMUNC! This is my eighth year of MUN, so I hope that I can use my experience to bring you all a great time!",
+                    "sudhan@vt.edu ",
+                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "Small Islands, Big Problems: Alliance of Small Island States (AOSIS)", //committee name
+                    "aosis.jpg", //committe pic
+                    "The Alliance of Small Island States is a regional body committee at Virginia Tech Model United Nations Conference (VTMUNC I) where delegates will represent one of 39 member states, all of which are small islands underrepresented in international relations. In this committee, delegates will examine some of the world’s biggest problems through the lens of some of the world’s smallest voices: those who are disproportionately affected. \r\n\r\nThrough issues such as the sustainability of tourism and the importances of the Exclusive Economic Zones of small islands, delegates will consider issues from a new perspective that is often overlooked by the international community. AOSIS will build debate and diplomacy skills while challenging delegates to think about important issues from a non-Western point of view. \r\n", //exec summary
+                    "anneli.jpg", //chair a pic
+                    "Anneli Sample", //char a name
+                    "Head Chair", //chair a position
+                    "My name is Anneli Sample and I am the chair for AOSIS! I am a freshman at Virginia Tech and majoring in International Relations. I have been doing MUN for four years and I am so excited to be part of the inaugural VTMUNC. Please email me if you have any questions! \r\n", //char a bio
+                    "anneli@vt.edu", //chair a email
+                    "", //chair b pic
+                    "null", //chair b name //set to null
+                    "", // chair position                   
+                    "", //chair b bio
+                    "", //chair b email
+                    "Committees.pdf" //background guide
+                    ),
+
+                //template
+                new Committee(
+                    "", //committee name
+                    "", //committe pic
+                    "", //exec summary
+                    "", //chair a pic
+                    "", //chair a name
+                    "", //chair a position
+                    "", //chair a bio
+                    "", //chair a email
+                    "", //chair b pic
+                    "", //chair b name
+                    "", //chair position                   
+                    "", //chair b bio
+                    "", //chair b email
+                    "" //background guide
+                    ),
             };
         }
 
@@ -23,7 +232,8 @@ namespace VTMUNC.Controllers
             return View(_committees);
         }
 
-        // GET: Committees/Details/<url-name>
+        // GET: Committees/<url-name>
+        [HttpGet("Committees/{urlName}")]
         public ActionResult Details(string urlName)
         {
             if (urlName == null)
