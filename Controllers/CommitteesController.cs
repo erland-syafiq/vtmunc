@@ -72,6 +72,42 @@ namespace VTMUNC.Controllers
                     "Committees.pdf"
                     )});
 
+            // Specialized
+            _committees.AddCommitteeGroup("Specialized", new Committee[]
+            {
+                new Committee(
+                    "Ancient Mythology Meets Modern America:Camp Half-Blood",
+                    "mythology.jpg",
+                    "Three years after the Second Giant War, Camp Half-Blood must train a new generation of demigods to defend themselves in a world where killer monsters and other mythological spirits and creatures are all too present. With the hero of Olympus, Percy Jackson, having mysteriously disappeared without a trace, the Greek demigods of Camp Half-Blood and their friends have become worried about his whereabouts. However, it seems that the gods don’t leave any time for concern, because Rachel Elizabeth Dare, the oracle of Delphi has arrived with a new prophecy from Mount Olympus for the demigods of Camp Halfblood to fulfill. Chiron, the acting camp director, has taken great lengths to keep the prophecy secret from anyone not directly called on by the prophecy (Something about the prophecy hitting too close to home? ) and has now gathered a group of campers to partake in this quest. What is the prophecy hiding? Is the safety of the world at stake again? Will more campers have to put their lives on the line to satisfy the disagreements of the deities? And perhaps most importantly, what happened to Percy Jackson?\r\n\r\nBalancing the political problems of Ancient Greece and the environment that is modern day New York, delegates will take on the roles of Greek demigods at Camp Half-Blood, and they shall be put to trials to balance the responsibilities of their Godly parenthood, their own goals, and perhaps most importantly, the fate of the future. \r\n",
+                    "vihaan.CR2",
+                    "Vihaan Ambre",
+                    "Head Chair",
+                    "Welcome y’all! As one of VT’s resident crisis delegates, I am very excited to be working with Sudhan to bring this committee to life at the inaugural VTMUNC. I am a big fan of trying something new, and I hope we can bring y’all a MUN experience unlike any other!",
+                    "vambre9864@vt.edu ",
+                    "sudhan.CR2",
+                    "Sudhan Vijayakumar ",
+                    "Crisis Director",
+                    "Nothing more needs to be said other than that I’m a huge Percy Jackson fan. I’ve read every book and wanted to take this chance to run a fun committee for the first ever VTMUNC! This is my eighth year of MUN, so I hope that I can use my experience to bring you all a great time!",
+                    "sudhan@vt.edu ",
+                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "Small Islands, Big Problems: Alliance of Small Island States (AOSIS)", //committee name
+                    "aosis.jpg", //committe pic
+                    "The Alliance of Small Island States is a regional body committee at Virginia Tech Model United Nations Conference (VTMUNC I) where delegates will represent one of 39 member states, all of which are small islands underrepresented in international relations. In this committee, delegates will examine some of the world’s biggest problems through the lens of some of the world’s smallest voices: those who are disproportionately affected. \r\n\r\nThrough issues such as the sustainability of tourism and the importances of the Exclusive Economic Zones of small islands, delegates will consider issues from a new perspective that is often overlooked by the international community. AOSIS will build debate and diplomacy skills while challenging delegates to think about important issues from a non-Western point of view. \r\n", //exec summary
+                    "anneli.jpg", //chair a pic
+                    "Anneli Sample", //char a name
+                    "Head Chair", //chair a position
+                    "My name is Anneli Sample and I am the chair for AOSIS! I am a freshman at Virginia Tech and majoring in International Relations. I have been doing MUN for four years and I am so excited to be part of the inaugural VTMUNC. Please email me if you have any questions! \r\n", //char a bio
+                    "anneli@vt.edu", //chair a email
+                    "", //chair b pic
+                    "null", //chair b name //set to null
+                    "", // chair position                   
+                    "", //chair b bio
+                    "", //chair b email
+                    "Committees.pdf" //background guide
+                    ) });
+
             // Crisis Committees
             _committees.AddCommitteeGroup("Crisis Committees", new Committee[]
             {
@@ -171,43 +207,6 @@ namespace VTMUNC.Controllers
                     "sarahs04@vt.edu",
                     "Committees.pdf"
                     )});
-
-
-            // Specialized
-            _committees.AddCommitteeGroup("Specialized", new Committee[]
-            {
-                new Committee(
-                    "Ancient Mythology Meets Modern America:Camp Half-Blood",
-                    "mythology.jpg",
-                    "Three years after the Second Giant War, Camp Half-Blood must train a new generation of demigods to defend themselves in a world where killer monsters and other mythological spirits and creatures are all too present. With the hero of Olympus, Percy Jackson, having mysteriously disappeared without a trace, the Greek demigods of Camp Half-Blood and their friends have become worried about his whereabouts. However, it seems that the gods don’t leave any time for concern, because Rachel Elizabeth Dare, the oracle of Delphi has arrived with a new prophecy from Mount Olympus for the demigods of Camp Halfblood to fulfill. Chiron, the acting camp director, has taken great lengths to keep the prophecy secret from anyone not directly called on by the prophecy (Something about the prophecy hitting too close to home? ) and has now gathered a group of campers to partake in this quest. What is the prophecy hiding? Is the safety of the world at stake again? Will more campers have to put their lives on the line to satisfy the disagreements of the deities? And perhaps most importantly, what happened to Percy Jackson?\r\n\r\nBalancing the political problems of Ancient Greece and the environment that is modern day New York, delegates will take on the roles of Greek demigods at Camp Half-Blood, and they shall be put to trials to balance the responsibilities of their Godly parenthood, their own goals, and perhaps most importantly, the fate of the future. \r\n",
-                    "vihaan.CR2",
-                    "Vihaan Ambre",
-                    "Head Chair",
-                    "Welcome y’all! As one of VT’s resident crisis delegates, I am very excited to be working with Sudhan to bring this committee to life at the inaugural VTMUNC. I am a big fan of trying something new, and I hope we can bring y’all a MUN experience unlike any other!",
-                    "vambre9864@vt.edu ",
-                    "sudhan.CR2",
-                    "Sudhan Vijayakumar ",
-                    "Crisis Director",
-                    "Nothing more needs to be said other than that I’m a huge Percy Jackson fan. I’ve read every book and wanted to take this chance to run a fun committee for the first ever VTMUNC! This is my eighth year of MUN, so I hope that I can use my experience to bring you all a great time!",
-                    "sudhan@vt.edu ",
-                    "Committees.pdf"
-                    ),
-                new Committee(
-                    "Small Islands, Big Problems: Alliance of Small Island States (AOSIS)", //committee name
-                    "aosis.jpg", //committe pic
-                    "The Alliance of Small Island States is a regional body committee at Virginia Tech Model United Nations Conference (VTMUNC I) where delegates will represent one of 39 member states, all of which are small islands underrepresented in international relations. In this committee, delegates will examine some of the world’s biggest problems through the lens of some of the world’s smallest voices: those who are disproportionately affected. \r\n\r\nThrough issues such as the sustainability of tourism and the importances of the Exclusive Economic Zones of small islands, delegates will consider issues from a new perspective that is often overlooked by the international community. AOSIS will build debate and diplomacy skills while challenging delegates to think about important issues from a non-Western point of view. \r\n", //exec summary
-                    "anneli.jpg", //chair a pic
-                    "Anneli Sample", //char a name
-                    "Head Chair", //chair a position
-                    "My name is Anneli Sample and I am the chair for AOSIS! I am a freshman at Virginia Tech and majoring in International Relations. I have been doing MUN for four years and I am so excited to be part of the inaugural VTMUNC. Please email me if you have any questions! \r\n", //char a bio
-                    "anneli@vt.edu", //chair a email
-                    "", //chair b pic
-                    "null", //chair b name //set to null
-                    "", // chair position                   
-                    "", //chair b bio
-                    "", //chair b email
-                    "Committees.pdf" //background guide
-                    ) });
     }
 
     // GET: Committees
