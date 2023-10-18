@@ -2,8 +2,10 @@
 @model Committee
 
 <style>
-    .secretariatCard {
-        padding: 40px;
+    .chairCard {
+        padding: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
         margin-bottom: 40px;
         margin-right: 10px;
         margin-left: 10px;
@@ -12,13 +14,13 @@
         box-shadow: -8px 12px 0px 0px var(--tertiary);
     }
 
-    .secretariatEmail {
+    .chairEmail {
         font-style: italic;
         font-family: "Playfair Display", sans-serif;
         font-size: 16px;
     }
 
-    .secretariatImg {
+    .chairImg {
         height: 200px;
         width: 100%;
         object-fit: cover;
@@ -51,6 +53,10 @@
         margin-top: 40px;
     }
 
+    p {
+        font-size: 14px;
+    }
+
 </style>
 
 
@@ -66,22 +72,20 @@
                 </div>                
             </div>
             
-            <p style="margin-top: 20px; font-size: 14px">@Html.Raw(Model.ExecutiveSummary)</p>
+            <p style="margin-top: 20px">@Html.Raw(Model.ExecutiveSummary)</p>
             <a class="btn btn-primary btn-lg heroBtn" href="/BackgroundGuides/@Model.BackgroundGuide" target="_blank">
                 <h5 style="color:white;  transform: translate(0px, 3px); ">
                     Background Guide
                 </h5>
             </a>
         </div>
-
-        @if (@Model.ChairB.Name == "null")
+        @if (@Model.ChairB == null)
         {
             <div class="col-md-1"></div>
-
-            <div class="col-md-4" >
-                <div class="secretariatCard">
+            <div class="col-md-4">
+                <div class="chairCard">
                     <div>
-                        <img class="secretariatImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
+                        <img class="chairImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
                     </div>
 
                     <h4>@Model.ChairA.Name</h4>
@@ -90,33 +94,32 @@
                     <p>
                         @Model.ChairA.Bio
                     </p>
-                    <h6 class="secretariatEmail">@Model.ChairA.Email</h6>
+                    <h6 class="chairEmail">@Model.ChairA.Email</h6>
                 </div>
             </div>
-
-            <div class="col-md-1"></div>
-        } 
+            <div class="col-md-1"></div>            
+        }
         else
-        {
-            <div class="col-md-3">
-                <div class="secretariatCard">
-                    <div>
-                        <img class="secretariatImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
-                    </div>
-
-                    <h4>@Model.ChairA.Name</h4>
-                    <h5>@Model.ChairA.Position</h5>
-                    <br>
-                    <p>
-                        @Model.ChairA.Bio
-                    </p>
-                    <h6 class="secretariatEmail">@Model.ChairA.Email</h6>
+        {        
+        <div class="col-md-3">
+            <div class="chairCard">
+                <div>
+                    <img class="chairImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
                 </div>
+
+                <h4>@Model.ChairA.Name</h4>
+                <h5>@Model.ChairA.Position</h5>
+                <br>
+                <p>
+                    @Model.ChairA.Bio
+                </p>
+                <h6 class="chairEmail">@Model.ChairA.Email</h6>
             </div>
+        </div>
             <div class="col-md-3">
-                <div class="secretariatCard">
+                <div class="chairCard">
                     <div>
-                        <img class="secretariatImg" src="/Images/Chair_Headshots/@Model.ChairB.ImagePath" />
+                        <img class="chairImg" src="/Images/Chair_Headshots/@Model.ChairB.ImagePath" />
                     </div>
 
                     <h4>@Model.ChairB.Name</h4>
@@ -125,10 +128,9 @@
                     <p>
                         @Model.ChairB.Bio
                     </p>
-                    <h6 class="secretariatEmail">@Model.ChairB.Email</h6>
+                    <h6 class="chairEmail">@Model.ChairB.Email</h6>
                 </div>
-            </div>
-            
+            </div> 
         }
 
         

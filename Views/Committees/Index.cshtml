@@ -1,38 +1,30 @@
 ﻿@using VTMUNC.ViewModels;
-@model IEnumerable<Committee>
+@model CommitteesList
 @{
-    ViewData["Title"] = "About Page";
+    ViewData["Title"] = "Committees";
 }
 
 <style>
 
-    .secretariatTitle {
+    .committeesTitle {
         position: relative;
         display: inline-block;
         padding-bottom: 10px;
     }
 
-    .secretariatTitle::after {
-        background-color: #DEBB8F;
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 8px;
-        height: 20px;
-        width: 100%;
-        transform: scaleX(1.1);
-        z-index: -1;
-    }
+        .committeesTitle::after {
+            background-color: #DEBB8F;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 8px;
+            height: 20px;
+            width: 100%;
+            transform: scaleX(1.1);
+            z-index: -1;
+        }
 
-    .secretariatInfo {
-        background: #F2F1E8;
-        padding: 40px;
-        margin-bottom: 40px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .secretariatCard {
+    .committeesCard {
         padding: 40px;
         margin-bottom: 40px;
         margin-right: 10px;
@@ -42,21 +34,35 @@
         box-shadow: -8px 12px 0px 0px var(--tertiary);
     }
 
-    .secretariatEmail {
+    .committeesEmail {
         font-style: italic;
         font-family: "Playfair Display", sans-serif;
         font-size: 16px;
     }
 
-    .secretariatImg {
-        height: 400px;
+    .committeesContainer {
+        height: 300px;
         width: 100%;
-        object-fit: cover;
-        background-position: center;
-        margin-bottom: 20px;
+        overflow: hidden; 
+        display: block;
+        height: 100%
     }
 
-    .secretariatCard > p {
+    .committeesImg {
+        height: 400px;       
+        width:100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .committeesImg:hover {
+        transform: scale(1.1);
+    }
+
+    .committeesCard > p {
         text-align: justify;
         text-justify: inter-word;
         font-size: 13px;
@@ -69,80 +75,36 @@
 
     <div class="row">
         <div class="col-12 text-center">
-            <h2 class="text-nowrap secretariatTitle">Committees</h2>
+            <h2 class="text-nowrap committeesTitle">Committees</h2>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-12 text-center">
-            <h3 class="text-nowrap secretariatTitle">General Assembly</h3>
-        </div>
-    </div>
 
-    <div class="row">
-        @for (int i = 0; i < 2 && i < Model.Count(); i++)
-        {
-            var committee = Model.ElementAt(i);
-            <a href= "Committees/@committee.UrlName" class="col-md-6">
-                <div class="secretariatCard">
-                    <h3 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
-                        @committee.Name
-                    </h3>
-                    <div>
-                        <img class="secretariatImg" src="/Images/Committees/@committee.ImagePath" />
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        <div class="row">
+            <div class="col-12 text-center" style="padding: 30px">
+                <h3 class="text-nowrap">@Model.GetCommitteeCategory(i)</h3>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-evenly h-100">
+            @foreach (Committee committee in Model.GetCommitteeGroup(i))
+            {
+                <div class="col-md-6">
+                    <div class="committeesCard">
+                        <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                            @committee.Name
+                        </h4>
+
+                        <a href="Committees/@committee.UrlName" class="committeesContainer">
+                            <img class="committeesImg" src="/Images/Committees/@committee.ImagePath" />
+                        </a>
+
                     </div>
-
                 </div>
-            </a>
-        }
-    </div>
 
-    <div class="row">
-        <div class="col-12 text-center">
-            <h3 class="text-nowrap secretariatTitle">Crisis Committees</h3>
+
+            }
         </div>
-    </div>
-
-    <div class="row">
-        @for (int i = 2; i < 8 && i < Model.Count(); i++)
-        {
-            var committee = Model.ElementAt(i);
-            <a href="Committees/@committee.UrlName" class="col-md-6">
-                <div class="secretariatCard">
-                    <h3 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
-                        @committee.Name
-                    </h3>
-                    <div>
-                        <img class="secretariatImg" src="/Images/Committees/@committee.ImagePath" />
-                    </div>
-
-                </div>
-            </a>
-        }
-    </div> 
-
-    <div class="row">
-        <div class="col-12 text-center">
-            <h3 class="text-nowrap secretariatTitle">Specialized Committees</h3>
-        </div>
-    </div>
-
-    <div class="row">
-        @for (int i = 8; i < 10 && i < Model.Count(); i++)
-        {
-            var committee = Model.ElementAt(i);
-            <a href="Committees/@committee.UrlName" class="col-md-6">
-                <div class="secretariatCard">
-                    <h3 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
-                        @committee.Name
-                    </h3>
-                    <div>
-                        <img class="secretariatImg" src="/Images/Committees/@committee.ImagePath" />
-                    </div>
-
-                </div>
-            </a>
-        }
-    </div>
-
+    }
 </section>
