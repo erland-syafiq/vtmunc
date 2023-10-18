@@ -50,25 +50,27 @@ namespace VTMUNC
             app.MapRazorPages();
 
             // Seeding Roles
-            using (var scope = app.Services.CreateScope())
+            System.Diagnostics.Debug.WriteLine("SEED DATABASE STATUS: ");
+            System.Diagnostics.Debug.WriteLine(builder.Configuration["SEED_DATABASE"]);
+            if (builder.Configuration["SEED_DATABASE"] != "false")
             {
-                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-
-                var roles = new[] { "Admin", "Secretariat" };
-
-                foreach (var role in roles)
+                using (var scope = app.Services.CreateScope())
                 {
-                    if (!await roleManager.RoleExistsAsync(role))
+                    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                    var roles = new[] { "Admin", "Secretariat" };
+
+                    foreach (var role in roles)
                     {
-                        await roleManager.CreateAsync(new IdentityRole(role));
+                        if (!await roleManager.RoleExistsAsync(role))
+                        {
+                            await roleManager.CreateAsync(new IdentityRole(role));
+                        }
                     }
                 }
-            }
 
-            // Decides to create admin based on preferences
-            if (builder.Configuration["CREATE_ADMIN"] != "false")
-            {
-                System.Diagnostics.Debug.WriteLine("Admin Created");
+                // Decides to create admin based on preferences
+
                 using (var scope = app.Services.CreateScope())
                 {
                     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
