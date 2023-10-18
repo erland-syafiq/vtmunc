@@ -70,6 +70,7 @@ Set the admin password using the Secrets Manager. To do this, run the following 
 ```bash
 dotnet user-secrets init
 dotnet user-secrets set "ADMIN_PASSWORD" "<INSERT_PASSWORD>"
+dotnet user-secrets set "CREATE_ADMIN" "<true or false>"
 dotnet user-secrets list
 ```
 

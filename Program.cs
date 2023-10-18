@@ -65,28 +65,35 @@ namespace VTMUNC
                 }
             }
 
-            using (var scope = app.Services.CreateScope())
+            // Decides to create admin based on preferences
+            if (builder.Configuration["CREATE_ADMIN"] != "false")
             {
-                var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-
-                string email = "chargedaffaires@vtmunc.org";
-                string? password = builder.Configuration["ADMIN_PASSWORD"];
-
-
-                if (await userManager.FindByEmailAsync(email) == null)
+                System.Diagnostics.Debug.WriteLine("Admin Created");
+                using (var scope = app.Services.CreateScope())
                 {
-                    var user = new ApplicationUser();
-                    user.UserName = email;
-                    user.Email = email;
-                    user.EmailConfirmed = true;
+                    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
-                    await userManager.CreateAsync(user, password);
+                    string email = "chargedaffaires@vtmunc.org";
+                    string? password = builder.Configuration["ADMIN_PASSWORD"];
 
-                    await userManager.AddToRoleAsync(user, "Admin");
+
+                    if (await userManager.FindByEmailAsync(email) == null)
+                    {
+                        var user = new ApplicationUser();
+                        user.UserName = email;
+                        user.Email = email;
+                        user.EmailConfirmed = true;
+
+                        await userManager.CreateAsync(user, password);
+
+                        await userManager.AddToRoleAsync(user, "Admin");
+
+                    }
 
                 }
-
             }
+
+
 
             app.Run();
         }
