@@ -14,6 +14,7 @@ The VTMUNC web application serves as the online platform for the Virginia Tech M
     - [Clone the Repository](#clone-the-repository)
     - [Install Dependencies](#install-dependencies)
     - [Database Migrations](#database-migrations)
+    - [Set Environment Variables](#set-environment-variables)
     - [Build and Run](#build-and-run)
   - [Deployment](#deployment)
   - [License](#license)
@@ -30,8 +31,6 @@ The following dependencies are required to set up and run this project:
 - **Entity Framework**: Entity Framework is used for data access and database interactions in this project. It simplifies working with relational databases and allows you to define your data model using C# classes. Entity Framework Core is the latest version, and it's included as part of the .NET SDK. No additional installation is required; you can start using it in your this project right away.
 
 ## Getting Started
-
-Provide step-by-step instructions on how to set up the project locally for development.
 
 ### Clone the Repository
 
@@ -63,9 +62,24 @@ dotnet ef database update
 
 This will apply the migration and ensure that your database schema matches the model defined in your code.
 
+### Set Environment Variables
+
+Environment variables are implemented using [.NET's Secrets Manager](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-7.0&tabs=windows). 
+Set the admin password using the Secrets Manager. To do this, run the following commands:
+
+```bash
+dotnet user-secrets init
+dotnet user-secrets set "ADMIN_PASSWORD" "<INSERT_PASSWORD>"
+dotnet user-secrets list
+```
+
+These environment variables also need to be set on Azure.
+
+On the 
+
 ### Build and Run
 
-Now that the database is up to date, you can build and run the application:
+Now that the database and environment variables are set, you can build and run the application:
 
 ```bash
 dotnet build
