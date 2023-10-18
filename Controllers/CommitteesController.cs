@@ -91,7 +91,19 @@ namespace VTMUNC.Controllers
                     "My name is Anneli Sample and I am the chair for AOSIS! I am a freshman at Virginia Tech and majoring in International Relations. I have been doing MUN for four years and I am so excited to be part of the inaugural VTMUNC. Please email me if you have any questions! \r\n", //char a bio
                     "anneli@vt.edu", //chair a email
                     "Committees.pdf" //background guide
-                    ) });
+                    ),
+                new Committee(
+                    "Suez Showdown: The Suez Crisis of 1956 Committee Information", //com name
+                    "suez.jpg", //com pic
+                    "In the midst of a global struggle for power between superpowers, a sudden invasion of Egypt takes place, threatening the delicate balance of world peace. As France, Israel, and the United Kingdom convene on the Suez Canal, the still-young United Nations General Assembly must find a quick and peaceful resolution following the Security Council's failure to do so. As lines are drawn in the sand, factions within the UN form, and fighting continues; a solution is desperately needed. As states' positions within the international system radically change, delegates must act with creativity, diplomacy, and urgency to prevent further escalation.\r\n", //com bio
+                    "noah.jpg", //chair pic
+                    "Noah Charness", //chaur name
+                    "Head Chair ", //chair pos
+                    "Hello! My name is Noah Charness, I am a junior studying engineering here at Virginia Tech. I am super excited to bring you this committee, where we will talk about one of the most integral crises to shape the current context for international relations. \r\n", //chairbio
+                    "noahc25@vt.edu ", //chair email                    
+                    "Committees.pdf" //background
+                    )
+            });
 
             // Crisis Committees
             _committees.AddCommitteeGroup("Crisis Committees", new Committee[]
