@@ -79,6 +79,28 @@
                 </h5>
             </a>
         </div>
+        @if (@Model.ChairB == null)
+        {
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <div class="chairCard">
+                    <div>
+                        <img class="chairImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
+                    </div>
+
+                    <h4>@Model.ChairA.Name</h4>
+                    <h5>@Model.ChairA.Position</h5>
+                    <br>
+                    <p>
+                        @Model.ChairA.Bio
+                    </p>
+                    <h6 class="chairEmail">@Model.ChairA.Email</h6>
+                </div>
+            </div>
+            <div class="col-md-1"></div>            
+        }
+        else
+        {        
         <div class="col-md-3">
             <div class="chairCard">
                 <div>
@@ -94,8 +116,6 @@
                 <h6 class="chairEmail">@Model.ChairA.Email</h6>
             </div>
         </div>
-        @if (@Model.ChairB != null)
-        {
             <div class="col-md-3">
                 <div class="chairCard">
                     <div>
@@ -110,8 +130,7 @@
                     </p>
                     <h6 class="chairEmail">@Model.ChairB.Email</h6>
                 </div>
-            </div>
-            
+            </div> 
         }
 
         

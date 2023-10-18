@@ -16,7 +16,7 @@ namespace VTMUNC.Controllers
         public CommitteesController()
         {
             _committees = new CommitteesList();
-            
+
             // General Assembly
             _committees.AddCommitteeGroup("General Assembly", new Committee[]
             {
@@ -43,7 +43,7 @@ namespace VTMUNC.Controllers
                     \n
                     This committee will allow delegates the opportunity to discuss and create methods of developmental growth and opportunity in 
                     the Middle East, as well as promote equal, accessible opportunities for anyone who needs them.",
-                    "sumaijay.jpg",
+                    "sumaiyah.jpg",
                     "Sumaiyah Ali",
                     "Head Chair",
                     "Hello! My name is Sumaiyah and I am a Virginia Tech Alumni. I graduated in 2023 with a degree in National Security and Foreign Affairs as well as a minor in Spanish. I was involved with VT MUN for two years and am so excited to stay involved as an alumni! ",
@@ -69,12 +69,12 @@ namespace VTMUNC.Controllers
                     "Ancient Mythology Meets Modern America: Camp Half-Blood",
                     "mythology.jpg",
                     "Three years after the Second Giant War, Camp Half-Blood must train a new generation of demigods to defend themselves in a world where killer monsters and other mythological spirits and creatures are all too present. With the hero of Olympus, Percy Jackson, having mysteriously disappeared without a trace, the Greek demigods of Camp Half-Blood and their friends have become worried about his whereabouts. However, it seems that the gods don’t leave any time for concern, because Rachel Elizabeth Dare, the oracle of Delphi has arrived with a new prophecy from Mount Olympus for the demigods of Camp Halfblood to fulfill. Chiron, the acting camp director, has taken great lengths to keep the prophecy secret from anyone not directly called on by the prophecy (Something about the prophecy hitting too close to home? ) and has now gathered a group of campers to partake in this quest. What is the prophecy hiding? Is the safety of the world at stake again? Will more campers have to put their lives on the line to satisfy the disagreements of the deities? And perhaps most importantly, what happened to Percy Jackson?\r\n\r\nBalancing the political problems of Ancient Greece and the environment that is modern day New York, delegates will take on the roles of Greek demigods at Camp Half-Blood, and they shall be put to trials to balance the responsibilities of their Godly parenthood, their own goals, and perhaps most importantly, the fate of the future. \r\n",
-                    "vihaan.CR2",
+                    "vihaan.jpg",
                     "Vihaan Ambre",
                     "Head Chair",
                     "Welcome y’all! As one of VT’s resident crisis delegates, I am very excited to be working with Sudhan to bring this committee to life at the inaugural VTMUNC. I am a big fan of trying something new, and I hope we can bring y’all a MUN experience unlike any other!",
                     "vambre9864@vt.edu ",
-                    "sudhan.CR2",
+                    "suddhan.jpg",
                     "Sudhan Vijayakumar ",
                     "Crisis Director",
                     "Nothing more needs to be said other than that I’m a huge Percy Jackson fan. I’ve read every book and wanted to take this chance to run a fun committee for the first ever VTMUNC! This is my eighth year of MUN, so I hope that I can use my experience to bring you all a great time!",
@@ -97,20 +97,22 @@ namespace VTMUNC.Controllers
             _committees.AddCommitteeGroup("Crisis Committees", new Committee[]
             {
                 new Committee(
-                        "American Revolution Historical Crisis",
-                        "revolution.jpg",
-                        "The date is July 4,1776, and the American Colonies have just written and passed the Declaration of Independence at the meeting of the Second Continental Congress. The Revolutionary war is in its earliest stages, and battles have broken out already in the past year at Lexington and Concord and Bunker Hill. The Continental Army has been established for only a year, and the army still appears somewhat disorganized and battles have not reached an entirely large scale yet. Though the Revolutionary War was fought primarily by the opposing American Continental and British Armies, there are other parties that have stakes in this war. The American Colonies cannot be successful without aid from their potential French allies. As the war begins to unfold, will the British squash the revolution of the self-proclaimed independent American Colonists? Can the American patriots defend their brand new republic? How will other actors, such as European powers, loyalist colonists, indigenous people, impact and intervention in the conflict? It is up to this crisis committee to determine the course of the American Revolution, and decide on the future of the establishment of the independent United States of America.",
-                        "liz.jpg",
-                        "Liz Mennitt",
-                        "Head Chair",
-                        "Hey Guys! My name is Liz and I am a Senior at VT majoring in Political Science and minoring in Integrated Security. I am also dual enrolled in the Political Science Master’s program. I’ve been in MUN for 2 years and also participated in MUN in high school. ",
-                        "lizmennitt@vt.edu",
-                        "Committees.pdf"
-                        ),
+                   "American Revolution Historical Crisis",
+                   "revolution.jpg",
+                   "The date is July 4,1776, and the American Colonies have just written and passed the Declaration of Independence at the meeting of the Second Continental Congress. The Revolutionary war is in its earliest stages, and battles have broken out already in the past year at Lexington and Concord and Bunker Hill. The Continental Army has been established for only a year, and the army still appears somewhat disorganized and battles have not reached an entirely large scale yet. Though the Revolutionary War was fought primarily by the opposing American Continental and British Armies, there are other parties that have stakes in this war. The American Colonies cannot be successful without aid from their potential French allies. As the war begins to unfold, will the British squash the revolution of the self-proclaimed independent American Colonists? Can the American patriots defend their brand new republic? How will other actors, such as European powers, loyalist colonists, indigenous people, impact and intervention in the conflict? It is up to this crisis committee to determine the course of the American Revolution, and decide on the future of the establishment of the independent United States of America.",
+                   "liz.jpg",
+                   "Liz Mennitt",
+                   "Head Chair",
+                   "Hey Guys! My name is Liz and I am a Senior at VT majoring in Political Science and minoring in Integrated Security. I am also dual enrolled in the Political Science Master’s program. I’ve been in MUN for 2 years and also participated in MUN in high school. ",
+                   "lizmennitt@vt.edu",
+                   "Committees.pdf"
+                    ),
                 new Committee(
                     "Restoring Balance: The Legend of Korra",
                     "korra.jpg",
-                    "Korra and Asami have returned from their mini vacation in the spirit world to find the human realm in complete disarray. Everyone had expected Kuvira’s army to dissipate after she was arrested, but instead, they have gathered themselves in the outskirts of the Earth Kingdom and are preparing to elect a new leader. Because of this, the expansion of Republic City has come to a halt as everyone fears the Earth Empire coming back. Meanwhile, travelers from around the world have come to visit the spirit portal in the heart of Republic City, and spirits are distressed by the number of humans invading their space without an Air Nomad guide. There is word that they may pose a revolution of their own, keeping humans away from their territory. Historically, this ragtag group of heroes has struggled to come to agreement on solutions, and many times will create additional problems before solving the original ones. Today, tensions are high, war is a serious possibility, and the people of this world are waiting for its leaders to take charge and help them. Delegates, can you all work together to figure out how to bring peace and harmony back to the physical world? ",
+                    @"Korra and Asami have returned from their mini vacation in the spirit world to find the human realm in complete disarray. Everyone had expected Kuvira’s army to dissipate after she was arrested, but instead, they have gathered themselves in the outskirts of the Earth Kingdom and are preparing to elect a new leader. Because of this, the expansion of Republic City has come to a halt as everyone fears the Earth Empire coming back. Meanwhile, travelers from around the world have come to visit the spirit portal in the heart of Republic City, and spirits are distressed by the number of humans invading their space without an Air Nomad guide. There is word that they may pose a revolution of their own, keeping humans away from their territory. 
+                    \n
+                    Historically, this ragtag group of heroes has struggled to come to agreement on solutions, and many times will create additional problems before solving the original ones. Today, tensions are high, war is a serious possibility, and the people of this world are waiting for its leaders to take charge and help them. Delegates, can you all work together to figure out how to bring peace and harmony back to the physical world? ",
                     "natilyn.jpg",
                     "Natilyn Mann",
                     "Head Chair",
@@ -121,7 +123,9 @@ namespace VTMUNC.Controllers
                 new Committee(
                     "One Count and Ten Thousand Systems: A Star Wars: the Clone Wars Committee",
                     "starwars.png",
-                    "The Clone Wars have inflicted unprecedented destruction and chaos in the galaxy. The unwieldy galaxy-spanning Galactic Republic, governed from the Core worlds, has failed to provide effective governance in the outer rim despite heavy taxation. The Confederacy of Independent Systems, also called the Separatist Alliance, seeks to establish a decentralized government promoting free and fair trade, effective local governance, and individual rights. As the Separatist Alliance formed, powerful corporations offered their services to the CIS, supplying a droid army and starships to battle against the Republic’s hastily assembled Clone Army and Jedi generals.   After a year and a half of conflict, both sides have suffered devastating losses following an early Republic onslaught into the outer rim. Key military production has been shut down after the second battle of Geonosis, and with vital supply lines severed at Christophsis and Ryloth, the movement to establish a new independent government is in peril. Furthermore, reports from the frontlines of brutal atrocities have sparked internal dissent and called into question the manner in which the war is being conducted. The populace is divided on whether or not the current administration can win the war, much less doing so in a dignified way that represents the ideals the Confederacy was originally founded. So much so that a new faction in the Parliament has been formed calling for a swift, negotiated end to the war effort. It is up to a newly established joint session convening critical leaders of the Separatist Council, Parliament, and independent stakeholders to determine the fate of the Separatist Alliance and the galaxy itself. ",
+                    @"The Clone Wars have inflicted unprecedented destruction and chaos in the galaxy. The unwieldy galaxy-spanning Galactic Republic, governed from the Core worlds, has failed to provide effective governance in the outer rim despite heavy taxation. The Confederacy of Independent Systems, also called the Separatist Alliance, seeks to establish a decentralized government promoting free and fair trade, effective local governance, and individual rights. As the Separatist Alliance formed, powerful corporations offered their services to the CIS, supplying a droid army and starships to battle against the Republic’s hastily assembled Clone Army and Jedi generals.   
+                    \n
+                    After a year and a half of conflict, both sides have suffered devastating losses following an early Republic onslaught into the outer rim. Key military production has been shut down after the second battle of Geonosis, and with vital supply lines severed at Christophsis and Ryloth, the movement to establish a new independent government is in peril. Furthermore, reports from the frontlines of brutal atrocities have sparked internal dissent and called into question the manner in which the war is being conducted. The populace is divided on whether or not the current administration can win the war, much less doing so in a dignified way that represents the ideals the Confederacy was originally founded. So much so that a new faction in the Parliament has been formed calling for a swift, negotiated end to the war effort. It is up to a newly established joint session convening critical leaders of the Separatist Council, Parliament, and independent stakeholders to determine the fate of the Separatist Alliance and the galaxy itself. ",
                     "willk.jpg",
                     "William Kirshbom",
                     "Crisis Director",
@@ -142,17 +146,12 @@ namespace VTMUNC.Controllers
                     "Will Letvin",
                     "Head Chair",
                     "Will is great!",
-                    "wletvin@vt.edu",
-                    "evan.jpg",
-                    "null",
-                    "Committee Chair",
-                    "Just a student aspiring to be a civil engineer and make functioning public transportation in this country. I joined Model UN last year because of my interest in geopolitics and to improve my skills in public speaking. Here’s to an exciting Clone Wars Committee!",
-                    "marshaet26@vt.edu",
+                    "wletvin@vt.edu",                    
                     "Committees.pdf"
                     ),
                 new Committee(
                     "The Wizarding War: Harry Potter Committee",
-                    "voldemart.jpg",
+                    "harrypotter.jpg",
                     "Set in the 1970s within British territory, the Order of the Phoenix has emerged as a secret society of wizards opposing the rise of the Dark Lord Voldemort and his Deatheaters. Founded by Albus Dumbledore, the organization has fought diligently against anti-muggle rhetoric and the violent ideology of Voldemort’s followers. Composed of well-known Aurors, professors, and public figures committed to the fight against the violent Death Eaters, the Order must fight to defeat the opposite side while staying alive and true to themselves. Meanwhile, the Death Eaters work to overthrow the current government and install their leader Voldemort as Minister of Magic. Now, in October of 1980, the Order is recovering from recent attacks and it has been announced that Regulus Black, the heir to the House of Black, is presumed dead. Rumors are circulating on the nature of his death and the secrets he might’ve held. Meanwhile, the Death Eater’s influence has been expanding across the UK. Will the Order succeed in upholding the current governmental system and defeat Voldemort, or will the Death Eaters come out victorious and establish Voldemort’s dark reign over the British wizarding world? This all depends on the way the committee utilizes their unique positions and powers; The war will come to an end with either side prevailing.",
                     "holly.jpg",
                     "Holly Johnson",
@@ -177,7 +176,45 @@ namespace VTMUNC.Controllers
                     "madiv26@vt.edu",
                     "Committees.pdf"
                     )});
-    }
+
+            _committees.AddCommitteeGroup("Ad Hoc", new Committee[]
+           {
+                new Committee(
+                    "President's Ad-Hoc",
+                    "adhoc.png",
+                    @"The Ad-hoc Committee of the Presidents is the most challenging committee at VTMUNC I, as everything will remain confidential until the conference! Delegates will get all information including background guides & positions in the first committee session. ",
+                    "james.jpg",
+                    "James Mullet",
+                    "Head Chair",
+                    "Hey everyone! My name is James Mullet, and I am so excited to be your chair for the first VTMUNC Ad Hoc committee. I was last year's VTMUN President and graduated last spring with a Double Major in Biochemistry and Biological Sciences. I have participated in MUN throughout my time at Virginia Tech, and I am so happy to be coming back to chair this committee! Personally, I work as a Research Technician at MIT, but I always love to discuss complex politically and culturally relevant issues. I am a big tea and coffee enthusiast who loves to hike, walk, and do my daily sudoku puzzles! I am so excited to bring a competitive and engaging committee this year that is interesting for everyone and make VTMUNC I Ad hoc a fantastic experience!",
+                    "jmullet@mit.edu",
+                    "alyssa.jpg", //chair pic
+                    "Alyssa Bohnstengel", //chaur name
+                    "Crisis Director", //chair pos
+                    "Hi everyone! My name is Alyssa Bohnstengel and I am beyond excited to be your crisis director! I am a senior majoring in political science with three minors in creative writing, European studies, and global engagement! I have been doing MUN for seven years and have been in Model UN at Virginia Tech for three! I am currently the External President of VTMUN & also serve as the director of finance for VTMUNC. Aside from MUN, I love reading (I have an instagram account dedicated to books that has nine-hundred followers,) dog-sitting (even though they use my roommates room as a bathroom,) spending time with my friends, and doing puzzles (I think it might be an addiction.) I am also a proud NYT game enthusiast! I am looking forward to meeting everyone and bringing our ad-hoc idea to life!", //chairbio
+                    "alyssab19@vt.edu", //chair email
+                    "Committees.pdf"
+                    ),
+           });
+
+            //template
+            new Committee(
+                "", //com name
+                "", //com pic
+                "", //com bio
+                "", //chair pic
+                "", //chaur name
+                "", //chair pos
+                "", //chairbio
+                "", //chair email
+                "", //chair pic
+                "", //chaur name
+                "", //chair pos
+                "", //chairbio
+                "", //chair email
+                "" //background
+                );
+   }
 
     // GET: Committees
     public ActionResult Index()
