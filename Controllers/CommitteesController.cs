@@ -157,8 +157,8 @@ namespace VTMUNC.Controllers
                     "willl.jpg",
                     "Will Letvin",
                     "Head Chair",
-                    "Will is great!",
-                    "wletvin@vt.edu",                    
+                    "I am a second year studying urban planning and design. With a passion for history, the arts, and the\r\ncerebral elements of life, I’ve spent most of my life traveling, and have an affinity for places with\r\npersonality.",
+                    "wletvin03@vt.edu",                    
                     "Committees.pdf"
                     ),
                 new Committee(
