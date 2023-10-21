@@ -120,6 +120,17 @@ namespace VTMUNC.Controllers
                    "Committees.pdf"
                     ),
                 new Committee(
+                    "Just Another Week in Paradise",
+                    "paradise.jpg",
+                    "The Kingdom of Hawaii, at once one of the most powerful nations in the Pacific, was at a precipice. On the sunny Monday morning of January 16, 1893; the USS Boston arrived in Oahu harbor and the agents of the Reform Party of Hawaii, primarily descendants of Americans and Europeans, began a 48-hour coup d’etat that would result in the end of the Hawaiian kingdom and a new American era for the islands. Though seemingly rapid and seamless in its execution, the Hawaiian coup was far from inevitable, and if things had played out just a little differently, the trajectory of the entire Pacific may have changed. Delegates will take up positions of both the Hawaiian government and the reform party, as well as powerful Pacific empires including Japan, the United Kingdom, and France; as the sun rises on just another week in paradise. ",
+                    "willl.jpg",
+                    "Will Letvin",
+                    "Head Chair",
+                    "I am a second year studying urban planning and design. With a passion for history, the arts, and the\r\ncerebral elements of life, I’ve spent most of my life traveling, and have an affinity for places with\r\npersonality.",
+                    "wletvin03@vt.edu",
+                    "Committees.pdf"
+                    ),
+                new Committee(
                     "Restoring Balance: The Legend of Korra",
                     "korra.jpg",
                     @"Korra and Asami have returned from their mini vacation in the spirit world to find the human realm in complete disarray. Everyone had expected Kuvira’s army to dissipate after she was arrested, but instead, they have gathered themselves in the outskirts of the Earth Kingdom and are preparing to elect a new leader. Because of this, the expansion of Republic City has come to a halt as everyone fears the Earth Empire coming back. Meanwhile, travelers from around the world have come to visit the spirit portal in the heart of Republic City, and spirits are distressed by the number of humans invading their space without an Air Nomad guide. There is word that they may pose a revolution of their own, keeping humans away from their territory. 
@@ -150,17 +161,7 @@ namespace VTMUNC.Controllers
                     "marshaet26@vt.edu",
                     "Committees.pdf"
                     ),
-                new Committee(
-                    "Just Another Week in Paradise",
-                    "paradise.jpg",
-                    "The Kingdom of Hawaii, at once one of the most powerful nations in the Pacific, was at a precipice. On the sunny Monday morning of January 16, 1893; the USS Boston arrived in Oahu harbor and the agents of the Reform Party of Hawaii, primarily descendants of Americans and Europeans, began a 48-hour coup d’etat that would result in the end of the Hawaiian kingdom and a new American era for the islands. Though seemingly rapid and seamless in its execution, the Hawaiian coup was far from inevitable, and if things had played out just a little differently, the trajectory of the entire Pacific may have changed. Delegates will take up positions of both the Hawaiian government and the reform party, as well as powerful Pacific empires including Japan, the United Kingdom, and France; as the sun rises on just another week in paradise. ",
-                    "willl.jpg",
-                    "Will Letvin",
-                    "Head Chair",
-                    "I am a second year studying urban planning and design. With a passion for history, the arts, and the\r\ncerebral elements of life, I’ve spent most of my life traveling, and have an affinity for places with\r\npersonality.",
-                    "wletvin03@vt.edu",                    
-                    "Committees.pdf"
-                    ),
+                
                 new Committee(
                     "The Wizarding War: Harry Potter Committee",
                     "harrypotter.jpg",
