@@ -60,7 +60,20 @@ namespace VTMUNC.Controllers
                     "\r\nExcited to lead Commission on Status of Women! Senior at Virginia Tech, double major in econ & international relations, MUN enthusiast. Also, co-president of VT Amnesty International. Love reading, Netflix, henna, and Beyoncé playlists. Can't wait to see you all there!",
                     "jyorathinam@vt.edu",
                     "Committees.pdf"
-                    )});
+                    ),
+                 new Committee(
+                    "World Health Organization", //com name
+                    "who.png", //com pic
+                    "The World Health Organization (WHO), a specialized agency of the United Nations, was\r\nestablished in 1948 in order to further international public health efforts. As the World Health Organization expanded over time, it has become an entity that is able to guide, make recommendations, pursue research, establish health campaigns, and more to promote the better health of our global society, with primary focuses on achieving universal health coverage, preparing and responding to health emergencies, and addressing overall health and well-being. In this committee, delegates must face various issues and provide resolutions to the growing problems within our society that serve as a blockade to our better health.The first issue that seeks for response from our delegations is combatting rabies, especially in areas of poverty. Rabies, although possessing an effective vaccine, is a fatal disease that can be spread to people and pets if an infected animal bites or scratches them. In most countries around the world, especially developing countries, the death rate by rabies reaches to almost 59,000 and without proper systems in place, that rate may increase without immediate medical help or support. Secondly, delegates will be asked to demonstrate diplomacy and an effort to control organ trafficking. Organ trafficking, a longstanding heinous act that occurs worldwide, is extremely targeted towards higher-risk people (homeless, lower-income individuals, etc.). Therefore, a solution to stop traffickers and prevent the profit-oriented, inhumane industry. Lastly, delegates are then tasked with the global crisis against antimicrobial resistance. Antimicrobial resistance, also known as antibiotic resistance or AMR, occurs when an increase in antimicrobial resistance is driven by a combination of germs exposed to antibiotics and the spread of those germs and their resistance mechanisms. This increases the risk of medical operations such as chemotherapy, organ transplants, and diabetes management. However, the effects of this issue have extended to veterinary, agricultural, and tourism industries as well, making it a crisis for countries across the globe. Altogether, WHO will encompass in-depth discussions in terms of approaching these very complex issues that will further promote justice around the world, because of how it tackles the injustices and major issues regarding health. \r\n\r\n", //com bio
+                    "abe.jpg", //chair pic
+                    "Abe Al-Dalli", //chaur name
+                    "Head Chair", //chair pos
+                    "Hi everyone!\r\nMy name is Abe Al-Dalli and I am a freshman at Virginia Tech. I am currently majoring in Biology with the intent to pursue medicine and obtain an M.D. in internal medicine, and I am also minoring in economics. In my free time I enjoy playing sports such as soccer, golf, tennis, basketball, and football, hanging out with friends and family, cooking/baking, and weight lifting. I have been involved in MUN for over 6 years throughout middle school and high school, where I have participated in many high school and college conferences, and also led my high school team for about two years. Throughout committee I’m excited to see diplomatic and substantive debate regarding the three topics in this committee. I can’t wait to see you all soon!\r\n", //chairbio
+                    "abe23@vt.edu", //chair email                    
+                    "Committees.pdf" //background
+                    )
+
+            });
 
             // Specialized
             _committees.AddCommitteeGroup("Specialized", new Committee[]
@@ -102,8 +115,8 @@ namespace VTMUNC.Controllers
                     "Hello! My name is Noah Charness, I am a junior studying engineering here at Virginia Tech. I am super excited to bring you this committee, where we will talk about one of the most integral crises to shape the current context for international relations. \r\n", //chairbio
                     "noahc25@vt.edu ", //chair email                    
                     "Committees.pdf" //background
-                    )
-            });
+                    )               
+        });
 
             // Crisis Committees
             _committees.AddCommitteeGroup("Crisis Committees", new Committee[]
