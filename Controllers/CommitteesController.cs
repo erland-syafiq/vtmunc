@@ -60,7 +60,31 @@ namespace VTMUNC.Controllers
                     "\r\nExcited to lead Commission on Status of Women! Senior at Virginia Tech, double major in econ & international relations, MUN enthusiast. Also, co-president of VT Amnesty International. Love reading, Netflix, henna, and Beyoncé playlists. Can't wait to see you all there!",
                     "jyorathinam@vt.edu",
                     "Committees.pdf"
-                    )});
+                    ),
+                 new Committee(
+                    "World Health Organization", //com name
+                    "who.png", //com pic
+                    "The World Health Organization (WHO), a specialized agency of the United Nations, was\r\nestablished in 1948 in order to further international public health efforts. As the World Health Organization expanded over time, it has become an entity that is able to guide, make recommendations, pursue research, establish health campaigns, and more to promote the better health of our global society, with primary focuses on achieving universal health coverage, preparing and responding to health emergencies, and addressing overall health and well-being. In this committee, delegates must face various issues and provide resolutions to the growing problems within our society that serve as a blockade to our better health.The first issue that seeks for response from our delegations is combatting rabies, especially in areas of poverty. Rabies, although possessing an effective vaccine, is a fatal disease that can be spread to people and pets if an infected animal bites or scratches them. In most countries around the world, especially developing countries, the death rate by rabies reaches to almost 59,000 and without proper systems in place, that rate may increase without immediate medical help or support. Secondly, delegates will be asked to demonstrate diplomacy and an effort to control organ trafficking. Organ trafficking, a longstanding heinous act that occurs worldwide, is extremely targeted towards higher-risk people (homeless, lower-income individuals, etc.). Therefore, a solution to stop traffickers and prevent the profit-oriented, inhumane industry. Lastly, delegates are then tasked with the global crisis against antimicrobial resistance. Antimicrobial resistance, also known as antibiotic resistance or AMR, occurs when an increase in antimicrobial resistance is driven by a combination of germs exposed to antibiotics and the spread of those germs and their resistance mechanisms. This increases the risk of medical operations such as chemotherapy, organ transplants, and diabetes management. However, the effects of this issue have extended to veterinary, agricultural, and tourism industries as well, making it a crisis for countries across the globe. Altogether, WHO will encompass in-depth discussions in terms of approaching these very complex issues that will further promote justice around the world, because of how it tackles the injustices and major issues regarding health. \r\n\r\n", //com bio
+                    "abe.jpg", //chair pic
+                    "Abe Al-Dalli", //chaur name
+                    "Head Chair", //chair pos
+                    "Hi everyone!\r\nMy name is Abe Al-Dalli and I am a freshman at Virginia Tech. I am currently majoring in Biology with the intent to pursue medicine and obtain an M.D. in internal medicine, and I am also minoring in economics. In my free time I enjoy playing sports such as soccer, golf, tennis, basketball, and football, hanging out with friends and family, cooking/baking, and weight lifting. I have been involved in MUN for over 6 years throughout middle school and high school, where I have participated in many high school and college conferences, and also led my high school team for about two years. Throughout committee I’m excited to see diplomatic and substantive debate regarding the three topics in this committee. I can’t wait to see you all soon!\r\n", //chairbio
+                    "abe23@vt.edu", //chair email                    
+                    "Committees.pdf" //background
+                    ),
+                 new Committee(
+                    "DISEC", //com name
+                    "disec.png", //com pic
+                    "The Disarmament and International Security Committee, otherwise known as DISEC, was established in 1993 as the first committee of the General Assembly of the United Nations. Delegates in DISEC discuss global concerns, disarmament, security, and dangers to world peace in order to highlight the efforts being made to safeguard the international security regime. Within this UN body, the questions that delegates must resolve have to do with the Tigrayan conflict. Although the Tigray war officially started in 2020, tensions have been brewing for decades. The armed conflict between Tigray’s People Liberation Front (TPLF) and the Ethiopian forces has officially been called a war from November 2020 and November 2022. During this time, multiple human rights organizations, including amnesty international, human rights watch, and Genocide Watch have called out the Ethiopian government for violations and accusations of genocide. What started off as a war between those two parties has turned into a war on the Tigrayan people as a whole. Despite the current cease-fire, the situation still remains dire for Tigrayan people due to displacement, sexual violence, and allegations of ethnic cleansing. Currently, areas of the Tigray region have been sealed off, with banking services heavily restricted. There is still a lack of access to food, aid and other essential needs. Across the globe, there has been severe condemnation of the human rights abuses from several countries, with Secretary of State Antony Blinken calling for Ethiopian and Amhara troops to retreat from the region. Although there has been international pressure to de-escalate the violence, there has been no formal UNSC action, resulting in criticisms from the international community. As time continues to pass by, it is imperative for member states to act and prevent further atrocities from occuring in the region.\r\n", //com bio
+                    "leah.jpg", //chair pic
+                    "Leah Solomon", //chaur name
+                    "Head Chair", //chair pos
+                    "Hello everyone! My name is Leah Solomon and I am the chair for DISEC! I am a public health major with a minor in adaptive brain and behavior. I’ve been a part of Model UN on and off since my 8th grade. Ethnically, I am from Tigray, Ethiopia (which is why I’m super passionate about the topic) but I currently reside in Ashburn, VA. Some hobbies of mine include playing tennis and going to concerts or any live event. I am super excited to work with you all! Please email me if you have any questions.", //chairbio
+                    "leahs@vt.edu", //chair email                    
+                    "Committees.pdf" //background
+                    )
+
+            });
 
             // Specialized
             _committees.AddCommitteeGroup("Specialized", new Committee[]
@@ -103,7 +127,8 @@ namespace VTMUNC.Controllers
                     "noahc25@vt.edu ", //chair email                    
                     "Committees.pdf" //background
                     )
-            });
+                
+        });
 
             // Crisis Committees
             _committees.AddCommitteeGroup("Crisis Committees", new Committee[]
@@ -118,6 +143,17 @@ namespace VTMUNC.Controllers
                    "Hey Guys! My name is Liz and I am a Senior at VT majoring in Political Science and minoring in Integrated Security. I am also dual enrolled in the Political Science Master’s program. I’ve been in MUN for 2 years and also participated in MUN in high school. ",
                    "lizmennitt@vt.edu",
                    "Committees.pdf"
+                    ),
+                new Committee(
+                    "Just Another Week in Paradise",
+                    "paradise.jpg",
+                    "The Kingdom of Hawaii, at once one of the most powerful nations in the Pacific, was at a precipice. On the sunny Monday morning of January 16, 1893; the USS Boston arrived in Oahu harbor and the agents of the Reform Party of Hawaii, primarily descendants of Americans and Europeans, began a 48-hour coup d’etat that would result in the end of the Hawaiian kingdom and a new American era for the islands. Though seemingly rapid and seamless in its execution, the Hawaiian coup was far from inevitable, and if things had played out just a little differently, the trajectory of the entire Pacific may have changed. Delegates will take up positions of both the Hawaiian government and the reform party, as well as powerful Pacific empires including Japan, the United Kingdom, and France; as the sun rises on just another week in paradise. ",
+                    "willl.jpg",
+                    "Will Letvin",
+                    "Head Chair",
+                    "I am a second year studying urban planning and design. With a passion for history, the arts, and the\r\ncerebral elements of life, I’ve spent most of my life traveling, and have an affinity for places with\r\npersonality.",
+                    "wletvin03@vt.edu",
+                    "Committees.pdf"
                     ),
                 new Committee(
                     "Restoring Balance: The Legend of Korra",
@@ -150,17 +186,7 @@ namespace VTMUNC.Controllers
                     "marshaet26@vt.edu",
                     "Committees.pdf"
                     ),
-                new Committee(
-                    "Just Another Week in Paradise",
-                    "paradise.jpg",
-                    "The Kingdom of Hawaii, at once one of the most powerful nations in the Pacific, was at a precipice. On the sunny Monday morning of January 16, 1893; the USS Boston arrived in Oahu harbor and the agents of the Reform Party of Hawaii, primarily descendants of Americans and Europeans, began a 48-hour coup d’etat that would result in the end of the Hawaiian kingdom and a new American era for the islands. Though seemingly rapid and seamless in its execution, the Hawaiian coup was far from inevitable, and if things had played out just a little differently, the trajectory of the entire Pacific may have changed. Delegates will take up positions of both the Hawaiian government and the reform party, as well as powerful Pacific empires including Japan, the United Kingdom, and France; as the sun rises on just another week in paradise. ",
-                    "willl.jpg",
-                    "Will Letvin",
-                    "Head Chair",
-                    "I am a second year studying urban planning and design. With a passion for history, the arts, and the\r\ncerebral elements of life, I’ve spent most of my life traveling, and have an affinity for places with\r\npersonality.",
-                    "wletvin03@vt.edu",                    
-                    "Committees.pdf"
-                    ),
+                
                 new Committee(
                     "The Wizarding War: Harry Potter Committee",
                     "harrypotter.jpg",
