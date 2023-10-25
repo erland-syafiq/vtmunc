@@ -126,8 +126,20 @@ namespace VTMUNC.Controllers
                     "Hello! My name is Noah Charness, I am a junior studying engineering here at Virginia Tech. I am super excited to bring you this committee, where we will talk about one of the most integral crises to shape the current context for international relations. \r\n", //chairbio
                     "noahc25@vt.edu ", //chair email                    
                     "Committees.pdf" //background
-                    )
-                
+                    ),
+                new Committee(
+                    "Anthrax Attack: An Anonymous Series of Biological Attacks", //com name
+                    "anthrax.jpg", //com pic
+                    "In the panic-stricken United States following the attacks of 9/11, a new issue arises causing mass hysteria throughout the nation. Anonymous letters laced with anthrax are sent to news stations in Florida and New York as well as to a congressional office building in Washington D.C. Anthrax is the spore of Bacillus anthracis which when inhaled, can cause a variety of symptoms, even leading to death. These letters have already taken the lives of 5 people. Members of the CDC as well as the Department of Defence must come together to prevent further chaos and investigate the roots of this attack.\r\n", //com bio
+                    "tanishqa.png", //chair pic
+                    "Tanishqa Gautam", //chaur name
+                    "Head Chair", //chair pos
+                    "Hello delegates! My name is Tanishqa Gautam. I am an Engineering freshman at Virginia Tech! I have been doing MUN for 3 years and I am thrilled to be a part of VTMUNC’s first conference. I can’t wait to meet all the delegates and see how the debate will unfold at the conference!\r\n", //chairbio
+                    "tanishqa@vt.edu", //chair email                    
+                    "Committees.pdf" //background
+                )
+
+
         });
 
             // Crisis Committees
