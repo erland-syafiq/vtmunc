@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Remove LaunchSettings [Where Production Environment Variables are stored]
+Properties/launchSettings.json
+
 # User-specific files
 *.rsuser
 *.suo

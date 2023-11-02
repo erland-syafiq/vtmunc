@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using VTMUNC.Data;
 using VTMUNC.Models;
@@ -11,8 +12,19 @@ namespace VTMUNC
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Obtain connection string
+            var connectionString = "";
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Production")
+            {
+                connectionString = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
+            }
+            else
+            {
+                connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+            }
+            System.Diagnostics.Debug.Assert(connectionString != null);
+
             // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -49,9 +61,23 @@ namespace VTMUNC
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
 
-            // Seeding Roles
-            System.Diagnostics.Debug.WriteLine("SEED DATABASE STATUS: ");
-            System.Diagnostics.Debug.WriteLine(builder.Configuration["SEED_DATABASE"]);
+            // Redirects staff.vtmunc.org to login page
+            app.Use(async (context, next) =>
+            {
+                var isStaffDomain = context.Request.Host.Host.StartsWith("staff.", StringComparison.OrdinalIgnoreCase);
+                if (isStaffDomain)
+                {
+                    string domainName = context.Request.Host.Value.Replace("staff.", "");
+                    string destinationUrl = "https://" + domainName + "/Identity/Account/Login";
+
+                    // Redirect to the destination URL
+                    context.Response.Redirect(destinationUrl.ToString(), permanent: true);
+                }
+                await next.Invoke();
+            });
+
+
+            // Seeding Roles and Admin Account
             if (builder.Configuration["SEED_DATABASE"] != "false")
             {
                 using (var scope = app.Services.CreateScope())
