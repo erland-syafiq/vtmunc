@@ -35,6 +35,10 @@ namespace VTMUNC.ViewModels
                 {
                     ParticipantsData.Add(new TimeDataPoint(applicant.Date, sum));
                 }
+                else
+                {
+                    ParticipantsData[ParticipantsData.Count - 1].y += applicant.DelegationSize;
+                }
                 pastDate = applicant.Date;
             }
 

@@ -2,8 +2,8 @@
 {
 public class TimeDataPoint
 {
-    public String x { get; private set; }
-    public int y { get; private set; }
+    public String x { get; set; }
+    public int y { get; set; }
 
     public TimeDataPoint(DateTime date, int y)
     {
