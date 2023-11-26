@@ -20,36 +20,7 @@ namespace VTMUNC.Controllers
             // General Assembly
             _committees.AddCommitteeGroup("General Assembly", new Committee[]
             {
-                new Committee(
-                    "Committee for Development Policy (CDP)",
-                    "development.png",
-                    @"The Committee for Development Policy (CDP) is a subsidiary body of 
-                    the United Nations Economic and Social Council (ECOSOC), which aims to
-                    provide independent advice based on a metric that studies several factors. 
-                    Such factors include geographical and gender balance, which help monitor the 
-                    developmental progression of countries labeled as the 'Least Developed 
-                    Countries' (LDC). This committee was first established in 1965 and is made 
-                    up of 24 members who are nominated and appointed by the United Nations Secretary-General and by ECOSOC in their personal capacity. 
-                    \n                    
-                    As a body of the United Nations, the first topic questions how to improve the economic stability in the Middle 
-                    East, as there are glaring discrepancies in wealth across several states and within regions of those states. The second 
-                    topic will promote discussion within the committee to debate methods to construct a balance in income across all genders. 
-                    Within the Middle East, there is a large gap between the annual income earned by women when compared to the income earned by men. 
-                    The committee aims to examine and create solutions to alleviate poverty for marginalized communities by creating and promoting 
-                    access to  a plethora of resources such as education and legal services. The final topic discusses potential methods for upholding 
-                    these solutions and services created within the Middle East. Delegates will discuss methods to maintain and sustain solutions to 
-                    prevent implemented systems from failing. In addition, delegates will confer about principles which will heighten access to the 
-                    resources for these systems across the entire region to enhance social, gender-based, and economic growth in the Middle East. 
-                    \n
-                    This committee will allow delegates the opportunity to discuss and create methods of developmental growth and opportunity in 
-                    the Middle East, as well as promote equal, accessible opportunities for anyone who needs them.",
-                    "sumaiyah.jpg",
-                    "Sumaiyah Ali",
-                    "Head Chair",
-                    "Hello! My name is Sumaiyah and I am a Virginia Tech Alumni. I graduated in 2023 with a degree in National Security and Foreign Affairs as well as a minor in Spanish. I was involved with VT MUN for two years and am so excited to stay involved as an alumni! ",
-                    "sumaiyaha19@vt.edu ",
-                    "Committees.pdf"
-                    ),
+                
                 new Committee(
                     "Commission on the Status of Women (CSW)",
                     "women.jpg",
@@ -71,6 +42,21 @@ namespace VTMUNC.Controllers
                     "Hi everyone!\r\nMy name is Abe Al-Dalli and I am a freshman at Virginia Tech. I am currently majoring in Biology with the intent to pursue medicine and obtain an M.D. in internal medicine, and I am also minoring in economics. In my free time I enjoy playing sports such as soccer, golf, tennis, basketball, and football, hanging out with friends and family, cooking/baking, and weight lifting. I have been involved in MUN for over 6 years throughout middle school and high school, where I have participated in many high school and college conferences, and also led my high school team for about two years. Throughout committee I’m excited to see diplomatic and substantive debate regarding the three topics in this committee. I can’t wait to see you all soon!\r\n", //chairbio
                     "abe23@vt.edu", //chair email                    
                     "Committees.pdf" //background
+                    ),
+                 new Committee(
+                    "United Nations Development Programme (UNDP)",
+                    "development.png",
+                    @"The United Nations Development Programme (UNDP) was originally created in 1966, following the combination of two existing committees, the United Nations Expanded Programme of Technical Assistance, created in 1949, and the United Nations Special Fund, established in 1958.The UNDP is a committee which works in roughly 170 countries to eradicate poverty as well as reduce inequality in the existing infrastructure of these countries. The UNDP helps countries create and implement developmental policies, leadership skills, institutional capabilities and more. The UNDP focuses on three specific areas: sustainable development, democratic governance and peace building and finally climate and disaster resilience. 
+                    \n                    
+                    As a body of the United Nations, the first topic questions how to improve the economic stability in the Middle East, as there are glaring discrepancies in wealth across several states and within regions of those states. The second topic will promote discussion within the committee to debate methods to construct a balance in income across all genders. Within the Middle East, there is a large gap between the annual income earned by women when compared to the income earned by men. The committee aims to examine and create solutions to alleviate poverty for marginalized communities by creating and promoting access to a plethora of resources such as education and legal services. The final topic discusses potential methods for upholding these solutions and services created within the Middle East. Delegates will discuss methods to maintain and sustain solutions to prevent implemented systems from failing. In addition, delegates will confer about principles which will heighten access to the resources for these systems across the entire region to enhance social, gender-based, and economic growth in the Middle East. 
+                    \n
+                    This committee will allow delegates the opportunity to discuss and create methods of developmental growth and opportunity in the Middle East, as well as promote equal, accessible opportunities for anyone who needs them. ",
+                    "sumaiyah.jpg",
+                    "Sumaiyah Ali",
+                    "Head Chair",
+                    "Hello! My name is Sumaiyah and I am a Virginia Tech Alumni. I graduated in 2023 with a degree in National Security and Foreign Affairs as well as a minor in Spanish. I was involved with VT MUN for two years and am so excited to stay involved as an alumni! ",
+                    "sumaiyaha19@vt.edu ",
+                    "Committees.pdf"
                     ),
                  new Committee(
                     "Disarmament and International Security Committee (DISEC)", //com name
