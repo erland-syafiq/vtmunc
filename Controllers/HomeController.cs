@@ -18,7 +18,7 @@ namespace VTMUNC.Controllers
             return View();
         }
 
-        public IActionResult Committees()
+        public IActionResult Resources()
         {
             return View();
         }
