@@ -56,7 +56,7 @@ namespace VTMUNC.Controllers
                     "Head Chair",
                     "Hello! My name is Sumaiyah and I am a Virginia Tech Alumni. I graduated in 2023 with a degree in National Security and Foreign Affairs as well as a minor in Spanish. I was involved with VT MUN for two years and am so excited to stay involved as an alumni! ",
                     "sumaiyaha19@vt.edu ",
-                    "Committees.pdf"
+                    "undp.pdf"
                     ),
                  new Committee(
                     "Disarmament and International Security Committee (DISEC)", //com name
@@ -89,7 +89,7 @@ namespace VTMUNC.Controllers
                     "Crisis Director",
                     "Nothing more needs to be said other than that I’m a huge Percy Jackson fan. I’ve read every book and wanted to take this chance to run a fun committee for the first ever VTMUNC! This is my eighth year of MUN, so I hope that I can use my experience to bring you all a great time!",
                     "sudhan@vt.edu ",
-                    "Committees.pdf"
+                    "finalpercyjackson.pdf"
                     ),
                 new Committee(
                     "Small Islands, Big Problems: Alliance of Small Island States (AOSIS)", //committee name
@@ -100,7 +100,7 @@ namespace VTMUNC.Controllers
                     "Head Chair", //chair a position
                     "My name is Anneli Sample and I am the chair for AOSIS! I am a freshman at Virginia Tech and majoring in International Relations. I have been doing MUN for four years and I am so excited to be part of the inaugural VTMUNC. Please email me if you have any questions! \r\n", //char a bio
                     "anneli@vt.edu", //chair a email
-                    "Committees.pdf" //background guide
+                    "finalaosis.pdf" //background guide
                     ),
                 new Committee(
                     "Suez Showdown: The Suez Crisis of 1956", //com name
@@ -143,7 +143,7 @@ namespace VTMUNC.Controllers
                    "Head Chair",
                    "Hey Guys! My name is Liz and I am a Senior at VT majoring in Political Science and minoring in Integrated Security. I am also dual enrolled in the Political Science Master’s program. I’ve been in MUN for 2 years and also participated in MUN in high school. ",
                    "lizmennitt@vt.edu",
-                   "Committees.pdf"
+                   "american.pdf"
                     ),
                 new Committee(
                     "Just Another Week in Paradise: 1893 Hawai’ian Coup d’etat",
@@ -154,7 +154,7 @@ namespace VTMUNC.Controllers
                     "Head Chair",
                     "I am a second year studying urban planning and design. With a passion for history, the arts, and the\r\ncerebral elements of life, I’ve spent most of my life traveling, and have an affinity for places with\r\npersonality.",
                     "wletvin03@vt.edu",
-                    "Committees.pdf"
+                    "paradise.pdf"
                     ),
                 new Committee(
                     "Restoring Balance: The Legend of Korra",
@@ -167,7 +167,7 @@ namespace VTMUNC.Controllers
                     "Head Chair",
                     "Hello! I am a senior studying Animal and Poultry Sciences and have been involved with Model UN for 3 years. I am so excited to lead you all through an exciting committee focused on working together, solving problems, and not creating too much chaos. ",
                     "natimann@vt.edu",
-                    "Committees.pdf"
+                    "korra.pdf"
                     ),
                 new Committee(
                     "One Count and Ten Thousand Systems: A Star Wars: the Clone Wars Committee",
@@ -185,7 +185,7 @@ namespace VTMUNC.Controllers
                     "Committee Chair",
                     "Just a student aspiring to be a civil engineer and make functioning public transportation in this country. I joined Model UN last year because of my interest in geopolitics and to improve my skills in public speaking. Here’s to an exciting Clone Wars Committee!",
                     "marshaet26@vt.edu",
-                    "Committees.pdf"
+                    "starwars.pdf"
                     ),
                 
                 new Committee(
@@ -202,7 +202,7 @@ namespace VTMUNC.Controllers
                     "Head Chair",
                     "Hi guys! I’m a sophomore majoring in chemical engineering with minors in chemistry and green engineering. I’ve done MUN for awhile, starting in high school like y’all, and am on the board for VTMUN! I have loved Harry Potter since I read it as a kid, and am super excited to focus on this earlier era of the universe. ",
                     "sarahs04@vt.edu",
-                    "Committees.pdf"
+                    "harrypotter.pdf"
                     ),
                 new Committee(
                     "Trouble in Barbieland",
@@ -213,7 +213,7 @@ namespace VTMUNC.Controllers
                     "Head Chair",
                     "Hi everyone! My name is Madi Voss and I am a sophomore here at Virginia Tech. I have only been doing MUN for about a year and a half but I absolutely love it. As an International Relations major I have some super cool yet admittedly insane goals. If it was up to me I would 100% be the “leader of the universe.” However, I have accepted my mortal fate and will hopefully be working for an NGO or the Government in the near future. To be honest, I think a lot of other job paths are cooler but I’ve come into acceptance. While chairing this committee I really hope to use my position of leadership to inspire the delegates and help them bloom. To me the most important things in the world are acceptance and understanding, so come as you are to Barbieland, all are welcome..even Kens. On the topic of Barbie, my favorite part of the movie is totally when the Kens take over Barbieland, specifically when Barbie tells Ken she'll be his “short term, long distance girlfriend.” Oh boy I could relate with that one. I am so very excited to meet you all and I am already so proud. Sublime!",
                     "madiv26@vt.edu",
-                    "Committees.pdf"
+                    "barbie.pdf"
                     )});
 
             _committees.AddCommitteeGroup("Ad Hoc", new Committee[]
