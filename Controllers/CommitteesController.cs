@@ -116,7 +116,10 @@ namespace VTMUNC.Controllers
                 new Committee(
                     "Anthrax Attack: An Anonymous Series of Biological Warfare", //com name
                     "anthrax.jpg", //com pic
-                    "In the panic-stricken United States following the attacks of 9/11, a new issue arises causing mass hysteria throughout the nation. Anonymous letters laced with anthrax are sent to news stations in Florida and New York as well as to a congressional office building in Washington D.C. Anthrax is the spore of Bacillus anthracis which when inhaled, can cause a variety of symptoms, even leading to death. These letters have already taken the lives of 5 people. Members of the CDC as well as the Department of Defence must come together to prevent further chaos and investigate the roots of this attack.\r\n", //com bio
+                    @"In the panic-stricken United States following the attacks of 9/11, a new issue arises causing mass hysteria throughout the nation. Anonymous letters laced with anthrax are sent to news stations in Florida and New York as well as to a congressional office building in Washington D.C. Anthrax is the spore of Bacillus anthracis which when inhaled, can cause a variety of symptoms, even leading to death. These letters have already taken the lives of 5 people. Members of the CDC as well as the Department of Defence must come together to prevent further chaos and investigate the roots of this attack.
+                    \n
+                    \n
+                    Note: This committee will discuss mature topics that some delegates may find unsettling. As such, this committee is intended for more mature audiences and experienced delegates. If you have any questions or concerns, please feel free to email the Under Secretary General of Specialized at pedersenmk@vt.edu. ", //com bio
                     "tanishqa.png", //chair pic
                     "Tanishqa Gautam", //chaur name
                     "Head Chair", //chair pos
