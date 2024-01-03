@@ -23,6 +23,11 @@ namespace VTMUNC.Controllers
             return View();
         }
 
+        public IActionResult Speakers()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             return View();
