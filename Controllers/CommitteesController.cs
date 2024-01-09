@@ -57,18 +57,8 @@ namespace VTMUNC.Controllers
                     "Hello! My name is Sumaiyah and I am a Virginia Tech Alumni. I graduated in 2023 with a degree in National Security and Foreign Affairs as well as a minor in Spanish. I was involved with VT MUN for two years and am so excited to stay involved as an alumni! ",
                     "sumaiyaha19@vt.edu ",
                     "undp.pdf"
-                    ),
-                 new Committee(
-                    "Disarmament and International Security Committee (DISEC)", //com name
-                    "disec.png", //com pic
-                    "The Disarmament and International Security Committee, otherwise known as DISEC, was established in 1993 as the first committee of the General Assembly of the United Nations. Delegates in DISEC discuss global concerns, disarmament, security, and dangers to world peace in order to highlight the efforts being made to safeguard the international security regime. Within this UN body, the questions that delegates must resolve have to do with the Tigrayan conflict. Although the Tigray war officially started in 2020, tensions have been brewing for decades. The armed conflict between Tigray’s People Liberation Front (TPLF) and the Ethiopian forces has officially been called a war from November 2020 and November 2022. During this time, multiple human rights organizations, including amnesty international, human rights watch, and Genocide Watch have called out the Ethiopian government for violations and accusations of genocide. What started off as a war between those two parties has turned into a war on the Tigrayan people as a whole. Despite the current cease-fire, the situation still remains dire for Tigrayan people due to displacement, sexual violence, and allegations of ethnic cleansing. Currently, areas of the Tigray region have been sealed off, with banking services heavily restricted. There is still a lack of access to food, aid and other essential needs. Across the globe, there has been severe condemnation of the human rights abuses from several countries, with Secretary of State Antony Blinken calling for Ethiopian and Amhara troops to retreat from the region. Although there has been international pressure to de-escalate the violence, there has been no formal UNSC action, resulting in criticisms from the international community. As time continues to pass by, it is imperative for member states to act and prevent further atrocities from occuring in the region.\r\n", //com bio
-                    "leah.jpg", //chair pic
-                    "Leah Solomon", //chaur name
-                    "Head Chair", //chair pos
-                    "Hello everyone! My name is Leah Solomon and I am the chair for DISEC! I am a public health major with a minor in adaptive brain and behavior. I’ve been a part of Model UN on and off since my 8th grade. Ethnically, I am from Tigray, Ethiopia (which is why I’m super passionate about the topic) but I currently reside in Ashburn, VA. Some hobbies of mine include playing tennis and going to concerts or any live event. I am super excited to work with you all! Please email me if you have any questions.", //chairbio
-                    "leahs@vt.edu", //chair email                    
-                    "Committees.pdf" //background
                     )
+                
 
             });
 
@@ -111,23 +101,8 @@ namespace VTMUNC.Controllers
                     "Head Chair ", //chair pos
                     "Hello! My name is Noah Charness, I am a junior studying engineering here at Virginia Tech. I am super excited to bring you this committee, where we will talk about one of the most integral crises to shape the current context for international relations. \r\n", //chairbio
                     "noahc25@vt.edu ", //chair email                    
-                    "Committees.pdf" //background
-                    ),
-                new Committee(
-                    "Anthrax Attack: An Anonymous Series of Biological Warfare", //com name
-                    "anthrax.jpg", //com pic
-                    @"In the panic-stricken United States following the attacks of 9/11, a new issue arises causing mass hysteria throughout the nation. Anonymous letters laced with anthrax are sent to news stations in Florida and New York as well as to a congressional office building in Washington D.C. Anthrax is the spore of Bacillus anthracis which when inhaled, can cause a variety of symptoms, even leading to death. These letters have already taken the lives of 5 people. Members of the CDC as well as the Department of Defence must come together to prevent further chaos and investigate the roots of this attack.
-                    \n
-                    \n
-                    Note: This committee will discuss mature topics that some delegates may find unsettling. As such, this committee is intended for more mature audiences and experienced delegates. If you have any questions or concerns, please feel free to email the Under Secretary General of Specialized at pedersenmk@vt.edu. ", //com bio
-                    "tanishqa.png", //chair pic
-                    "Tanishqa Gautam", //chaur name
-                    "Head Chair", //chair pos
-                    "Hello delegates! My name is Tanishqa Gautam. I am an Engineering freshman at Virginia Tech! I have been doing MUN for 3 years and I am thrilled to be a part of VTMUNC’s first conference. I can’t wait to meet all the delegates and see how the debate will unfold at the conference!\r\n", //chairbio
-                    "tanishqa@vt.edu", //chair email                    
-                    "Committees.pdf" //background
-                )
-
+                    "suezfinaldraft.pdf" //background
+                    )
 
         });
 
@@ -227,7 +202,7 @@ namespace VTMUNC.Controllers
                     "Head Chair",
                     "Hey everyone! My name is James Mullet, and I am so excited to be your chair for the first VTMUNC Ad Hoc committee. I was last year's VTMUN President and graduated last spring with a Double Major in Biochemistry and Biological Sciences. I have participated in MUN throughout my time at Virginia Tech, and I am so happy to be coming back to chair this committee! Personally, I work as a Research Technician at MIT, but I always love to discuss complex politically and culturally relevant issues. I am a big tea and coffee enthusiast who loves to hike, walk, and do my daily sudoku puzzles! I am so excited to bring a competitive and engaging committee this year that is interesting for everyone and make VTMUNC I Ad hoc a fantastic experience!",
                     "jmullet@mit.edu",
-                    "alyssa.jpg", //chair pic
+                    "alyssa.png", //chair pic
                     "Alyssa Bohnstengel", //chaur name
                     "Crisis Director", //chair pos
                     "Hi everyone! My name is Alyssa Bohnstengel and I am beyond excited to be your crisis director! I am a senior majoring in political science with three minors in creative writing, European studies, and global engagement! I have been doing MUN for seven years and have been in Model UN at Virginia Tech for three! I am currently the External President of VTMUN & also serve as the director of finance for VTMUNC. Aside from MUN, I love reading (I have an instagram account dedicated to books that has nine-hundred followers,) dog-sitting (even though they use my roommates room as a bathroom,) spending time with my friends, and doing puzzles (I think it might be an addiction.) I am also a proud NYT game enthusiast! I am looking forward to meeting everyone and bringing our ad-hoc idea to life!", //chairbio
