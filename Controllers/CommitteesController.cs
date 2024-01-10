@@ -30,7 +30,7 @@ namespace VTMUNC.Controllers
                     "Head Chair",
                     "Hi everyone!\r\nI’m Jyotsna and I am so excited to be your head chair for the Commission on the Status of Women. I’m currently a senior at Virginia Tech double majoring in economics and international relations with minors in French and data science. I’ve been involved in MUN since my sophomore year of college and am currently my team’s GA training chair. I’ve always loved GA’s ability to have young people consider intricate solutions to real-world problems, and I feel like it’s not something that happens in many other settings. Prior to college I did a lot of debate and speech in high school with NSDA and loved it. Apart from MUN, I am also co-president and founder of VT’s chapter of Amnesty International, so I always enjoy talking about issues of equity and policy improvements! In my free time, I love reading, journaling, watching Netflix shows, doing henna, and making Spotify playlists (especially if they involve Beyoncé). I am thrilled to have been able to create a committee I feel so passionate about, and I look forward to seeing you all there!\r\n",
                     "jyorathinam@vt.edu",
-                    "Committees.pdf"
+                    "CSWFINAL.pdf"
                     ),
                  new Committee(
                     "World Health Organization (WHO)", //com name
@@ -41,7 +41,7 @@ namespace VTMUNC.Controllers
                     "Head Chair", //chair pos
                     "Hi everyone!\r\nMy name is Abe Al-Dalli and I am a freshman at Virginia Tech. I am currently majoring in Biology with the intent to pursue medicine and obtain an M.D. in internal medicine, and I am also minoring in economics. In my free time I enjoy playing sports such as soccer, golf, tennis, basketball, and football, hanging out with friends and family, cooking/baking, and weight lifting. I have been involved in MUN for over 6 years throughout middle school and high school, where I have participated in many high school and college conferences, and also led my high school team for about two years. Throughout committee I’m excited to see diplomatic and substantive debate regarding the three topics in this committee. I can’t wait to see you all soon!\r\n", //chairbio
                     "abe23@vt.edu", //chair email                    
-                    "Committees.pdf" //background
+                    "WHOFINAL.pdf" //background
                     ),
                  new Committee(
                     "United Nations Development Programme (UNDP)",
@@ -56,7 +56,7 @@ namespace VTMUNC.Controllers
                     "Head Chair",
                     "Hello! My name is Sumaiyah and I am a Virginia Tech Alumni. I graduated in 2023 with a degree in National Security and Foreign Affairs as well as a minor in Spanish. I was involved with VT MUN for two years and am so excited to stay involved as an alumni! ",
                     "sumaiyaha19@vt.edu ",
-                    "undp.pdf"
+                    "UNDPFINAL.pdf"
                     )
                 
 
