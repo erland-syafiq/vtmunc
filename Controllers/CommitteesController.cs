@@ -195,14 +195,14 @@ namespace VTMUNC.Controllers
            {
                 new Committee(
                     "President's Ad-Hoc",
-                    "adhoc.png",
+                    "alyssa.png",
                     @"The Ad-hoc Committee of the Presidents is the most challenging committee at VTMUNC I, as everything will remain confidential until the conference! Delegates will get all information including background guides & positions in the first committee session. ",
                     "james.jpg",
                     "James Mullet",
                     "Head Chair",
                     "Hey everyone! My name is James Mullet, and I am so excited to be your chair for the first VTMUNC Ad Hoc committee. I was last year's VTMUN President and graduated last spring with a Double Major in Biochemistry and Biological Sciences. I have participated in MUN throughout my time at Virginia Tech, and I am so happy to be coming back to chair this committee! Personally, I work as a Research Technician at MIT, but I always love to discuss complex politically and culturally relevant issues. I am a big tea and coffee enthusiast who loves to hike, walk, and do my daily sudoku puzzles! I am so excited to bring a competitive and engaging committee this year that is interesting for everyone and make VTMUNC I Ad hoc a fantastic experience!",
                     "jmullet@mit.edu",
-                    "alyssa.png", //chair pic
+                    "alyssa.jpg", //chair pic
                     "Alyssa Bohnstengel", //chaur name
                     "Crisis Director", //chair pos
                     "Hi everyone! My name is Alyssa Bohnstengel and I am beyond excited to be your crisis director! I am a senior majoring in political science with three minors in creative writing, European studies, and global engagement! I have been doing MUN for seven years and have been in Model UN at Virginia Tech for three! I am currently the External President of VTMUN & also serve as the director of finance for VTMUNC. Aside from MUN, I love reading (I have an instagram account dedicated to books that has nine-hundred followers,) dog-sitting (even though they use my roommates room as a bathroom,) spending time with my friends, and doing puzzles (I think it might be an addiction.) I am also a proud NYT game enthusiast! I am looking forward to meeting everyone and bringing our ad-hoc idea to life!", //chairbio
