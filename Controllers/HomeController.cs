@@ -28,6 +28,10 @@ namespace VTMUNC.Controllers
             return View();
         }
 
+        public IActionResult Sponsors()
+            return View();
+        }
+
         public IActionResult About()
         {
             return View();
