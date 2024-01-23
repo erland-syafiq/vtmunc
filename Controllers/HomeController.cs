@@ -29,6 +29,7 @@ namespace VTMUNC.Controllers
         }
 
         public IActionResult Sponsors()
+        {
             return View();
         }
 
