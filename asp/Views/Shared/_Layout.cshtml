@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VTMUNC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/VTMUNC.styles.css" asp-append-version="true" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/logo" href="/Images/Logo.png">
+
+    <!-- Google Fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Source+Sans+3&display=swap" rel="stylesheet">
+    <style>
+        /* Highlighted Code - Start */
+        .navbar {
+            background-color: #630031 !important;
+        }
+        /* Highlighted Code - End */
+
+        /* Override text color to white */
+        .customFont {
+            color: white !important;
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            margin-right: 15px;
+        }
+
+        button.navbar-toggler {
+            background-color: var(--secondary-background);
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
+            <div class="container-fluid">
+                <img src="/Images/Logo.png" class="img-fluid" style="height: 25px; margin: 10px" />
+                <a class="navbar-brand customFont" asp-area="" asp-controller="Home" asp-action="Index">VTMUNC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                    <a class="nav-link customFont" asp-area="" asp-controller="Committees" asp-action="Index">Committees</a>
+                    <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="Resources">Resources</a>  
+                    <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="Speakers">Speakers</a>
+                    <a class="nav-link customFont" asp-area="" asp-controller="Home" asp-action="Sponsors">Sponsors</a>
+                    <a class="nav-link customFont" asp-area="" asp-controller="Applicants" asp-action="Create">Register</a>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @if (ViewData["mainContainer"] != null)
+    {
+        <div class="contentBackground">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    }
+    else
+    {
+        <div class="container contentBackground">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    }
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footerText col-12 col-md-8 " style="padding: 30px">
+                    <div class="logoTitle d-flex align-items-center">
+                        <img src="/Images/Logo.png" />
+                        <h4>VTMUNC 2024</h4>
+                    </div>
+                    <p>
+                        Virginia Tech, Blacksburg, VA 24061 <br>
+                        chargedaffaires@vtmunc.org <br />
+                        <a href="https://www.inclusive.vt.edu/resources/land-acknowledgement-and-labor-recognition.html" target="_blank" style="text-decoration: none; color: inherit;">
+                        Land Acknowledgement</a>
+                    </p>
+
+                    <p class="disclaimerText">
+                        Although this organization has members who are Virginia Tech students and may have University employees
+                        associated or engaged in its activities and affairs, the organization is not a part of or an agency of
+                        the University. It is a separate and independent organization which is responsible for and manages its
+                        own activities and affairs. The University does not direct, supervise or control the organization and is
+                        not responsible for the organization's contracts, acts or omissions. the VTMUNC secretariat reserves the
+                        right to change website contents at any given time.
+                    </p>
+
+                    <a href="https://www.instagram.com/vtmunc/" target="_blank">
+                        <img src="/Images/Instagram.svg" class="img-fluid" style="height: 30px;" />
+                    </a>
+                </div>
+
+
+                <div class="footerMap col-md-4 d-flex justify-content-center z-depth-1-half map-container" id="map-container-google-1" style="padding: 30px">
+                    <iframe src="https://maps.google.com/maps?q=blacksburg&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

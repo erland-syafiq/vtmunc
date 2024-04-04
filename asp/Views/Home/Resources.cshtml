@@ -1,0 +1,525 @@
+﻿@using VTMUNC.ViewModels;
+@{
+    ViewData["Title"] = "Resources";
+}
+
+
+<style>
+
+    .committeesTitle {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+        .committeesTitle::after {
+            background-color: #DEBB8F;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 8px;
+            height: 20px;
+            width: 100%;
+            transform: scaleX(1.1);
+            z-index: -1;
+        }
+
+    .committeesCard {
+        padding: 20px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border: solid var(--primary);
+        background: var(--primary-background);
+        box-shadow: -8px 12px 0px 0px var(--tertiary);
+    }
+
+    .committeesEmail {
+        font-style: italic;
+        font-family: "Playfair Display", sans-serif;
+        font-size: 16px;
+    }
+
+    .committeesContainer {
+        height: 250px;
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        height: 100%
+    }
+
+    .committeesImg {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .committeesImg:hover {
+            transform: scale(1.1);
+        }
+
+    .committeesCard > p {
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 13px;
+    }
+
+</style>
+
+<section>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="text-nowrap committeesTitle">Resources</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center" style="padding: 30px">
+            <h3 class="text-nowrap">Policy</h3>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-evenly h-100">
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Conference Policies
+                </h4>
+
+                <a href="/Policy/Policy.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/vt.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Delegate Handbook
+                </h4>
+
+                <a href="/Policy/VTMUNC Handbook.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Home1.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Schedule
+                </h4>
+
+                <a href="/Policy/schedule.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/vto.png" />
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center" style="padding: 30px">
+            <h3 class="text-nowrap">Waivers and Forms</h3>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-evenly h-100">
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Conference Feedback Form
+                </h4>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuZtjwCw2_bHdkicbc0wWbJ3o5xi43oyFrafYb6WBubQ6qaA/viewform" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/vt1.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Anonymous Reporting Form
+                </h4>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYF02h5UB2Qg6ygsJkbC6TV2pvWAlQ9YMniPmDO_TGvsLSCQ/viewform" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/vt3.png" />
+                </a>
+
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Medical Waiver
+                </h4>
+
+                <a href="/Policy/medical.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/vt2.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Liability Waiver
+                </h4>
+
+                <a href="/Policy/liability.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/vt1.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Committee Preference
+                </h4>
+
+                <a href="https://forms.gle/xHB4rQZHwnes9Pta8" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/vt3.png" />
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center" style="padding: 30px">
+            <h3 class="text-nowrap">Logistics</h3>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-evenly h-100">
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Hotel Information
+                </h4>
+
+                <a href="/Policy/Hotels.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/hotel.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Room Assignments
+                </h4>
+
+                <a href="/Policy/Room Assignments.png" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Policy/Room Assignments.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Where to Eat?
+                </h4>
+
+                <a href="/Policy/Eating.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/eat.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Blacksburg Transportation
+                </h4>
+
+                <a href="/Policy/Transportation.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/bt.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Getting to Blacksburg
+                </h4>
+
+                <a href="/Policy/Travel.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/transport.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center" style="padding: 30px">
+            <h3 class="text-nowrap">How to MUN</h3>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-evenly h-100">
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    VT How to MUN
+                </h4>
+
+                <a href="/Policy/Flow_of_Debate.pdf" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/howto.png" />
+                </a>
+
+            </div>
+        </div>
+
+        
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                        Getting Started with Model UN
+                </h4>
+
+                <a href="https://bestdelegate.com/mun-made-easy-how-to-get-started-with-model-united-nations" target="_blank" class="committeesContainer">
+                        <img class="committeesImg" src="/Images/Resources/starting.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Basics to Parliamentary Procedure
+                </h4>
+
+                <a href="https://www.youtube.com/watch?v=eOu7VAkuEEg" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/parlipro.jfif" />
+                </a>
+
+            </div>
+        </div>        
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center" style="padding: 30px">
+            <h3 class="text-nowrap">Overview of Committees</h3>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-evenly h-100">
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Committee Formats
+                </h4>
+
+                <a href="https://www.youtube.com/watch?v=nijZhSnDyrg" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/committee.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Overview of General Assembly
+                </h4>
+
+                <a href="https://www.youtube.com/watch?v=BYYwBLJ9q5E" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/ga.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Overview of Crisis
+                </h4>
+
+                <a href="https://bestdelegate.com/everything-you-need-to-know-about-crisis-committees/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/crisis.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Overview of Specialized
+                </h4>
+
+                <a href="https://www.allamericanmun.com/mun-101-specialized-committees/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/specialized.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center" style="padding: 30px">
+            <h3 class="text-nowrap">Research Gathering</h3>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-evenly h-100">
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Research Binder
+                </h4>
+
+                <a href="https://bestdelegate.com/mun-research-made-easy-15-things-every-delegate-should-have-in-their-research-binder/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/binder.jfif" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    The World Factbook
+                </h4>
+
+                <a href="https://www.cia.gov/the-world-factbook/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/worldfactbook.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    UN Security Council
+                </h4>
+
+                <a href="https://www.un.org/securitycouncil/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/unsc.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Human Right Watch
+                </h4>
+
+                <a href="https://www.hrw.org/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/hwr.png" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Amnesty International
+                </h4>
+
+                <a href="https://www.amnesty.org/en/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/amnesty.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Foreign Policy
+                </h4>
+
+                <a href="https://foreignpolicy.com/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/fp.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Pew Research Center
+                </h4>
+
+                <a href="https://www.pewresearch.org/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/prc.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Proquest
+                </h4>
+
+                <a href="https://www.proquest.com/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/proquest.jpg" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="committeesCard">
+                <h4 style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px">
+                    Britannica
+                </h4>
+
+                <a href="https://www.britannica.com/" target="_blank" class="committeesContainer">
+                    <img class="committeesImg" src="/Images/Resources/britannica.png" />
+                </a>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</section>
