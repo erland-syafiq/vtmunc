@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #630031 !important;
+}
+
+.customFont {
+    color: white !important;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+button.navbar-toggler {
+    background-color: var(--secondary-background);
+}
+
+.navbar-logo {
+    height: 25px; 
+    margin: 10px
+}
