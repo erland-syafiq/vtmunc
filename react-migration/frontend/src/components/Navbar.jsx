@@ -14,11 +14,11 @@ function Navbar() {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
-                        <NavLink to="/"><a class="nav-link customFont"> Home</a></NavLink>
-                        <NavLink to="/about"><a class="nav-link customFont"> About Us</a></NavLink>
-                        <NavLink to="/committees"><a class="nav-link customFont"> Committees</a></NavLink>
-                        <NavLink to="/resources"><a class="nav-link customFont"> Resources</a></NavLink>
-                        <NavLink to="/sponsors"><a class="nav-link customFont"> Sponsors</a></NavLink>
+                        <NavLink class="nav-link customFont" to="/">Home</NavLink>
+                        <NavLink class="nav-link customFont"to="/about"> About Us</NavLink>
+                        <NavLink class="nav-link customFont" to="/committees">Committees</NavLink>
+                        <NavLink class="nav-link customFont" to="/resources">Resources</NavLink>
+                        <NavLink class="nav-link customFont" to="/sponsors"> Sponsors</NavLink>
                     </div>
                 </div>
             </nav>
