@@ -4,10 +4,10 @@ import './UserCard.css';
 function UserCard({person}) {
     const {name, position, bio, email, image} = person;
     return (
-        <div class="col-md-4">
-            <div class="secretariatCard">
+        <div className="col-md-4">
+            <div className="secretariatCard">
                 <div>
-                    <img class="secretariatImg" src={"/Images/Secretariat_Headshots/" + image} />
+                    <img className="secretariatImg" src={"/Images/Secretariat_Headshots/" + image} />
                 </div>
 
                 <h4>{name}</h4>
@@ -16,7 +16,7 @@ function UserCard({person}) {
                 <p>
                     {bio}
                 </p>
-                <h6 class="secretariatEmail">{email}</h6>
+                <h6 className="secretariatEmail">{email}</h6>
             </div>
         </div>
     )

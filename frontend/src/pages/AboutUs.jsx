@@ -23,14 +23,14 @@ function AboutUs() {
       }, []);
 
     return (
-        <main class="container">
+        <main className="container">
             <section>
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h2 class="text-nowrap secretariatTitle">Secretariat</h2>
+                <div className="row">
+                    <div className="col-12 text-center">
+                        <h2 className="text-nowrap secretariatTitle">Secretariat</h2>
                     </div>
                 </div>
-                <div class="row">
+                <div className="row">
                     {
                     secretariat.map((staff, index) => {
                         return (
