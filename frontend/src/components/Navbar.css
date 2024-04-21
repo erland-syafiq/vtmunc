@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #630031;
+    background-color: #630031 !important;
 }
 
 .nav-link {
@@ -8,6 +8,11 @@
     font-style: normal;
     font-weight: 400;
     margin-right: 15px;
+}
+
+.nav-link:hover {
+    background-color: var(--tertiary);
+    color: var(--primary);
 }
 
 button.navbar-toggler {
