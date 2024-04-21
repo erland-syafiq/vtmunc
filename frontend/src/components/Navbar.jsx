@@ -1,11 +1,17 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation} from "react-router-dom";
 import './Navbar.css';
 
 function Navbar() {
+    const location = useLocation();
+
+    const isHomePage = location.pathname === '/';
+
+    const navbarStyle = isHomePage ? 'navbar-transparent' : '';
+
     return (
         <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
+            <nav class={`${navbarStyle} navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow`}>
                 <div class="container-fluid">
                     <NavLink to="/"><img src="/Images/Logo.png" class="navbar-logo" /></NavLink>
                     <NavLink className="nav-link" to="/">VTMUNC</NavLink>

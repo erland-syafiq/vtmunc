@@ -11,8 +11,12 @@
 }
 
 .nav-link:hover {
-    background-color: var(--tertiary);
-    color: var(--primary);
+    background-color: var(--primary-background);
+}
+
+.navbar-transparent {
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 button.navbar-toggler {
