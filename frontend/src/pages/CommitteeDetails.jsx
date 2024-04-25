@@ -49,9 +49,6 @@ export default function CommitteeDetails() {
                                 <h3>{committee.committee_name}</h3>
                             </div>                
                         </div>
-                        
-                        {/* <p className="mt-3" >{committee.committee_bio}</p> */}
-
                         <FormattedParagraph paragraphClassName="mt-3" text={committee.committee_bio} />
                         <a className="btn btn-primary btn-lg heroBtn" href={"/background_guides/" + committee.background_guide} target="_blank">
                             <h5 className="backgroundGuideButton">
