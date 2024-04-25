@@ -1,21 +1,19 @@
 import React from 'react';
 import './UserCard.css';
+import FormattedParagraph from './FormattedParagraph';
 
-function UserCard({person}) {
-    const {name, position, bio, email, image} = person;
+function UserCard({name, position, bio, email, imagePath, colWidth}) {
     return (
-        <div className="col-md-4">
+        <div className={"col-md-"+colWidth}>
             <div className="secretariatCard">
                 <div>
-                    <img className="secretariatImg" src={"/Images/Secretariat_Headshots/" + image} />
+                    <img className="secretariatImg" src={imagePath} />
                 </div>
 
                 <h4>{name}</h4>
                 <h5>{position}</h5>
                 <br/>
-                <p>
-                    {bio}
-                </p>
+                <FormattedParagraph text={bio} />
                 <h6 className="secretariatEmail">{email}</h6>
             </div>
         </div>

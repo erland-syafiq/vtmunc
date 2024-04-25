@@ -1,26 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import UserCard from '../components/UserCard.jsx';
+import useStaticData from '../hooks/useStaticData.jsx';
 import './AboutUs.css';
 
 function AboutUs() {
-    const [secretariat, setSecretariat] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await fetch('/data/secretariat.json');
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            setSecretariat(data);
-          } catch (error) {
-            console.error('Error fetching secretariat data:', error);
-          }
-        };
-    
-        fetchData();
-      }, []);
+    const secretariat = useStaticData("/data/secretariat.json", []);
 
     return (
         <main className="container">
@@ -32,18 +16,12 @@ function AboutUs() {
                 </div>
                 <div className="row">
                     {
-                    secretariat.map((staff, index) => {
-                        return (
-                                <UserCard person={staff} key={index}/>
-                            );
-                        })
-                    }
+                    secretariat.map(({name, position, bio, email, image}, index) => 
+                         <UserCard colWidth={4} key={index} name={name} position={position} bio={bio} email={email} imagePath={"/Images/Secretariat_Headshots/" + image}/>
+                    )}
                 </div>
             </section>
         </main>
-
-
-
     );
 };
 

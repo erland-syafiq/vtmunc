@@ -1,0 +1,64 @@
+
+.committeeDetails {
+    min-height: 100vh;
+}
+
+.backgroundGuideButton {
+    color:white; 
+    transform: translate(0px, 3px); 
+}
+
+.chairCard {
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: solid var(--primary);
+    background: var(--primary-background);
+    box-shadow: -8px 12px 0px 0px var(--tertiary);
+}
+
+.chairEmail {
+    font-style: italic;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 16px;
+}
+
+.chairImg {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    margin-bottom: 20px;
+   
+}
+
+.committeeImg {
+    height: 88px;  
+    width: 88px;
+    object-fit: cover;        
+    margin-bottom: 30px;
+    box-shadow: -20px 16px 0px 0px #DEBB8F;
+    margin-left: 20px;
+}
+
+.committeeTitle {        
+    justify-content: center;
+    align-items: center;    
+    margin-top: 20px;
+}
+
+.heroBtn {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 14px;
+}
