@@ -8,6 +8,7 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Committees from './pages/Committees.jsx';
 import CommitteeDetails from './pages/CommitteeDetails.jsx';
+import Register from './pages/Register.jsx';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/committees/:id" element={<CommitteeDetails />} />
         <Route path="/sponsors" element={<div></div>} />
         <Route path="/resources" element={<div></div>} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
       <Footer/>

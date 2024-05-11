@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -16,11 +17,11 @@ function Home() {
                 <h4>
                     The premier Model United Nations conference for high school students
                 </h4>
-                <a className="btn btn-primary btn-lg heroBtn" asp-area="" asp-controller="Applicants" asp-action="Create">
-                    <h4>
-                        Register Here
+                <Link to="/register" text="R">
+                    <h4  className="btn btn-primary btn-lg heroBtn">
+                            Register Here
                     </h4>
-                </a>
+                </Link>
             </div>
             <div className="heroBackground"></div>
         </section>
