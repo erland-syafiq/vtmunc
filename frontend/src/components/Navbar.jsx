@@ -25,6 +25,7 @@ function Navbar() {
                         <NavLink className="nav-link" to="/committees">Committees</NavLink>
                         <NavLink className="nav-link" to="/resources">Resources</NavLink>
                         <NavLink className="nav-link" to="/sponsors"> Sponsors</NavLink>
+                        <NavLink className="nav-link" to="/register"> Registers</NavLink>
                     </div>
                 </div>
             </nav>
