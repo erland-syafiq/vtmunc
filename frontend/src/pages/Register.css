@@ -26,3 +26,7 @@
 .registerPage .group > .row {
     margin-bottom: 20px
 }
+
+.registerPage input[type=checkbox] {
+    accent-color: var(--primary);
+}

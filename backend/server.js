@@ -1,12 +1,14 @@
 import express from "express";
 import { getApplicants, putApplicant } from "./dynamodb.js";
 import { generateRandomId, getCurrentDate } from "./util.js";
+import cors from "cors";
 const app = express();
 const port = 8080;
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(cors());
 
 // Hello world test
 app.get("/", (req, res) => {
