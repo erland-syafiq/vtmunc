@@ -1,0 +1,32 @@
+.registerPage h1 {
+    color: var(--primary);
+}
+
+.registerPage h4 {
+    color: var(--primary);
+}
+
+.registerPage.form-group input[type="submit"] {
+    margin-top: 25px;
+    font-family: "Playfair Display", sans-serif;
+}
+
+.registerPage textarea.form-control {
+    height: 125px !important;
+}
+
+.registerPage body {
+    background-color: var(--secondary-background);
+}
+
+.registerPage .group {
+    margin-bottom: 50px;
+}
+
+.registerPage .group > .row {
+    margin-bottom: 20px
+}
+
+.registerPage input[type=checkbox] {
+    accent-color: var(--primary);
+}

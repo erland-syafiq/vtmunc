@@ -1,0 +1,139 @@
+﻿@using VTMUNC.ViewModels;
+@model Committee
+
+<style>
+    .chairCard {
+        padding: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border: solid var(--primary);
+        background: var(--primary-background);
+        box-shadow: -8px 12px 0px 0px var(--tertiary);
+    }
+
+    .chairEmail {
+        font-style: italic;
+        font-family: "Playfair Display", sans-serif;
+        font-size: 16px;
+    }
+
+    .chairImg {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+        margin-bottom: 20px;
+       
+    }
+
+    .committeeImg {
+        height: 88px;  
+        width: 88px;
+        object-fit: cover;        
+        margin-bottom: 30px;
+        box-shadow: -20px 16px 0px 0px #DEBB8F;
+        margin-left: 20px;
+    }
+
+    .committeeTitle {        
+        justify-content: center;
+        align-items: center;    
+        margin-top: 20px;
+    }
+
+    .heroBtn {
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        justify-content: center;
+        padding: 10px;
+        margin-top: 40px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+</style>
+
+
+<section style="min-height: 100vh;">
+    <div class="row" style="margin-top: 50px">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="committeeImg" src="/Images/Committees/@Model.ImagePath" />
+                </div>
+                <div class="col-md-9 committeeTitle">
+                    <h3>@Model.Name</h3>
+                </div>                
+            </div>
+            
+            <p style="margin-top: 20px">@Html.Raw(Model.ExecutiveSummary)</p>
+            <a class="btn btn-primary btn-lg heroBtn" href="/BackgroundGuides/@Model.BackgroundGuide" target="_blank">
+                <h5 style="color:white;  transform: translate(0px, 3px); ">
+                    Background Guide
+                </h5>
+            </a>
+        </div>
+        @if (@Model.ChairB == null)
+        {
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <div class="chairCard">
+                    <div>
+                        <img class="chairImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
+                    </div>
+
+                    <h4>@Model.ChairA.Name</h4>
+                    <h5>@Model.ChairA.Position</h5>
+                    <br>
+                    <p>
+                        @Model.ChairA.Bio
+                    </p>
+                    <h6 class="chairEmail">@Model.ChairA.Email</h6>
+                </div>
+            </div>
+            <div class="col-md-1"></div>            
+        }
+        else
+        {        
+        <div class="col-md-3">
+            <div class="chairCard">
+                <div>
+                    <img class="chairImg" src="/Images/Chair_Headshots/@Model.ChairA.ImagePath" />
+                </div>
+
+                <h4>@Model.ChairA.Name</h4>
+                <h5>@Model.ChairA.Position</h5>
+                <br>
+                <p>
+                    @Model.ChairA.Bio
+                </p>
+                <h6 class="chairEmail">@Model.ChairA.Email</h6>
+            </div>
+        </div>
+            <div class="col-md-3">
+                <div class="chairCard">
+                    <div>
+                        <img class="chairImg" src="/Images/Chair_Headshots/@Model.ChairB.ImagePath" />
+                    </div>
+
+                    <h4>@Model.ChairB.Name</h4>
+                    <h5>@Model.ChairB.Position</h5>
+                    <br>
+                    <p>
+                        @Model.ChairB.Bio
+                    </p>
+                    <h6 class="chairEmail">@Model.ChairB.Email</h6>
+                </div>
+            </div> 
+        }
+
+        
+
+    </div>
+</section>

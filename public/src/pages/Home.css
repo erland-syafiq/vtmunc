@@ -1,0 +1,54 @@
+.heroBackground {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-image: url(../Images/Home1.jpg);
+    background-size: cover;
+    height: 125vh;
+    width: 100%;
+    z-index: -1;
+}
+
+section.hero {
+    width: 100%;
+    height: calc(100vh - 61px);
+    display: flex;
+    align-items: center;
+}
+
+.heroContent {
+    color: white;
+    transform: translate(-5px, 0px);
+}
+
+.heroContent > h1 {
+    margin-bottom: 40px;
+}
+
+.heroBtn{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.heroBtn > h4 {
+    margin-bottom: 0px;
+}
+
+.heroHighlightBox {
+    width: 19px;
+    height: 410px;
+    background-color: rgba(58, 80, 107, 32%);
+}
+
+.columnTan {
+    position: absolute;
+    left: 90%;
+    right: 0%;        
+    background: #DEBB8F;        
+    z-index: 1;
+}
