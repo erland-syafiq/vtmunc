@@ -1,6 +1,6 @@
 import express from "express";
-import { getApplicants, putApplicant } from "./dynamodb.js";
-import { generateRandomId, getCurrentDate } from "./util.js";
+import { getApplicants, putApplicant } from "./src/dynamodb.js";
+import { generateRandomId, getCurrentDate } from "./src/util.js";
 import cors from "cors";
 const app = express();
 const port = 8080;
@@ -9,16 +9,17 @@ const port = 8080;
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
+app.use(express.static('./public/dist'))
 
 // Hello world test
-app.get("/", (req, res) => {
+app.get("/helloworld", (req, res) => {
     res.status(200);
     res.send("Hello World");
 });
 
 
 // Applicants routes
-app.get("/applicants", async (req, res) => {
+app.get("/api/applicants", async (req, res) => {
     try {
         const applicants = await getApplicants();
         res.status(200);
@@ -31,7 +32,7 @@ app.get("/applicants", async (req, res) => {
     }
 });
 
-app.post("/applicants", async (req, res) => {
+app.post("/api/applicants", async (req, res) => {
     try {
         const body = req.body;
         console.log(body);
@@ -63,6 +64,11 @@ app.post("/applicants", async (req, res) => {
         res.send(`Error with adding applicant: ${e}`);
     }
 });
+
+app.get("*", (req, res) => {
+    res.sendFile("./public/dist/index.html");
+})
+
 
 app.listen(port, function() {
     console.log(`Example app listening on port ${port}!`);
