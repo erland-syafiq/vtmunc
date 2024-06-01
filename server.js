@@ -1,7 +1,13 @@
 import express from "express";
 import { getApplicants, putApplicant } from "./src/dynamodb.js";
 import { generateRandomId, getCurrentDate } from "./src/util.js";
+import { fileURLToPath } from 'url';
+import path, {dirname} from "path";
 import cors from "cors";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const app = express();
 const port = 8080;
 
@@ -9,7 +15,6 @@ const port = 8080;
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
-app.use(express.static('./public/dist'))
 
 // Hello world test
 app.get("/helloworld", (req, res) => {
@@ -65,11 +70,13 @@ app.post("/api/applicants", async (req, res) => {
     }
 });
 
+// Serving Front End Application
+app.use(express.static(path.join(__dirname, 'public/dist')))
 app.get("*", (req, res) => {
-    res.sendFile("./public/dist/index.html");
+    res.sendFile(path.join(__dirname, 'public/dist/index.html'));
 })
 
 
 app.listen(port, function() {
-    console.log(`Example app listening on port ${port}!`);
+    console.log(`Checkout app on http://localhost:${port}`);
 });
