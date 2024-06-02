@@ -22,10 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Create identity file for ssh
-        run: echo "${{ secrets.EC2_IDENTITY_FILE}}" > vtmunc.pem
+      - name: Create SSH key
+        run: |
+          echo "${{ secrets.EC2_IDENTITY_FILE}}" > vtmunc.pem
+          ssh-keyscan -H vtmunc.org -i vtmunc.pem > ~/.ssh/known_hosts
       - name: SSH into EC2 instance
-        run: ssh -i vtmunc.pem -o "StrictHostKeyChecking no" webapp@vtmunc.org
+        run: ssh -i vtmunc.pem webapp@vtmunc.org
       - name: Pull image from docker hub
         run: docker pull vtmunc/vtmunc:latest
       - name: Delete old container
