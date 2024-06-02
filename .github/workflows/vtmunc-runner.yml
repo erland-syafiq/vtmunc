@@ -28,12 +28,6 @@ jobs:
         run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
       - name: Adding known hosts
         run: echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-      - name: SSH into EC2 instance
-        run: ssh -i ~/.ssh/id_rsa webapp@vtmunc.org
-      - name: Pull image from docker hub
-        run: docker pull vtmunc/vtmunc:latest
-      - name: Delete old container
-        run: docker rm -rf vtmunc
-      - name: Run docker container
-        run: docker run -d -p 8080:8080 --name vtmunc vtmunc/vtmunc
+      - name: Connect to SSH instance, pull image and deploy container
+        run: ssh -i ~/.ssh/id_rsa webapp@vtmunc.org "docker pull vtmunc/vtmunc:latest && docker rm -rf vtmunc && docker run -d -p 8080:8080 --name vtmunc vtmunc/vtmunc "
 
