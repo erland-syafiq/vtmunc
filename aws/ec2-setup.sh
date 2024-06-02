@@ -38,3 +38,21 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 # Add docker to user group
 sudo usermod -aG docker $USER
+
+# Add github runner
+# Create a folder
+sudo useradd -m -d /home/githubrunner -s /bin/bash githubrunner
+sudo passwd -d githubrunner 
+sudo usermod -aG sudo githubrunner
+sudo usermod -aG docker githubrunner
+su githubrunner
+cd ~
+mkdir actions-runner && cd actions-runner
+# Download the latest runner package
+curl -o actions-runner-linux-x64-2.316.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.316.1/actions-runner-linux-x64-2.316.1.tar.gz
+# Optional: Validate the hash
+echo "d62de2400eeeacd195db91e2ff011bfb646cd5d85545e81d8f78c436183e09a8  actions-runner-linux-x64-2.316.1.tar.gz" | shasum -a 256 -c
+# Extract the installer
+tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
+
+

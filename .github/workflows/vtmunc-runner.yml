@@ -18,32 +18,15 @@ jobs:
         run: docker push vtmunc/vtmunc:latest
   
   deploy:
+    runs-on: self-hosted
     needs: build
-    runs-on: ubuntu-latest
-    
+
     steps:
-      # - name: Create SSH key file
-      #   run: install -m 600 -D /dev/null ~/.ssh/id_rsa
-      # - name: Adding contents of ssh key
-      #   run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-      # - name: Adding known hosts
-      #   run: echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-      # - name: Connect to SSH instance, pull image and deploy container
-      #   run: |
-      #     ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no webapp@vtmunc.org << 'EOF'
-      #       docker pull vtmunc/vtmunc:latest
-      #       docker rm -f vtmunc || true
-      #       docker run -d -p 8080:8080 --name vtmunc vtmunc/vtmunc
-      #     EOF
-      - name: Connect to ssh instance, pull image and deploy container
-        uses: appleboy/ssh-action@v1.0.3
-        with: 
-          host: vtmunc.org
-          username: webapp
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          debug: true
-          script: |
-              docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-              docker pull vtmunc/vtmunc:latest
-              docker rm -f vtmunc || true
-              docker run -d -p 8080:8080 --name vtmunc vtmunc/vtmunc
+      - name: Login to docker hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Pull docker image
+        run: docker pull vtmunc/vtmunc:latest
+      - name: Remove old containers
+        run: docker rm -f vtmunc || true
+      - name: Run container
+        run: docker run -p 8080:8080 -d --name vtmunc vtmunc/vtmunc
