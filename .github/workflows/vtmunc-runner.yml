@@ -22,11 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Create SSH key
-        run: |
-          install -m 600 -D /dev/null ~/.ssh/id_rsa
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          ssh-keyscan -H vtmunc.org > ~/.ssh/known_hosts
+      - name: Create SSH key file
+        run: install -m 600 -D /dev/null ~/.ssh/id_rsa
+      - name: Adding contents of ssh key
+        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+      - name: Adding known hosts
+        run: ssh-keyscan -H vtmunc.org -i ~/.ssh/id_rsa > ~/.ssh/known_hosts
       - name: SSH into EC2 instance
         run: ssh -i ~/.ssh/id_rsa webapp@vtmunc.org
       - name: Pull image from docker hub
