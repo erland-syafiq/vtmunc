@@ -24,10 +24,11 @@ jobs:
     steps:
       - name: Create SSH key
         run: |
-          echo "${{ secrets.EC2_IDENTITY_FILE}}" > vtmunc.pem
-          ssh-keyscan -H vtmunc.org -i vtmunc.pem > ~/.ssh/known_hosts
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H vtmunc.org > ~/.ssh/known_hosts
       - name: SSH into EC2 instance
-        run: ssh -i vtmunc.pem webapp@vtmunc.org
+        run: ssh -i ~/.ssh/id_rsa webapp@vtmunc.org
       - name: Pull image from docker hub
         run: docker pull vtmunc/vtmunc:latest
       - name: Delete old container
