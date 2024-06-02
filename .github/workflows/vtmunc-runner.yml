@@ -13,7 +13,7 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build docker image
-        run: docker build -t vtmunc/app /app
+        run: docker build -t vtmunc/app ./app
       - name: Publish images to docker hub
         run: docker push vtmunc/app:latest
   
