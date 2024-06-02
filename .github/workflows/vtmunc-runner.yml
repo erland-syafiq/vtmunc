@@ -28,10 +28,21 @@ jobs:
         run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
       - name: Adding known hosts
         run: echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-      - name: Connect to SSH instance, pull image and deploy container
-        run: |
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no webapp@vtmunc.org << 'EOF'
-            docker pull vtmunc/vtmunc:latest
-            docker rm -f vtmunc || true
-            docker run -d -p 8080:8080 --name vtmunc vtmunc/vtmunc
-          EOF
+      # - name: Connect to SSH instance, pull image and deploy container
+      #   run: |
+      #     ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no webapp@vtmunc.org << 'EOF'
+      #       docker pull vtmunc/vtmunc:latest
+      #       docker rm -f vtmunc || true
+      #       docker run -d -p 8080:8080 --name vtmunc vtmunc/vtmunc
+      #     EOF
+      - name: Connect to ssh instance, pull image and deploy container
+        run: appleboy/ssh-action@v1.0.3
+        with: 
+          host: vtmunc.org
+          username: webapp
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          debug: true
+          script: |
+              docker pull vtmunc/vtmunc:latest
+              docker rm -f vtmunc || true
+              docker run -d -p 8080:8080 --name vtmunc vtmunc/vtmunc
