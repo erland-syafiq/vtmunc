@@ -1,0 +1,35 @@
+name: Production
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+      - name: Login to docker hub
+        run: dockerr login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build docker image
+        run: docker build -t vtmunc/vtmunc .
+      - name: Publish images to docker hub
+        run: docker push vtmunc/vtmunc:latest
+  
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Create identity file for ssh
+        run: echo "${{ secrets.EC2_IDENTITY_FILE}}" > vtmunc.pem
+      - name: SSH into EC2 instance
+        run: ssh -i vtmunc.pem webapp@vtmunc.org
+      - name: Pull image from docker hub
+        run: docker pull vtmunc/vtmunc:latest
+      - name: Delete old container
+        run: docker rm -rf vtmunc
+      - name: Run docker container
+        run: docker run -d -p 8080:8080 --name vtmunc vtmunc/vtmunc
+
