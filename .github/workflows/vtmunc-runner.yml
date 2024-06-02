@@ -22,12 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Create SSH key file
-        run: install -m 600 -D /dev/null ~/.ssh/id_rsa
-      - name: Adding contents of ssh key
-        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-      - name: Adding known hosts
-        run: echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
       # - name: Connect to SSH instance, pull image and deploy container
       #   run: |
       #     ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no webapp@vtmunc.org << 'EOF'
