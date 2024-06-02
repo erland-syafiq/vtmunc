@@ -30,3 +30,5 @@ jobs:
         run: docker rm -f vtmunc || true
       - name: Run container
         run: docker run -p 8080:8080 -d --name vtmunc vtmunc/vtmunc
+      - name: Clean up (Removes old containers)
+        run: docker system prune -f

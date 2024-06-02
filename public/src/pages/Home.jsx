@@ -9,10 +9,10 @@ function Home() {
             <div className="heroHighlightBox"></div>
             <div className="heroContent">
                 <h3>
-                    Feb 2nd - Feb 4th
+                    Spring 2025
                 </h3>
                 <h1>
-                    VTMUNC 2024
+                    VTMUNC 2025
                 </h1>
                 <h4>
                     The premier Model United Nations conference for high school students

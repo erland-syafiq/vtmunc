@@ -6,18 +6,12 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
 sudo apt update
 sudo apt install caddy
 
-# create user
-sudo useradd -m -d /home/webapp -s /bin/bash webapp
-sudo usermod -aG sudo webapp 
-sudo passwd -d webapp
+# Writes config file
+sudo wget https://raw.githubusercontent.com/Trafix120/VTMUNC/main/reverse-proxy/CaddyFile -O /etc/caddy/Caddyfile
+sudo systemctl enable caddy
+sudo systemctl restart caddy
 
-# Allow ssh for webapp
-sudo mkdir /home/webapp/.ssh
-sudo cp /home/ubuntu/.ssh/authorized_keys /home/webapp/.ssh/authorized_keys
 
-# Set the correct permissions for the authorized_keys file
-sudo chmod 600 /home/webapp/.ssh/authorized_keys
-sudo chown webapp:webapp /home/webapp/.ssh/authorized_keys
 
 # Install Docker
 # Add Docker's official GPG key:
@@ -36,17 +30,21 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Add docker to user group
-sudo usermod -aG docker $USER
+
 
 # Add github runner
-# Create a folder
+
+# Creates user githubrunner
 sudo useradd -m -d /home/githubrunner -s /bin/bash githubrunner
 sudo passwd -d githubrunner 
 sudo usermod -aG sudo githubrunner
 sudo usermod -aG docker githubrunner
+
+# Login to githubrunner
 su githubrunner
 cd ~
+
+# Creates a folder
 mkdir actions-runner && cd actions-runner
 # Download the latest runner package
 curl -o actions-runner-linux-x64-2.316.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.316.1/actions-runner-linux-x64-2.316.1.tar.gz
