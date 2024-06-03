@@ -5,6 +5,7 @@ import NoPage from './NoPage.jsx';
 import './CommitteeDetails.css';
 import UserCard from '../components/UserCard.jsx';
 import FormattedParagraph from '../components/FormattedParagraph.jsx';
+import useDocumentTitle from '../hooks/useDocumentTitle.jsx';
 
 function findCommittee(committeeGroups, queryId) {
     for (const group of committeeGroups) {
@@ -23,6 +24,7 @@ export default function CommitteeDetails() {
     const committeeGroups = useStaticData('/data/committees.json');
     const {id} = useParams();
     if (!committeeGroups) {
+        useDocumentTitle("");
         return null;
     }
 
@@ -32,6 +34,7 @@ export default function CommitteeDetails() {
         return <NoPage />
     }
 
+    useDocumentTitle(committee.committee_name);
     const isOneChair = committee.co_chair_name == null;
     
 

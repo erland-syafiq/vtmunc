@@ -2,9 +2,12 @@ import React from 'react';
 import useStaticData from '../hooks/useStaticData.jsx';
 import Committee from '../components/Commitee';
 import './Committees.css';
+import useDocumentTitle from '../hooks/useDocumentTitle.jsx';
 
 function Committees() {
+    useDocumentTitle("Committees");
     const committeeGroups = useStaticData("/data/committees.json", []);
+    
 
     return (
         <main className="container">

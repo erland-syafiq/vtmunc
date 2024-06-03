@@ -2,9 +2,12 @@ import React from 'react';
 import UserCard from '../components/UserCard.jsx';
 import useStaticData from '../hooks/useStaticData.jsx';
 import './AboutUs.css';
+import useDocumentTitle from '../hooks/useDocumentTitle.jsx';
 
 function AboutUs() {
+    useDocumentTitle("About Us");
     const secretariat = useStaticData("/data/secretariat.json", []);
+
 
     return (
         <main className="container">

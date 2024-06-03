@@ -2,6 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -9,6 +10,7 @@ function isValidEmail(email) {
 }
 
 function Register() {
+    useDocumentTitle("Register");
 
     const [formData, setFormData] = useState({
         advisorEmail: "",

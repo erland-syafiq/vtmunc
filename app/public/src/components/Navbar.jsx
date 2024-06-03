@@ -20,12 +20,12 @@ function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="navbar-collapse collapse d-sm-inline-flex justify-content-end">
-                        <NavLink className="nav-link" to="/">Home</NavLink>
-                        <NavLink className="nav-link" to="/about"> About Us</NavLink>
-                        <NavLink className="nav-link" to="/committees">Committees</NavLink>
-                        <NavLink className="nav-link" to="/resources">Resources</NavLink>
-                        <NavLink className="nav-link" to="/sponsors"> Sponsors</NavLink>
-                        <NavLink className="nav-link" to="/register"> Registers</NavLink>
+                        <NavLink className="nav-link" to="/"> Home </NavLink>
+                        <NavLink className="nav-link" to="/about"> About Us </NavLink>
+                        <NavLink className="nav-link" to="/committees">Committees </NavLink>
+                        <NavLink className="nav-link" to="/resources">Resources </NavLink>
+                        <NavLink className="nav-link" to="/sponsors"> Sponsors </NavLink>
+                        <NavLink className="nav-link" to="/register"> Register </NavLink>
                     </div>
                 </div>
             </nav>
