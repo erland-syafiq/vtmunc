@@ -41,7 +41,7 @@ The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core
     - Run the following command to execute the initial setup script. This will set up your reverse proxy and do the initial setups for the github runners:
 
       ```bash
-      curl -sSL https://raw.githubusercontent.com/Trafix120/VTMUNC/main/aws/ec2-setup.sh | bash
+      curl -sSL https://raw.githubusercontent.com/erland-syafiq/vtmunc/main/aws/ec2-setup.sh | bash
       ```
 
 ### Step 4: Configure GitHub Runner
@@ -50,13 +50,13 @@ The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core
     - Navigate to your GitHub repository.
     - Go to `Settings` > `Actions` > `Runners` > `New self-hosted runner`
     - Select the option to configure a new self-hosted runner.
-    - Most of the commands have already been done in the ec2-setup.sh script but you need to run the config script, which is unique to each repository. It should look like this: ./config.cmd --url https://github.com/<Username>/<Repository> --token <Token>
+    - Most of the commands have already been done in the ec2-setup.sh script but you need to run the config script, which is unique to each repository. It should look like this: ./config.cmd --url https://github.com/Username/Repository --token <Token>
 
 2. **Run the GitHub Runner as a Systemd Daemon**:
     - Once configured, execute the following command to run the setup script again, which will configure the GitHub runner to run as a systemd daemon:
 
       ```bash
-      curl -ssL https://github.com/Trafix120/VTMUNC/blob/main/aws/start-githubrunner.sh | bash
+      curl -ssL https://raw.githubusercontent.com/erland-syafiq/vtmunc/main/aws/start-githubrunner.sh | bash
       ```
 
 ### Step 5: Create a DynamoDB Table
