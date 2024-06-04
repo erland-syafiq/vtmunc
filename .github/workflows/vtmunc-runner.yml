@@ -13,9 +13,9 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build docker image
-        run: docker build -t vtmunc/app ./app
+        run: docker build -t vtmunc/site ./site
       - name: Publish images to docker hub
-        run: docker push vtmunc/app:latest
+        run: docker push vtmunc/site:latest
   
   deploy:
     runs-on: self-hosted
@@ -25,10 +25,10 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Pull docker image
-        run: docker pull vtmunc/app:latest
+        run: docker pull vtmunc/site:latest
       - name: Remove old containers
         run: docker rm -f vtmunc || true
       - name: Run container
-        run: docker run -p 8080:8080 -d --name vtmunc vtmunc/app
+        run: docker run -p 3000:3000 -d --name vtmunc vtmunc/site
       - name: Clean up (Removes old containers)
         run: docker system prune -f
