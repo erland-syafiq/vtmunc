@@ -4,7 +4,7 @@ The VTMUNC web application serves as the online platform for the Virginia Tech M
 
 ## Technologies Used
 
-- **Frontend**: React.js, HTML+CSS+JS, and Vite
+- **Frontend**: React.js, and HTML+CSS+JS
 - **Framework**: Next.js 
 - **Containerization**: Docker
 - **Continuous Integration/Continuous Deployment (CI/CD)**: GitHub Actions
@@ -18,7 +18,7 @@ The VTMUNC web application serves as the online platform for the Virginia Tech M
 
 ## Table Of Contents:
 
-- [🚀 Set Up] (#set-up)
+- [🚀 Set Up](#set-up)
 - [🌐 Deployment](docs/deployment.md)
 
 ## 🚀 Set Up
