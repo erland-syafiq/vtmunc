@@ -89,7 +89,7 @@ export default function RegisterForm() {
     async function handleSubmit(e) {
         e.preventDefault();
 
-        const URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/applicants`;
+        const URL = `${process.env.BACKEND_URL}/applicants`;
 
         if (!validateForm()) return;
 
