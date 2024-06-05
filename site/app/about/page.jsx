@@ -12,7 +12,7 @@ async function AboutUs() {
             <section>
                 <div className="row">
                     <div className="col-12 text-center">
-                        <h2 className="text-nowrap secretariatTitle">Secretariat</h2>
+                        <h2 className="text-nowrap secretariatTitle">Secretariat Test</h2>
                     </div>
                 </div>
                 <div className="row">
