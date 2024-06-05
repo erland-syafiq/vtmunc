@@ -13,7 +13,7 @@ function Navbar() {
     const navbarStyle = isHomePage ? 'navbar-transparent' : '';
 
     return (
-            <nav className={`${navbarStyle} navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow`}>
+            <nav className={`${navbarStyle} navbar navbar-expand-md navbar-toggleable-md navbar-light box-shadow`}>
                 <div className="container-fluid">
                     <Link href="/"><img src="/Images/Logo.png" className="navbar-logo"/></Link>
                     <Link className="nav-link" href="/">VTMUNC</Link>
@@ -21,12 +21,12 @@ function Navbar() {
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <div className="navbar-collapse collapse d-md-inline-flex justify-content-end">
                         <Link className="nav-link" href="/"> Home </Link>
                         <Link className="nav-link" href="/about"> About Us </Link>
                         <Link className="nav-link" href="/committees">Committees </Link>
-                        <Link className="nav-link" href="/resources">Resources </Link>
-                        <Link className="nav-link" href="/sponsors"> Sponsors </Link>
+                        {/* <Link className="nav-link" href="/resources">Resources </Link>
+                        <Link className="nav-link" href="/sponsors"> Sponsors </Link> */}
                         <Link className="nav-link" href="/register"> Register </Link>
                     </div>
                 </div>

@@ -3,9 +3,13 @@ import Committee from '../components/Commitee';
 import './Committees.css';
 import fetchStaticJSON from '../utils/fetchStaticJSON';
 
+export const metadata = {
+    title: "Committees",
+    description: "Explore the heart of VTMUNC on our Committees page! Discover detailed information about each committee, including topics of discussion, background guides, and key objectives. Our committees cover a diverse range of global issues, providing a platform for delegates to engage in meaningful debates and develop solutions. Whether you're interested in international security, economic development, or human rights, the VTMUNC Committees page offers everything you need to prepare for and excel in your sessions. Enhance your Model United Nations experience by learning about the committees and their critical roles at VTMUNC. Visit now to get started!    "
+}
+
 async function Committees() {
     const committeeGroups = await fetchStaticJSON("/app/data/committees.json");
-    
 
     return (
         <main className="container">

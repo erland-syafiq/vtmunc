@@ -3,6 +3,11 @@ import UserCard from '../components/UserCard.jsx';
 import './AboutUs.css';
 import fetchStaticJSON from '../utils/fetchStaticJSON.js';
 
+export const metadata = {
+    title: "About Us",
+    description: "Meet the VTMUNC Secretariat: dedicated leaders organizing an inspiring conference. Learn about their roles, backgrounds, and commitment to global diplomacy."
+}
+
 async function AboutUs() {
     const secretariat = await fetchStaticJSON("/app/data/secretariat.json");
 

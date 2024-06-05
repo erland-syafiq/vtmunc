@@ -4,6 +4,12 @@ import React, { useState } from 'react';
 import './LoginPage.css';
 import { isValidEmail } from '../utils/validation';
 
+export const metadata = {
+    title: "Staff login",
+    description: "Login page for staff.",
+    noindex: true
+}
+
 export default function Login () {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [rememberMe, setRememberMe] = useState(false);
