@@ -2,6 +2,11 @@ import React from 'react';
 import RegisterForm from './RegisterForm';
 import './Register.css';
 
+export const metadata = {
+    title: "Register",
+    description: "Register for VTMUNC to access committee info, schedules, and benefits. Join dynamic debates, develop diplomacy skills, and connect with global delegates"
+}
+
 export default function RegisterPage() {
     return (
         <main className="container registerPage">
