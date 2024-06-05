@@ -1,0 +1,18 @@
+main .login {
+    background-color: #F2F1E8;
+}
+
+section.login {
+    height: calc(100vh - 61px);
+}
+
+.loginBox {
+    border: 2px solid #630031;
+    background: #EFE9E7;
+    box-shadow: -20px 16px 0px 0px #DEBB8F;
+    padding: 100px
+}
+
+.loginBox > h5 {
+    color: grey;
+}
