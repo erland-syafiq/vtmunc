@@ -56,7 +56,7 @@ The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core
     - Once configured, execute the following command to run the setup script again, which will configure the GitHub runner to run as a systemd daemon:
 
       ```bash
-      curl -ssL https://raw.githubusercontent.com/erland-syafiq/vtmunc/main/aws/start-githubrunner.sh | bash
+      sudo -u githubrunner bash -c 'cd ~ && sudo ./actions-runner/svc.sh install && sudo ./actions-runner/svc.sh start && sudo ./actions-runner/svc.sh status'
       ```
 
 ### Step 5: Create a DynamoDB Table

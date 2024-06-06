@@ -6,7 +6,7 @@ import Script from "next/script";
 
 export const metadata = {
   title: "VTMUNC",
-  description: "The premier model united nations conference",
+  description: "Discover VTMUNC: Engage in dynamic debates, connect with global delegates. Over 300 participants in 2024. Join us and be part of international diplomacy",
 };
 
 export default function RootLayout({ children }) {

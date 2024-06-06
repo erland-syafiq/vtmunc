@@ -3,6 +3,8 @@ import fetchStaticJSON from '@/app/utils/fetchStaticJSON';
 import UserCard from '@/app/components/UserCard';
 import './CommitteeDetails.css';
 import FormattedParagraph from '@/app/components/FormattedParagraph';
+import { notFound } from 'next/navigation';
+
 
 function findCommittee(committeeGroups, queryId) {
     for (const group of committeeGroups) {
@@ -12,10 +14,27 @@ function findCommittee(committeeGroups, queryId) {
             }
         }
     }
-
+    
     return null;
 }
 
+export async function generateMetadata({ params }) {
+    const committeeGroups = await fetchStaticJSON("/app/data/committees.json");
+    const id = params.slug;
+    const committee = findCommittee(committeeGroups, id);
+
+    if (!committee) {
+        notFound();
+    }
+
+    const title = committee.committee_name.substring(0, 60); // Ensure title is not too long
+    const description = committee.committee_bio.substring(0, 160); // Ensure description is not too long
+  
+    return {
+      title,
+      description,
+    };
+}
 
 export default async function CommitteeDetailsPage({params}) {
     const committeeGroups = await fetchStaticJSON("/app/data/committees.json");
@@ -24,7 +43,10 @@ export default async function CommitteeDetailsPage({params}) {
     const committee = findCommittee(committeeGroups, id);
 
     if (!committee) {
-        return NextResponse.rewrite(new URL('/404', request.url));
+        return {
+            title: "Page not found",
+            description: "Page you're looking for doesn't exist. ."
+        }
     }
 
     const isOneChair = committee.co_chair_name == null;
