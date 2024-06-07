@@ -3,8 +3,7 @@ import fetchStaticJSON from '@/app/utils/fetchStaticJSON';
 import UserCard from '@/app/components/UserCard';
 import './CommitteeDetails.css';
 import FormattedParagraph from '@/app/components/FormattedParagraph';
-import { notFound, permanentRedirect } from 'next/navigation';
-import { revalidateTag } from 'next/cache';
+import { notFound } from 'next/navigation';
 
 
 function findCommittee(committeeGroups, queryId) {
@@ -16,25 +15,6 @@ function findCommittee(committeeGroups, queryId) {
         }
     }
     
-    return null;
-}
-
-function findCommitteeFromName(committeeGroups, queryId) {
-    console.log(queryId);
-    for (const group of committeeGroups) {
-        for (const committee of group.committees) {
-            const urlName = committee.committee_name
-                .replace(/[:(),<>]/g, "") // Remove specified characters
-                .replace(/ /g, "-") // Replace spaces with hyphens
-                .toLowerCase(); 
-            console.log(urlName);
-            console.log(decodeURI(queryId));
-            if (urlName == decodeURI(queryId)) {
-                return committee;
-            }
-        }
-    }
-
     return null;
 }
 
@@ -63,12 +43,10 @@ export default async function CommitteeDetailsPage({params}) {
     const committee = findCommittee(committeeGroups, id);
 
     if (!committee) {
-        // Attempts to find a matching url from the old ASP.NET url system
-        const alt_committee = findCommitteeFromName(committeeGroups, id);
-        if (!alt_committee) {
-            notFound();
+        return {
+            title: "Page not found",
+            description: "Page you're looking for doesn't exist. ."
         }
-        permanentRedirect(`/committees/${alt_committee.id}`);
     }
 
     const isOneChair = committee.co_chair_name == null;
