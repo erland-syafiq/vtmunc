@@ -82,14 +82,14 @@ export default async function CommitteeDetailsPage({params}) {
                     <div className="col-md-6 pb-5">
                         <div className="row">
                             <div className="col-md-3">
-                                <img className="committeeImg" src={"/images/committees/" + committee.committee_image }/>
+                                <img className="committeeImg" src={"/Images/Committees/" + committee.committee_image }/>
                             </div>
                             <div className="col-md-9 committeeTitle">
                                 <h3>{committee.committee_name}</h3>
                             </div>                
                         </div>
                         <FormattedParagraph paragraphClassName="mt-3" text={committee.committee_bio} />
-                        <a className="btn btn-primary btn-lg heroBtn" href={"/background-guides/" + committee.background_guide} target="_blank">
+                        <a className="btn btn-primary btn-lg heroBtn" href={"/background_guides/" + committee.background_guide} target="_blank">
                             <h5 className="backgroundGuideButton">
                                 Background Guide
                             </h5>
@@ -97,11 +97,11 @@ export default async function CommitteeDetailsPage({params}) {
                     </div>       
                     {
                         isOneChair ? 
-                            <UserCard colWidth={6} name={committee.chair_name} position={committee.chair_position} bio={committee.chair_bio} email={committee.chair_email} imagePath={"/images/chair-headshots/" + committee.chair_image}/>
+                            <UserCard colWidth={6} name={committee.chair_name} position={committee.chair_position} bio={committee.chair_bio} email={committee.chair_email} imagePath={"/Images/Chair_Headshots/" + committee.chair_image}/>
                         :
                         <>
-                            <UserCard colWidth={3} name={committee.chair_name} position={committee.chair_position} bio={committee.chair_bio} email={committee.chair_email} imagePath={"/images/chair-headshots/" + committee.chair_image}/> 
-                            <UserCard colWidth={3} name={committee.co_chair_name} position={committee.co_chair_position} bio={committee.co_chair_bio} email={committee.co_chair_email} imagePath={"/images/chair-headshots/" + committee.co_chair_image}/> 
+                            <UserCard colWidth={3} name={committee.chair_name} position={committee.chair_position} bio={committee.chair_bio} email={committee.chair_email} imagePath={"/Images/Chair_Headshots/" + committee.chair_image}/> 
+                            <UserCard colWidth={3} name={committee.co_chair_name} position={committee.co_chair_position} bio={committee.co_chair_bio} email={committee.co_chair_email} imagePath={"/Images/Chair_Headshots/" + committee.co_chair_image}/> 
                         </>
                     } 
                 </div>

@@ -9,7 +9,7 @@ function Footer() {
                 <div className="row">
                     <div className="footerText col-12 col-md-8 pb-3">
                         <div className="logoTitle d-flex align-items-center">
-                            <img src="/images/logo.png" />
+                            <img src="/Images/Logo.png" />
                             <h4>VTMUNC 2025</h4>
                         </div>
                         <p>
@@ -29,7 +29,7 @@ function Footer() {
                         </p>
 
                         <a href="https://www.instagram.com/vtmunc/" target="_blank">
-                            <img src="/images/instagram.svg" className="img-fluid" />
+                            <img src="/Images/Instagram.svg" className="img-fluid" />
                         </a>
                     </div>
 
