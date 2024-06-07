@@ -10,7 +10,7 @@ function Committee({committee}) {
             </h4>
 
             <Link href={"/committees/" + committee.id} className="committeesContainer">
-                <img className="committeesImg" src={"/Images/Committees/" + committee.committee_image}/>
+                <img className="committeesImg" src={"/images/committees/" + committee.committee_image}/>
             </Link>
         </div> 
     );
