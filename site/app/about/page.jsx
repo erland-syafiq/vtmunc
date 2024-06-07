@@ -23,7 +23,7 @@ async function AboutUs() {
                 <div className="row">
                     {
                     secretariat.map(({name, position, bio, email, image}, index) => 
-                         <UserCard colWidth={4} key={index} name={name} position={position} bio={bio} email={email} imagePath={"/Images/secretariat/" + image}/>
+                         <UserCard colWidth={4} key={index} name={name} position={position} bio={bio} email={email} imagePath={"/images/secretariat/" + image}/>
                     )}
                 </div>
             </section>
