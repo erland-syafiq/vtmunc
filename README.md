@@ -21,6 +21,7 @@ The VTMUNC web application serves as the online platform for the Virginia Tech M
 - [🚀 Set Up](#set-up)
 - [📂 Project Overview](docs/project-overview.md)
 - [📙 Site Overview](docs/site-overview.md)
+- [🎨 Style Guide](docs/style-guide.md)
 - [🌐 Deployment](docs/deployment.md)
 
 ## 🚀 Set Up
