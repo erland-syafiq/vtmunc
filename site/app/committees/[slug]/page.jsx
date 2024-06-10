@@ -67,7 +67,7 @@ export default async function CommitteeDetailsPage({params}) {
                             </div>                
                         </div>
                         <FormattedParagraph paragraphClassName="mt-3" text={committee.committee_bio} />
-                        <a className="btn btn-primary btn-lg heroBtn" href={"/background_guides/" + committee.background_guide} target="_blank">
+                        <a className="btn btn-primary btn-lg heroBtn" href={"/BackgroundGuides/" + committee.background_guide} target="_blank">
                             <h5 className="backgroundGuideButton">
                                 Background Guide
                             </h5>
