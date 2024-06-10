@@ -1,6 +1,6 @@
 # 🌐 Deployment Guide
 
-[Architecture diagram](./assets/aws-architecture-diagram.png "Architecture Diagram" )
+![Architecture diagram](./assets/aws-architecture-diagram.png "Architecture Diagram" )
 
 ## Overview of VTMUNC Website Architecture
 The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core infrastructure for the web application. This EC2 instance also functions as a reverse proxy, efficiently managing incoming traffic to ensure smooth and secure operations. Additionally, the server interacts with AWS DynamoDB, providing scalable and rapid access to the database for handling data-related tasks.
