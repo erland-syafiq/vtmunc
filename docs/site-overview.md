@@ -1,6 +1,4 @@
-# 🌐 VTMUNC Site Overview
-
-The VTMUNC web application serves as the online platform for the Virginia Tech Model United Nations Conference. It provides a centralized space for participants and delegates to register, access committee information, and discover the benefits of joining VTMUNC.
+# 📙 VTMUNC Site Overview
 
 ## Pages Overview
 
@@ -42,7 +40,7 @@ Example:
 
 ### Committee Group
 The committees page and the committees/[:slug] pages are created from the data fetched from app/data/committees.json. This JSON file stores an array of objects. each object represents a committee group. Each Committee Group data type organizes committees into groups and includes detailed information about each committee within the group. Each entry includes:
-- **group_name**: The name of the committee group.
+- **group_name**: The name of the committee group (e.g: Crisis).
 - **committees**: An array of committees, each containing:
   - **committee_name**: The name of the committee.
   - **committee_image**: The filename of the committee's image.
