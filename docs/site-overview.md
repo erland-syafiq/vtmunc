@@ -1,4 +1,4 @@
-# 📙 VTMUNC Site Overview
+# 📙 Site Overview
 
 ## Pages Overview
 
