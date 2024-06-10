@@ -25,13 +25,13 @@ export default function LoginForm() {
             const userEmail = formData.email;
             const userPass = formData.password;
             // Send post request with user email and password
-            fetch('/api/auth/', {
+            fetch('/api/auth/login/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userEmail, userPass }),
             });
 
-            fetch('/api/auth/', {
+            fetch('/api/auth/login/', {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' },
             });

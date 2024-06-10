@@ -34,7 +34,6 @@ export async function GET(request) {
         // Try to decode cookies
         try {
             const decoded = jwt.verify(vtmunc_token, JWT_SECRET);
-            console.log(decoded);
             return NextResponse.json({ message: "Valid" }, { status: 200 });
         } 
         catch (error) {
