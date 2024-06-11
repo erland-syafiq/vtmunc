@@ -96,7 +96,7 @@ The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core
 2. **Add the Following Environment Variables**:
     - **DOCKERHUB_USERNAME**: Your DockerHub username.
     - **DOCKERHUB_PASSWORD**: Your DockerHub password.
-    - **ENV_FILE**: The content of your environment file (you can store sensitive data here if needed).
+    - **ENV_FILE**: The content of your environment file. The instructions for filling this file are in [env-file docs](./env-file.md)
 
     Instructions for adding a secret:
     - Click `New repository secret`.

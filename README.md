@@ -29,6 +29,7 @@ The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core
 ## Table Of Contents:
 
 - [🚀 Set Up](#-set-up)
+- [⚙️ Environment Variables File](docs/env-file.md)
 - [📂 Project Overview](docs/project-overview.md)
 - [📙 Site Overview](docs/site-overview.md)
 - [🎨 Style Guide](docs/style-guide.md)
@@ -74,7 +75,7 @@ The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core
    cp ../docs/assets/env.template .env
    ```
 
-   Open the `.env` file and fill in the necessary environment variables as per your project's requirements.
+   Open the `.env` file and fill in the necessary environment variables according to [these instructions](docs/env-file.md). 
 
 5. **Start the Development Server**
 
