@@ -3,7 +3,7 @@
 This file defines environment variables used by VTMUNC. Note, that this env file is seperate from the environment variables for GitHub, where you need to paste in this environment variable file as a variable called ENV_FILE. Find out more from the [deployment docs](./deployment.md#-step-7-set-environment-variables-in-github)
 
 ## Important security notice
-Never, commit .env files to any remote repository, including GitHub. Only share this environment variable with trusted personell. 
+Never, commit .env files to any remote repository, including GitHub. Only share this environment variable with trusted personnel. 
 
 ## Environment Variables in .env file
 | Variable Name | Description | Example Value |
