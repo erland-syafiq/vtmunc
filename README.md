@@ -1,5 +1,8 @@
 # VTMUNC Web Application
 
+![Home Page](/docs/assets/home-page.png "Home Page" )
+Figure 1: Home page of VTMUNC
+
 The VTMUNC web application serves as the online platform for the Virginia Tech Model United Nations Conference. It provides a centralized space for participants and delegates to register, access committee information, and discover the benefits of joining VTMUNC.
 
 ## Technologies Used
@@ -16,9 +19,20 @@ The VTMUNC web application serves as the online platform for the Virginia Tech M
 - **Committee Information**: Access detailed information about various committees and topics.
 - **Benefits Overview**: Learn about the advantages and opportunities available through VTMUNC participation.
 
+## Architecture
+
+![Architecture diagram](./docs/assets/aws-architecture-diagram.png "Architecture Diagram" )
+Figure 2: Architecture Diagram of VTMUNC web application
+
+The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core infrastructure for the web application. This EC2 instance also functions as a reverse proxy, efficiently managing incoming traffic to ensure smooth and secure operations. Additionally, the server interacts with AWS DynamoDB, providing scalable and rapid access to the database for handling data-related tasks. 
+
 ## Table Of Contents:
 
-- [🚀 Set Up](#set-up)
+- [🚀 Set Up](#-set-up)
+- [⚙️ Environment Variables File](docs/env-file.md)
+- [📂 Project Overview](docs/project-overview.md)
+- [📙 Site Overview](docs/site-overview.md)
+- [🎨 Style Guide](docs/style-guide.md)
 - [🌐 Deployment](docs/deployment.md)
 
 ## 🚀 Set Up
@@ -61,7 +75,7 @@ The VTMUNC web application serves as the online platform for the Virginia Tech M
    cp ../docs/assets/env.template .env
    ```
 
-   Open the `.env` file and fill in the necessary environment variables as per your project's requirements.
+   Open the `.env` file and fill in the necessary environment variables according to [these instructions](docs/env-file.md). 
 
 5. **Start the Development Server**
 
