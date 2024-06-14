@@ -1,10 +1,12 @@
 
 "use client"
+
 import React from "react";
 import dynamic from "next/dynamic";
 import "chart.js/auto";
 import { Doughnut } from "react-chartjs-2";
 import 'chartjs-adapter-date-fns';
+import { invoiceStatusCategories } from "@/app/utils/applicantUtils";
 
 const Line = dynamic(() => import("react-chartjs-2").then((mod) => mod.Line), {
     ssr: false
@@ -114,7 +116,7 @@ export default function Dashboard({applicants}) {
                         <h4>Applicants' Invoice Status</h4>
                         <Doughnut 
                             data={{
-                                labels: ["Invoice not sent", "Payment not received", "Payment received"],
+                                labels: invoiceStatusCategories,
                                 datasets: [{
                                     data: invoiceStatusData,
                                     backgroundColor: ['#DC3545', '#FFC107', '#28A745'],
