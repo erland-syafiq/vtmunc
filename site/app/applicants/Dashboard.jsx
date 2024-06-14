@@ -3,6 +3,8 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import "chart.js/auto";
+import { Doughnut } from "react-chartjs-2";
+import 'chartjs-adapter-date-fns';
 
 const Line = dynamic(() => import("react-chartjs-2").then((mod) => mod.Line), {
     ssr: false
@@ -23,7 +25,7 @@ export default function Dashboard({applicants}) {
     // Find number of days since last sign up. 
     const daysSinceSignUp = Math.floor((new Date() - new Date(applicants[0].date)) / (24 * 60 * 60 * 1000));
     
-    // Create data for total participants over time
+    // Comppile data for total participants over time
     let sum = totalParticipants;
     let totalParticipantsDates = [];
     let totalParticipantsOverTime = [];
@@ -43,9 +45,13 @@ export default function Dashboard({applicants}) {
 
     totalParticipantsOverTime.reverse(); 
     totalParticipantsDates.reverse();
-    
 
-    
+
+    // Compile data for invoice statuses
+    const invoiceStatusData = new Array(3).fill(0);
+    applicants.forEach((applicant) => {
+        invoiceStatusData[applicant.invoiceStatus] += applicant.delegationSize;
+    });
 
 
     return (
@@ -63,18 +69,41 @@ export default function Dashboard({applicants}) {
                 </div>
                 <div className="col-6 text-center">
                     <div className="card">
-                        <Line data={{
-                            labels: totalParticipantsDates,
-                            datasets: [{
-                                label: 'Total Number of Participants',
-                                data: totalParticipantsOverTime,
-                                borderWidth: 1,
-                                borderColor: '#630031',
-                                pointBackgroundColor: '#630031', 
-                                pointBorderWidth: 2, 
-                                borderSize: 2,
-                            }]
-                        }}/>
+                        <Line 
+                            data={{
+                                labels: totalParticipantsDates,
+                                datasets: [{
+                                    label: 'Total Number of Participants',
+                                    data: totalParticipantsOverTime,
+                                    borderWidth: 1,
+                                    borderColor: '#630031',
+                                    pointBackgroundColor: '#630031', 
+                                    pointBorderWidth: 2, 
+                                    borderSize: 2,
+                                }]
+                            }}
+                            options={{
+                                scales: {
+                                    x: {
+                                        type: 'time',
+                                        time: {
+                                            unit: 'day',
+                                            displayFormats: {
+                                                day: 'yyyy-MM-dd'
+                                            },
+                                            distribution: 'linear',
+                                        },
+                                        title: {
+                                            display: true,
+                                            text: 'Signup Date'
+                                        },
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                    }
+                                }
+                            }}
+                        />
                     </div>
                     <h4>
                         Total Number of Delegates
@@ -83,7 +112,19 @@ export default function Dashboard({applicants}) {
                 <div className="col-3">
                     <div className="card text-center">
                         <h4>Applicants' Invoice Status</h4>
-                        <canvas id="invoiceStatusChart"></canvas>
+                        <Doughnut 
+                            data={{
+                                labels: ["Invoice not sent", "Payment not received", "Payment received"],
+                                datasets: [{
+                                    data: invoiceStatusData,
+                                    backgroundColor: ['#DC3545', '#FFC107', '#28A745'],
+                                    borderWidth: 0
+                                }]
+                            }}
+                            options={{
+                                cutout: "60%"
+                            }}
+                        />
                     </div>
                 </div>
             </div>
