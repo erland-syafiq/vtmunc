@@ -1,5 +1,13 @@
 
+"use client"
 import React from "react";
+import dynamic from "next/dynamic";
+import "chart.js/auto";
+
+const Line = dynamic(() => import("react-chartjs-2").then((mod) => mod.Line), {
+    ssr: false
+});
+
 
 
 /**
@@ -8,12 +16,37 @@ import React from "react";
  * @returns {JSX.ELement} a dashboard with metrics on total number of participants and more
  */
 export default function Dashboard({applicants}) {
-
+    
     // Find total number of participants
     const totalParticipants = applicants.reduce((accumulator, applicant) => accumulator + applicant.delegationSize, 0);
-
+    
     // Find number of days since last sign up. 
     const daysSinceSignUp = Math.floor((new Date() - new Date(applicants[0].date)) / (24 * 60 * 60 * 1000));
+    
+    // Create data for total participants over time
+    let sum = totalParticipants;
+    let totalParticipantsDates = [];
+    let totalParticipantsOverTime = [];
+    let pastDate = "2022-01-01"
+    for (const applicant of applicants) {
+        if (pastDate != applicant.date) {
+            totalParticipantsOverTime.push(sum);
+            totalParticipantsDates.push(applicant.date);
+        }
+        else {
+            totalParticipantsOverTime[totalParticipantsOverTime.length - 1] = sum;
+        }
+        
+        sum -= applicant.delegationSize;
+        pastDate = applicant.date;
+    }
+
+    totalParticipantsOverTime.reverse(); 
+    totalParticipantsDates.reverse();
+    
+
+    
+
 
     return (
         <section className="Analysis">
@@ -30,8 +63,18 @@ export default function Dashboard({applicants}) {
                 </div>
                 <div className="col-6 text-center">
                     <div className="card">
-                        <canvas id="participantsChart">
-                        </canvas>
+                        <Line data={{
+                            labels: totalParticipantsDates,
+                            datasets: [{
+                                label: 'Total Number of Participants',
+                                data: totalParticipantsOverTime,
+                                borderWidth: 1,
+                                borderColor: '#630031',
+                                pointBackgroundColor: '#630031', 
+                                pointBorderWidth: 2, 
+                                borderSize: 2,
+                            }]
+                        }}/>
                     </div>
                     <h4>
                         Total Number of Delegates
