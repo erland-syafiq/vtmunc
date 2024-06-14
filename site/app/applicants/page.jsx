@@ -40,9 +40,7 @@ export default async function DashboardPage() {
                                                 <td>{applicant.delegationSize}</td>
                                                 <td>{applicant.invoiceStatus}</td>
                                                 <td>
-                                                    <Link href={`/applicants/edit/${applicant.id}`}>Edit</Link> |
-                                                    <Link href={`/applicants/details/${applicant.id}`}>Details</Link> |
-                                                    <Link href={`/applicants/edit/${applicant.id}`}>Delete</Link>
+                                                    <Link href={`/applicants/edit/${applicant.id}`}>Edit</Link> | <Link href={`/applicants/details/${applicant.id}`}>Details</Link> | <Link href={`/applicants/edit/${applicant.id}`}>Delete</Link> 
                                                 </td>
                                             </tr>
                                         )
