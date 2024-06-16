@@ -1,5 +1,6 @@
-import jwt from 'jsonwebtoken';
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
+import { encrypt, decrypt } from "@/lib";
 
 const { USERNAME, PASSWORD, JWT_SECRET } = process.env;
 
@@ -11,11 +12,14 @@ export async function POST(request) {
 
     // Verify email and password against our env variables
     if (userEmail === USERNAME && userPass === PASSWORD) {
-        const token = jwt.sign({ userEmail }, JWT_SECRET, { expiresIn: '1h' }); 
-       const response = NextResponse.json({ message: 'Succesful validation' }, { status: 200 });
-       // Set cookie to return to client
-       response.cookies.set('Set-Cookie', `vtmunc_token=${token}; HttpOnly; Secure; SameSite=Strict; Path=/`);
-       return response;  
+        // Create encrypted token with user email and expiration time
+        const expires = new Date(Date.now() + 3 * 60 * 60 * 1000);
+        const token = await encrypt({ userEmail, expires });
+
+        // Set cookies 'vtmunc_admin' for admin access
+        cookies().set("vtmunc_admin", token, { expires, httpOnly: true });
+
+        return NextResponse.json({ message: 'Succesful validation' }, { status: 200 }); 
     } 
     else {
         return NextResponse.json({ message: "Failed validation"}, { status: 200 });
@@ -23,23 +27,19 @@ export async function POST(request) {
 }
 
 export async function GET(request) {
-    // Get our cookie from request
-    const token = request.cookies.get('Set-Cookie');
+
+    // Get token from cookie
+    const token = request.cookies.get("vtmunc_admin")?.value; 
+
+        if (token) {
+            // Try to decode cookie
+            try {
+                const parsed = await decrypt(token);
+                return NextResponse.json({ message: "Valid" }, { status: 200 });
+            } catch (error) {
+                return NextResponse.json({ message: "Invalid token" }, { status: 200 });
+            }
+        }
     
-    if (token) {
-        // Parse to get our vtmunc token
-        const { value } = token;
-        const vtmunc_token = value.split(';')[0].split('=')[1];
-
-        // Try to decode cookies
-        try {
-            const decoded = jwt.verify(vtmunc_token, JWT_SECRET);
-            return NextResponse.json({ message: "Valid" }, { status: 200 });
-        } 
-        catch (error) {
-            return NextResponse.json({ message: "Invalid token" }, { status: 200 });
-        }        
-    }
-
     return NextResponse.json({ message: "Invalid or missing cookie" }, { status: 200 });
 }

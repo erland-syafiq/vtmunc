@@ -31,10 +31,6 @@ export default function LoginForm() {
                 body: JSON.stringify({ userEmail, userPass }),
             });
 
-            fetch('/api/auth/login/', {
-                method: 'GET',
-                headers: { 'Content-Type': 'application/json' },
-            });
         }
         catch(e) {
             console.error("There was an error submitting the form!", e);
