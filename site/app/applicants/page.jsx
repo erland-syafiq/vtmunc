@@ -40,7 +40,7 @@ export default async function DashboardPage() {
                                 {
                                     applicants.map((applicant) => {
                                         return (
-                                            <tr>
+                                            <tr key={applicant.id} >
                                                 <td>{applicant.date}</td>
                                                 <td>{applicant.schoolName}</td>
                                                 <td>{applicant.advisorName}</td>
