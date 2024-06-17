@@ -1,16 +1,16 @@
 import { generateRandomId, getCurrentDate } from "@/app/utils/util";
 import { getApplicants, putApplicant } from "../db/dynamodb";
 
-// export async function GET() {
-//     try {
-//         const applicants = await getApplicants();
-//         return Response.json(applicants);
-//     }
-//     catch (e) {
-//         console.log(e);
-//         return new Response("Error with applicants", 500);
-//     }
-// }
+export async function GET() {
+    try {
+        const applicants = await getApplicants();
+        return Response.json(applicants);
+    }
+    catch (e) {
+        console.log(e);
+        return new Response("Error with applicants", 500);
+    }
+}
 
 export async function POST(request) {
     try {
