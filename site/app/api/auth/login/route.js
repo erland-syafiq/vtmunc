@@ -22,7 +22,7 @@ export async function POST(request) {
         return NextResponse.json({ message: 'Succesful validation' }, { status: 200 }); 
     } 
     else {
-        return NextResponse.json({ message: "Failed validation"}, { status: 200 });
+        return NextResponse.json({ message: "Failed validation"}, { status: 401 });
     }
 }
 

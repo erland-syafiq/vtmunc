@@ -29,6 +29,18 @@ export default function LoginForm() {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userEmail, userPass }),
+            })
+            .then(response => {
+                if (response.ok) { 
+                  // Redirect to applicants if ok response
+                  window.location.href = '/applicants';
+                } else {
+                    const newErrors = {};
+                    newErrors.email = "Invalid email and password";
+                    newErrors.password = "Invalid email and password";
+                    clearForm();
+                    setErrors(newErrors);
+                }
             });
 
         }
@@ -36,6 +48,10 @@ export default function LoginForm() {
             console.error("There was an error submitting the form!", e);
         }
         
+    };
+
+    function clearForm() {
+        setFormData({ email: '', password: '' });
     };
 
     function validateForm() {
