@@ -22,6 +22,27 @@ export default function LoginForm() {
 
         try {
             // Attempt login
+            const userEmail = formData.email;
+            const userPass = formData.password;
+            // Send post request with user email and password
+            fetch('/api/auth/login/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ userEmail, userPass }),
+            })
+            .then(response => {
+                if (response.ok) { 
+                  // Redirect to applicants if ok response
+                  window.location.href = '/applicants';
+                } else {
+                    const newErrors = {};
+                    newErrors.email = "Invalid email and password";
+                    newErrors.password = "Invalid email and password";
+                    clearForm();
+                    setErrors(newErrors);
+                }
+            });
+
         }
         catch(e) {
             console.error("There was an error submitting the form!", e);
@@ -29,11 +50,15 @@ export default function LoginForm() {
         
     };
 
+    function clearForm() {
+        setFormData({ email: '', password: '' });
+    };
+
     function validateForm() {
         const newErrors = {};
 
-        if (!formData.advisorEmail) newErrors.email = "Email is required";
-        if (!isValidEmail(formData.advisorEmail)) newErrors.email = "Email is invalid";
+        if (!formData.email) newErrors.email = "Email is required";
+        else if (!isValidEmail(formData.email)) newErrors.email = "Email is invalid";
         if (!formData.password) newErrors.password = "Password is required";
 
         setErrors(newErrors);
@@ -80,6 +105,7 @@ export default function LoginForm() {
                     checked={rememberMe}
                     onChange={(e) => setRememberMe(e.target.checked)}
                 />
+                {/* TODO: or delete */}
                 <label className="custom-control-label" htmlFor="rememberMe">
                     Remember me?
                 </label>
@@ -88,21 +114,6 @@ export default function LoginForm() {
                 <button id="login-submit" type="submit" className="w-100 btn btn-lg btn-primary">
                     Log in
                 </button>
-            </div>
-            <div>
-                <p>
-                    <a id="forgot-password" href="/forgot-password">
-                        Forgot your password?
-                    </a>{' '}
-                    |{' '}
-                    <a href="/staff-register">
-                        Register as a new user
-                    </a>{' '}
-                    |{' '}
-                    <a id="resend-confirmation" href="/resend-email-confirmation">
-                        Resend email confirmation
-                    </a>
-                </p>
             </div>
         </form>
     )

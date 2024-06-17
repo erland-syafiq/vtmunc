@@ -1,11 +1,30 @@
 import { NextResponse } from "next/server";
+import { decrypt } from "@/lib";
 
-export function middleware(request) {
-    
-    if (/[A-Z]/.test(request.nextUrl.pathName)) {
-        const url = request.nextUrl.clone();
-        url.pathname = pathname.toLowerCase();
-        return NextResponse.redirect(url);
+export async function middleware(request) {
+
+    const { pathname, origin } = request.nextUrl;
+    const url = request.nextUrl.clone();
+    // Takes origin and adds /login which is our login page
+    const loginUrl = origin + '/login'
+
+    // Check if it is protected path '/admin'
+    if (pathname.toLowerCase() === '/applicants') {
+
+        // Retrieve the cookie value from the request
+        const token = request.cookies.get("vtmunc_admin")?.value; 
+
+        if (token) {
+            // If we have cookies we then decrypt
+            try {
+                const parsed = await decrypt(token);
+            } catch (error) {
+                // If any decryption errors then redirect to login
+                return NextResponse.redirect(loginUrl);
+            }
+        } else {
+            return NextResponse.redirect(loginUrl);
+        }
     }
 
     return NextResponse.next();
