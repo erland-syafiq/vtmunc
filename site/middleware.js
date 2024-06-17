@@ -9,7 +9,7 @@ export async function middleware(request) {
     const loginUrl = origin + '/login'
 
     // Check if it is protected path '/admin'
-    if (pathname.toLowerCase() === '/admin') {
+    if (pathname.toLowerCase() === '/applicants') {
 
         // Retrieve the cookie value from the request
         const token = request.cookies.get("vtmunc_admin")?.value; 
@@ -25,12 +25,6 @@ export async function middleware(request) {
         } else {
             return NextResponse.redirect(loginUrl);
         }
-    }
-    
-    // Redirect all urls to lowercase
-    if (/[A-Z]/.test(request.nextUrl.pathname)) {
-        url.pathname = pathname.toLowerCase();
-        return NextResponse.redirect(url);
     }
 
     return NextResponse.next();
