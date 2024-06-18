@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { encrypt, decrypt } from "@/lib";
 
-const { USERNAME, PASSWORD, JWT_SECRET } = process.env;
+const { ADMIN_USERNAME, ADMIN_PASSWORD, JWT_SECRET } = process.env;
 
 
 export async function POST(request) {
@@ -11,7 +11,7 @@ export async function POST(request) {
     const { userEmail, userPass } = body;
 
     // Verify email and password against our env variables
-    if (userEmail === USERNAME && userPass === PASSWORD) {
+    if (userEmail === ADMIN_USERNAME && userPass === ADMIN_PASSWORD) {
         // Create encrypted token with user email and expiration time
         const expires = new Date(Date.now() + 3 * 60 * 60 * 1000);
         const token = await encrypt({ userEmail, expires });
