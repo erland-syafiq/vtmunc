@@ -28,7 +28,13 @@ jobs:
         run: docker pull vtmunc/site:latest
       - name: Remove old containers
         run: docker rm -f vtmunc || true
+      - name: Clean earlier .env
+        run: rm .env || true
+      - name: Create environment variables
+        run: echo ${{ secrets.ENV_FILE }} > .env
       - name: Run container
-        run: docker run -p 3000:3000 -d --name vtmunc vtmunc/site
+        run: docker run -p 3000:3000 -d --name vtmunc --env_file .env vtmunc/site
+      - name: Removing environment variabe
+        run: rm .env || true
       - name: Clean up (Removes old containers)
         run: docker system prune -f
