@@ -33,7 +33,7 @@ jobs:
       - name: Create environment variables
         run: echo ${{ secrets.ENV_FILE }} > .env
       - name: Run container
-        run: docker run -p 3000:3000 -d --name vtmunc --env_file .env vtmunc/site
+        run: docker run -p 3000:3000 -d --name vtmunc --env-file .env vtmunc/site
       - name: Removing environment variabe
         run: rm .env || true
       - name: Clean up (Removes old containers)
