@@ -10,3 +10,5 @@
 **/.editorconfig
 **/.aws
 **/.next
+**/.env
+**/.env.development
