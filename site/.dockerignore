@@ -7,7 +7,6 @@
 **/.vscode
 **/npm-debug.log
 **/coverage
-**/.env
 **/.editorconfig
 **/.aws
 **/.next
