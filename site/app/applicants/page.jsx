@@ -4,6 +4,7 @@ import Dashboard from "./Dashboard";
 import Link from "next/link";
 import "./DashboardPage.css";
 import { invoiceStatusToString } from "@/app/utils/applicantUtils";
+import ErrorPage from "../components/ErrorPage";
 
 /**
  * Page displays some metrics on our current applicants including total number of participants, 
@@ -64,11 +65,6 @@ export default async function DashboardPage() {
 
     }
     catch (e) {
-        return (
-            <main className="container">
-                <h1>Error: {e.name}</h1>
-                <p>{e.message}</p>
-            </main>
-        )
+        return <ErrorPage e={e} />
     }
 }
