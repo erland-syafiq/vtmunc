@@ -11,7 +11,6 @@ Never, commit .env files to any remote repository, including GitHub. Only share 
 | AWS_DYNAMODB_ACCESS_KEY_ID | Your AWS DynamoDB access key ID. Refer to "Obtaining AWS Credentials Securely" to obtain this value. | `JKSOKJSDO` (fake) |
 | AWS_DYNAMODB_SECRET_ACCESS_KEY | Your AWS DynamoDB secret access key. Refer to "Obtaining AWS Credentials Securely" to obtain this value.  | `sb0lasoiwkdouwedfes` (fake) |
 | AWS_DEFAULT_REGION | The default AWS region your application will use | `us-east1` |
-| BACKEND_URL | The URL of your backend API | `localhost:3000/api` |
 | ADMIN_USERNAME | The admin username | `randomemail@gmail.com` (fake) |
 | ADMIN_PASSWORD | The admin password | `randOMPassWordForMUN&283` (fake) |
 | JWT_SECRET | A secret key used for generating JSON Web Tokens (JWTs) for authentication. | `okmasfq;eiuidf` (fake) |
