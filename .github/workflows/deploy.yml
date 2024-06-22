@@ -15,7 +15,7 @@ jobs:
       - name: Clean earlier environment variables
         run: rm site/.env.production || true
       - name: Create environment variables
-        run: echo ${{ secrets.ENV_FILE }} > site/.env.production
+        run: echo "${{ secrets.ENV_FILE }}" > site/.env.production
       - name: Build docker image
         run: docker build -t vtmunc/site ./site
       - name: Remove environment variables file 
