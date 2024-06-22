@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { isValidEmail } from '../utils/validation';
+import { getApplicantErrors } from '../utils/applicantUtils';
 
 export default function RegisterForm() {
 
@@ -64,33 +64,20 @@ export default function RegisterForm() {
     }
 
     function validateForm() {
-        const newErrors = {};
-
-        if (!formData.advisorEmail) newErrors.advisorEmail = "Advisor Email is required";
-        if (!isValidEmail(formData.advisorEmail)) newErrors.advisorEmail = "Advisor Email is invalid";
-        if (!formData.advisorName) newErrors.advisorName = 'Advisor Name is required';
-        if (!formData.advisorPhone) newErrors.advisorPhone = 'Advisor Phone is required';
-        if (!formData.advisorRelation) newErrors.advisorRelation = "Advisor Relation is required";
-    
-        if (!formData.schoolName) newErrors.schoolName = 'School Name is required';
-        if (formData.delegationSize <= 0) newErrors.delegationSize = 'Delegation Size is required';
-        if (!formData.schoolMailingAddress) newErrors.schoolMailingAddress = 'School Mailing Address is required';
-        if (!formData.isAgreeWithTerms) newErrors.isAgreeWithTerms = 'You must agree to the terms';
+        const newErrors = getApplicantErrors(formData);
         
         setErrors(newErrors);
-        console.log(newErrors);
         return Object.keys(newErrors).length === 0;
     }
 
     async function handleSubmit(e) {
         e.preventDefault();
 
-        const URL = `${process.env.BACKEND_URL}/applicants`;
+        const URL = `/api/applicants`;
 
         if (!validateForm()) return;
 
         try {
-            // Fetch data
             const response = await fetch(URL, {
                 method: "POST",
                 mode: "cors",
@@ -101,9 +88,9 @@ export default function RegisterForm() {
             });
             
             if (response.status === 200) {
-                router.push("/register-success");
+                router.push("/register/success");
             } else {
-                router.push("/register-server-failure");
+                console.error(response);
             }
         } catch (error) {
             console.error("There was an error submitting the form!", error);
