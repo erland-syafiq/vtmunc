@@ -1410,8 +1410,9 @@ pre {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border: 1px solid #2B2B29;
+  border-radius: 5px;
+  background: #F8F8F8;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .form-control {
@@ -1426,8 +1427,7 @@ pre {
     color: #495057;
     background-color: #fff;
     border-color: #e30070;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(99, 0, 49, 0.25); }
+    outline: 0;}
   .form-control::placeholder {
     color: #6c757d;
     opacity: 1; }

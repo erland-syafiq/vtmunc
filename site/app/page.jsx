@@ -10,7 +10,7 @@ function Home() {
             <div className="heroHighlightBox"></div>
             <div className="heroContent">
                 <h3>
-                    Spring 2025
+                    Feb 28th - Mar 2nd
                 </h3>
                 <h1>
                     VTMUNC 2025
