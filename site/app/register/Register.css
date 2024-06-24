@@ -15,7 +15,7 @@
     height: 125px !important;
 }
 
-.registerPage body {
+body .registerPage {
     background-color: var(--secondary-background);
 }
 
