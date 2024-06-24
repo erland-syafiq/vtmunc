@@ -16,7 +16,7 @@ async function Committees() {
             
             <div className="row">
                 <div className="col-12 text-center">
-                    <h2 className="text-nowrap committeesTitle">Committees</h2>
+                    <h1 className="text-nowrap committeesTitle">The Committees</h1>
                 </div>
             </div>
             {
