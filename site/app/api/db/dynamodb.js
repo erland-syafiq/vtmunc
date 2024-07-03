@@ -24,7 +24,16 @@ export async function putApplicant(applicant) {
         Item: applicant
     }
 
-    console.log(params);
-
     await dynamoClient.put(params).promise();
+}
+
+export async function deleteApplicant(id) {
+    const params = {
+        TableName: TABLE_NAME,
+        Key: {
+            id: id
+        }
+    }
+
+    await dynamoClient.delete(params).promise();
 }

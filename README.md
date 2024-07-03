@@ -32,6 +32,7 @@ The VTMUNC website is hosted on an Amazon EC2 instance, which serves as the core
 - [⚙️ Environment Variables](docs/env-file.md)
 - [📂 Project Overview](docs/project-overview.md)
 - [📙 Site Overview](docs/site-overview.md)
+- [📘 API Reference ](docs/api-reference.md)
 - [🎨 Style Guide](docs/style-guide.md)
 - [🌐 Deployment](docs/deployment.md)
 
