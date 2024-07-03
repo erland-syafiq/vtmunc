@@ -33,7 +33,7 @@ export async function POST(request) {
             id: generateRandomId(),
             date: getCurrentDate()
         }
-        console.log(applicant);
+        
         await putApplicant(applicant);
         return Response.json(body);
     }

@@ -49,8 +49,6 @@ export default function DashboardPage() {
         setApplicants(newApplicants);
     }
 
-    console.log(applicants);
-
 
     if (applicants.length == 0) {
         return (
