@@ -19,6 +19,26 @@ The `/api/applicants` endpoint allows for managing applicant data. It supports t
 #### Description
 Fetches a list of all applicants.
 
+#### Fields of each applicant
+| Field                    | Type   | Description                          |
+|--------------------------|--------|--------------------------------------|
+| `advisorPhone`           | string | The phone number of the advisor.     |
+| `delegationSize`         | number | The size of the delegation.          |
+| `headDelegateName`       | string | The name of the head delegate.       |
+| `schoolName`             | string | The name of the school.              |
+| `advisorOtherInformation`| string | Other information about the advisor. |
+| `commentsOrQuestions`    | string | Any comments or questions.           |
+| `advisorEmail`           | string | The email of the advisor.            |
+| `advisorRelation`        | string | The relation of the advisor.         |
+| `schoolMailingAddress`   | string | The mailing address of the school.   |
+| `headDelegateEmail`      | string | The email of the head delegate.      |
+| `headDelegatePhone`      | string | The phone number of the head delegate.|
+| `advisorName`            | string | The name of the advisor.             |
+| `delegateList`           | string  | A list of delegates.                |
+| `id`                     | number | Unique applicant id.                 |
+| `date`                   | string  | When applicant was created (YYYY-MM-DD)|
+
+
 #### Headers
 | Key           | Value                  |
 |---------------|------------------------|
@@ -53,7 +73,7 @@ Authorization: Bearer <JWT token>
         "headDelegateEmail": "delegate@example.com",
         "headDelegatePhone": "123-456-7890",
         "advisorName": "Jane Smith",
-        "delegateList": ["Delegate1", "Delegate2"],
+        "delegateList": "Jeffery Visonaire, Adam",
         "invoiceStatus": 0,
         "id": 12345,
         "date": "2024-07-02"
@@ -81,7 +101,7 @@ Creates a new applicant.
 | `headDelegateEmail`      | string | The email of the head delegate.      |
 | `headDelegatePhone`      | string | The phone number of the head delegate.|
 | `advisorName`            | string | The name of the advisor.             |
-| `delegateList`           | array  | A list of delegates.                 |
+| `delegateList`           | string  | A list of delegates.                 |
 
 #### Response
 | Status Code             | Description                                  |
@@ -108,7 +128,7 @@ Content-Type: application/json
     "headDelegateEmail": "delegate@example.com",
     "headDelegatePhone": "123-456-7890",
     "advisorName": "Jane Smith",
-    "delegateList": ["Delegate1", "Delegate2"]
+    "delegateList": "Jeffery Visonaire, Adam"
 }
 ```
 
@@ -127,7 +147,7 @@ Content-Type: application/json
     "headDelegateEmail": "delegate@example.com",
     "headDelegatePhone": "123-456-7890",
     "advisorName": "Jane Smith",
-    "delegateList": ["Delegate1", "Delegate2"],
+    "delegateList": "Jeffery Visonaire, Adam",
     "invoiceStatus": 0,
     "id": 12345,
     "date": "2024-07-02"

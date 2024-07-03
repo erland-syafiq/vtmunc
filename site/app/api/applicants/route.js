@@ -1,3 +1,9 @@
+/**
+ * Endpoint: /api/applicants
+ * 
+ * Reference: /docs/api/applicants.md
+ */
+
 import { generateRandomId, getCurrentDate } from "@/app/utils/util";
 import { deleteApplicant, getApplicants, putApplicant } from "../db/dynamodb";
 
