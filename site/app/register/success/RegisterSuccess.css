@@ -1,0 +1,61 @@
+.registerSuccess {
+    text-align: center;
+}
+
+.registerSuccess h2 {
+    color: var(--primary);
+    padding: 10px;
+}
+
+.registerSuccess h5 {
+    padding: 10px;
+}
+
+.registerCard {
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: solid var(--primary);
+    background: var(--primary-background);
+    box-shadow: -8px 12px 0px 0px var(--tertiary);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.registerImg {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/**
+    Unlike home page this background is fixed and static in background
+**/
+.registerSuccessBackground {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-image: url(/Images/registersuccess.jpeg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
