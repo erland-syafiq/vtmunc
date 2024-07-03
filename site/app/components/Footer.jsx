@@ -29,7 +29,7 @@ function Footer() {
                         </p>
 
                         <a href="https://www.instagram.com/vtmunc/" target="_blank">
-                            <img src="/Images/Instagram.svg" className="img-fluid" />
+                            <img src="/icons/instagram.svg" className="img-fluid" />
                         </a>
                     </div>
 

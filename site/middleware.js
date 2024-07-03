@@ -1,29 +1,44 @@
 import { NextResponse } from "next/server";
 import { decrypt } from "@/lib";
 
+/**
+ * Checks if user is admin
+ * @param {Request} request 
+ * @returns {bool} true if user is admin, false if it is not
+ */
+async function isUserAdmin(request) {
+    // Retrieve the cookie value from the request
+    const token = request.cookies.get("vtmunc_admin")?.value;
+    
+    if (token) {
+        // If we have cookies we then decrypt
+        try {
+            await decrypt(token);
+            return true;
+        } catch (error) {
+            // If any decryption errors then redirect to login
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
 export async function middleware(request) {
 
     const { pathname, origin } = request.nextUrl;
-    const url = request.nextUrl.clone();
-    // Takes origin and adds /login which is our login page
-    const loginUrl = origin + '/login'
 
-    // Check if it is protected path '/admin'
+    // Check if it is protected path '/applicants'
     if (pathname.toLowerCase() === '/applicants') {
+        if (!await isUserAdmin(request)) {
+            return NextResponse.redirect(origin + '/login');
+        }
+    }
 
-        // Retrieve the cookie value from the request
-        const token = request.cookies.get("vtmunc_admin")?.value; 
-
-        if (token) {
-            // If we have cookies we then decrypt
-            try {
-                const parsed = await decrypt(token);
-            } catch (error) {
-                // If any decryption errors then redirect to login
-                return NextResponse.redirect(loginUrl);
-            }
-        } else {
-            return NextResponse.redirect(loginUrl);
+    // Check if it is protected path '/applicants'
+    if (pathname.toLowerCase() === '/api/applicants' && request.method !== "POST") {
+        if (!await isUserAdmin(request)) {
+            return new Response("Unauthorized", {status: 401});
         }
     }
 
