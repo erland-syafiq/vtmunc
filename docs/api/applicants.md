@@ -37,6 +37,7 @@ Fetches a list of all applicants.
 | `delegateList`           | string  | A list of delegates.                |
 | `id`                     | number | Unique applicant id.                 |
 | `date`                   | string  | When applicant was created (YYYY-MM-DD)|
+| `invoiceStatus`          | number  | Status of invoice (1: Invoice not sent, 2: Payment not received, 3: Payment received) |
 
 
 #### Headers
