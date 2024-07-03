@@ -6,6 +6,7 @@
     margin-bottom: 40px;
     margin-right: 10px;
     margin-left: 10px;
+    border-radius: 0px;
 }
 
 .card > h2 {
@@ -13,5 +14,9 @@
 }
 
 .dashboard {
-    background: var(--secondary-background);
+    background-color: var(--secondary-background);
+}
+
+.transparent-overlay-delete-confirmation {
+    background-color: rgba(0, 0, 0, 0.2);
 }
