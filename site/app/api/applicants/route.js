@@ -1,5 +1,5 @@
 import { generateRandomId, getCurrentDate } from "@/app/utils/util";
-import { getApplicants, putApplicant } from "../db/dynamodb";
+import { deleteApplicant, getApplicants, putApplicant } from "../db/dynamodb";
 
 export async function GET() {
     try {
@@ -8,7 +8,7 @@ export async function GET() {
     }
     catch (e) {
         console.log(e);
-        return new Response("Error with applicants", 500);
+        return new Response("Error with applicants", {status: 500});
     }
 }
 
@@ -39,6 +39,23 @@ export async function POST(request) {
     }
     catch (e) {
         console.log(e);
-        return new Response("Error with applicants", 500);
+        return new Response("Error with applicants", {status: 500});
+    }
+}
+
+export async function DELETE(request) {
+    try {
+        const body = await request.json();
+        const id = body.id;
+        if (!id) {
+            return new Response("No id sent", {status: 400})
+        }
+
+        await deleteApplicant(id);
+        return new Response(`Deleted applicant with id: ${id}`, {status: 200});
+    }
+    catch (e) {
+        console.log(e);
+        return new Response("Error with deletion",  {status: 500});
     }
 }

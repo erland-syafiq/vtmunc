@@ -37,10 +37,20 @@ export default function DashboardPage() {
         getData();
     }, []);
 
+    // Open delete confirmation
     function handleApplicantDelete(applicant) {
         setApplicantToDelete(applicant);
         setShowDeleteConfirmation(true);
     }
+
+    // Delete applicant
+    function deleteApplicant(applicantToDelete) {
+        const newApplicants = applicants.filter((applicant) => applicantToDelete.id != applicant.id);
+        setApplicants(newApplicants);
+    }
+
+    console.log(applicants);
+
 
     if (applicants.length == 0) {
         return (
@@ -53,7 +63,12 @@ export default function DashboardPage() {
 
     return (
         <main className="dashboard pt-3">
-            <DeleteConfirmationModal applicant={applicantToDelete} showDeleteConfirmation={showDeleteConfirmation} setShowDeleteConfirmation={setShowDeleteConfirmation}/>
+            <DeleteConfirmationModal 
+                applicant={applicantToDelete}
+                showDeleteConfirmation={showDeleteConfirmation}
+                setShowDeleteConfirmation={setShowDeleteConfirmation}
+                deleteApplicant={deleteApplicant}
+            />
             <div className="container">
                 <h2>Delegations</h2>
                 <Dashboard applicants={applicants}/>

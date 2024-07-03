@@ -1,11 +1,36 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-export default function DeleteConfirmationModal({applicant, showDeleteConfirmation, setShowDeleteConfirmation}) {
+const APPLICANTS_URL = "/api/applicants";
+
+export default function DeleteConfirmationModal({applicant, showDeleteConfirmation, setShowDeleteConfirmation, deleteApplicant}) {
 
     const modalRef = useRef(null);
+    const [error, setError] = useState("");
 
-    function handleDelete() {
-        setShowDeleteConfirmation(false);
+    async function handleDelete() {
+        try {
+            const response = await fetch(APPLICANTS_URL, {
+                method: "DELETE",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    id: applicant.id
+                })
+            });
+
+            if (response.status != 200) {
+                throw new Error(`Response error code: ${response.status}, Response message: ${response.body}`)
+            }
+            
+            setShowDeleteConfirmation(false);
+            deleteApplicant(applicant);
+        }
+        catch (e) {
+            
+            setError(`${e.name}: ${e.message}`);
+        }
     }
 
     function handleClickOnModal(event) {
@@ -13,8 +38,6 @@ export default function DeleteConfirmationModal({applicant, showDeleteConfirmati
             setShowDeleteConfirmation(false);
         }
     }
-
-
 
 
     return (
@@ -40,6 +63,7 @@ export default function DeleteConfirmationModal({applicant, showDeleteConfirmati
                         <button type="button" className="btn btn-secondary" onClick={() => setShowDeleteConfirmation(false)}>Cancel</button>
                         <button type="button" className="btn btn-danger" onClick={handleDelete}>Delete</button>
                     </div>
+                    <span className="text-danger">{error}</span>
                 </div>
             </div>
         </div>
