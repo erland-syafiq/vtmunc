@@ -8,9 +8,10 @@ import { usePathname } from 'next/navigation';
 function Navbar() {
     const path = usePathname();
 
-    const isHomePage = path === '/';
+    // If we are on home page or register/success make navbar transparent
+    const isTransparent = path === '/' || path === '/register/success';
 
-    const navbarStyle = isHomePage ? 'navbar-transparent' : '';
+    const navbarStyle = isTransparent ? 'navbar-transparent' : '';
 
     return (
             <nav className={`${navbarStyle} navbar navbar-expand-md navbar-toggleable-md navbar-light box-shadow`}>
