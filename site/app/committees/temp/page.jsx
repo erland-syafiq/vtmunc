@@ -1,7 +1,7 @@
 import React from 'react';
  import './CommitteeTemp.css';
 
-export default function RegisterSuccess() {
+export default function TempPage() {
     return (
         <main className="temp">
            <h1>Committees Coming Soon!</h1>
