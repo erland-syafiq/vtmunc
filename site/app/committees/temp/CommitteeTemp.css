@@ -1,0 +1,13 @@
+.temp {
+    margin: 200px 0; 
+    text-align: center; 
+}
+
+.temp h1 {
+    margin-bottom: 50px;
+}
+
+a {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 30px;
+}
