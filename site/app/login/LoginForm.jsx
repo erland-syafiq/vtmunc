@@ -28,11 +28,11 @@ export default function LoginForm() {
             window.location.href = '/applicants';
         }
         catch(e) {
-            const newErrors = {};
-            newErrors.email = "Invalid email and password";
-            newErrors.password = "Invalid email and password";
             clearForm();
-            setErrors(newErrors);
+            setErrors({
+                email: e.message,
+                password: e.message
+            });
         }  
     };
 
