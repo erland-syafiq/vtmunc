@@ -1,12 +1,38 @@
 "use client"
 
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 
 const AuthContext = createContext();
 
 export default function AuthProvider({ children }) {
     const [user, setUser] = useState({});
+
+    // Attemps to auto login
+    useEffect(() => {
+        async function autoLogin() {
+            try {
+                const response = await fetch("/api/login");
+                if (!response.ok) {
+                    throw new Error("Invalid credentials");
+                }
+                const user = await response.json();
+                setUser(user);
+                console.log(user);
+            }
+            catch(e) {
+            }
+        }
+
+        autoLogin();
+    }, [])
     
+    /**
+     * Logs in to backend
+     * 
+     * @param {string} email 
+     * @param {string} password 
+     * @throws on server failure and on invalid email and password. Use with try catch statement to get error message
+     */
     async function login(email, password) {
         const response = await fetch('/api/login', {
             method: 'POST',
@@ -24,7 +50,7 @@ export default function AuthProvider({ children }) {
 
 
     return (    
-        <AuthContext.Provider value={{user, setUser, login}}>
+        <AuthContext.Provider value={{user, login}}>
             {children}
         </AuthContext.Provider>
     )
