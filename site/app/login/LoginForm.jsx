@@ -1,6 +1,7 @@
 "use client"
 
 
+import { useAuth } from '../components/AuthProvider';
 import { isValidEmail } from '../utils/validation';
 
 import React, { useState } from 'react';
@@ -9,45 +10,30 @@ export default function LoginForm() {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [rememberMe, setRememberMe] = useState(false);
     const [errors, setErrors] = useState([]);
+    const { login } = useAuth();
+
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!validateForm()) return;
 
         try {
-            // Attempt login
-            const userEmail = formData.email;
-            const userPass = formData.password;
-            // Send post request with user email and password
-            fetch('/api/auth/login/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ userEmail, userPass }),
-            })
-            .then(response => {
-                if (response.ok) { 
-                  // Redirect to applicants if ok response
-                  window.location.href = '/applicants';
-                } else {
-                    const newErrors = {};
-                    newErrors.email = "Invalid email and password";
-                    newErrors.password = "Invalid email and password";
-                    clearForm();
-                    setErrors(newErrors);
-                }
-            });
-
+            await login(formData.email, formData.password);
+            window.location.href = '/applicants';
         }
         catch(e) {
-            console.error("There was an error submitting the form!", e);
-        }
-        
+            const newErrors = {};
+            newErrors.email = "Invalid email and password";
+            newErrors.password = "Invalid email and password";
+            clearForm();
+            setErrors(newErrors);
+        }  
     };
 
     function clearForm() {

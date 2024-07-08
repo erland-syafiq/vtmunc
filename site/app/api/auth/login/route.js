@@ -9,6 +9,7 @@ export async function POST(request) {
     // Get email and password for login
     const body = await request.json();
     const { userEmail, userPass } = body;
+    console.log(body);
 
     // Verify email and password against our env variables
     if (userEmail === ADMIN_USERNAME && userPass === ADMIN_PASSWORD) {
