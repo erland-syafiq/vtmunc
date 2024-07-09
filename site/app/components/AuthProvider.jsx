@@ -36,9 +36,6 @@ export default function AuthProvider({ children }) {
         if (!response.ok) { 
             throw new Error("Invalid email and password");
         } 
-        const user = await response.json();
-
-        setUser(user);
     }
 
     async function logout() {
@@ -74,7 +71,7 @@ export default function AuthProvider({ children }) {
  * }
  * 
  * login: (email: string, password: string) => ();
- * Logs in user;
+ * Logs in user, doesn't automatically call setUser
  * Note: throws on server failure and on invalid email and password. Use with try catch statement to get error message
  * 
  * logout: () => ();
