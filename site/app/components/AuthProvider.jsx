@@ -17,7 +17,6 @@ export default function AuthProvider({ children }) {
                 }
                 const user = await response.json();
                 setUser(user);
-                console.log(user);
             }
             catch(e) {
             }
@@ -51,6 +50,7 @@ export default function AuthProvider({ children }) {
             }
 
             setUser({});
+            window.location.href = "/";
         }
         catch (e) {
         }
@@ -78,7 +78,7 @@ export default function AuthProvider({ children }) {
  * Note: throws on server failure and on invalid email and password. Use with try catch statement to get error message
  * 
  * logout: () => ();
- * Logouts out user
+ * Logouts out user and auto-directs to the home page
  */
 export function useAuth() {
     return useContext(AuthContext);
