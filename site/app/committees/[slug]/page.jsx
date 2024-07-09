@@ -45,7 +45,7 @@ export default async function CommitteeDetailsPage({params}) {
     if (!committee) {
         return {
             title: "Page not found",
-            description: "Page you're looking for doesn't exist. ."
+            description: "Page you're looking for doesn't exist..."
         }
     }
 
