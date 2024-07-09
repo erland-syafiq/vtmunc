@@ -26,13 +26,7 @@ export default function AuthProvider({ children }) {
         autoLogin();
     }, [])
     
-    /**
-     * Logs in to backend
-     * 
-     * @param {string} email 
-     * @param {string} password 
-     * @throws on server failure and on invalid email and password. Use with try catch statement to get error message
-     */
+
     async function login(email, password) {
         const response = await fetch('/api/login', {
             method: 'POST',
@@ -48,14 +42,44 @@ export default function AuthProvider({ children }) {
         setUser(user);
     }
 
+    async function logout() {
+        try {
+            const response = await fetch("/api/logout");
+            
+            if (!response.ok) {
+                throw new Error("Server error");
+            }
+
+            setUser({});
+        }
+        catch (e) {
+        }
+    }
+
+    const isAuthenticated = Object.keys(user).length > 0;
 
     return (    
-        <AuthContext.Provider value={{user, login}}>
+        <AuthContext.Provider value={{user, isAuthenticated, login, logout}}>
             {children}
         </AuthContext.Provider>
     )
 }
 
+/**
+ * Objects that can be obtained from useAuth
+ * 
+ * user: {
+ *  email: string,
+ *  username: string
+ * }
+ * 
+ * login: (email: string, password: string) => ();
+ * Logs in user;
+ * Note: throws on server failure and on invalid email and password. Use with try catch statement to get error message
+ * 
+ * logout: () => ();
+ * Logouts out user
+ */
 export function useAuth() {
     return useContext(AuthContext);
 }
