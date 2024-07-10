@@ -1,28 +1,5 @@
 import { NextResponse } from "next/server";
-import { decrypt } from "@/lib";
-
-/**
- * Checks if user is admin
- * @param {Request} request 
- * @returns {bool} true if user is admin, false if it is not
- */
-async function isUserAdmin(request) {
-    // Retrieve the cookie value from the request
-    const token = request.cookies.get("vtmunc_admin")?.value;
-    
-    if (token) {
-        // If we have cookies we then decrypt
-        try {
-            await decrypt(token);
-            return true;
-        } catch (error) {
-            // If any decryption errors then redirect to login
-            return false;
-        }
-    } else {
-        return false;
-    }
-}
+import { isUserAdmin } from "./app/utils/AuthUtils";
 
 export async function middleware(request) {
 

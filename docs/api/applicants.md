@@ -1,4 +1,4 @@
-# /applicants
+# /api/applicants
 
 ## Base URL
 `/api/applicants`

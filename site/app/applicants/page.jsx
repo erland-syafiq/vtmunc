@@ -53,8 +53,8 @@ export default function DashboardPage() {
     if (applicants.length == 0) {
         return (
             <main className="vh-100 dashboard d-flex justify-content-center align-items-center">
-                <div class="spinner-grow applicantsLoading text-primary" role="status">
-                    <span class="sr-only">Loading...</span>
+                <div className="spinner-grow applicantsLoading text-primary" role="status">
+                    <span className="sr-only">Loading...</span>
                 </div>
             </main>
         )

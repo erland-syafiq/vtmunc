@@ -4,9 +4,11 @@ import React from 'react';
 import Link  from "next/link";
 import './Navbar.css';
 import { usePathname } from 'next/navigation';
+import { useAuth } from './AuthProvider';
 
 function Navbar() {
     const path = usePathname();
+    const { isAuthenticated, logout } = useAuth();
 
     // If we are on home page or register/success make navbar transparent
     const isTransparent = path === '/' || path === '/register/success';
@@ -29,6 +31,12 @@ function Navbar() {
                         {/* <Link className="nav-link" href="/resources">Resources </Link>
                         <Link className="nav-link" href="/sponsors"> Sponsors </Link> */}
                         <Link className="nav-link" href="/register"> Register </Link>
+                        { isAuthenticated && (
+                            <>
+                                <Link className="nav-link" href="/applicants"> Dashboard </Link>
+                                <button className="btn nav-link" onClick={() => logout()}> Logout </button>
+                            </>
+                        )}
                     </div>
                 </div>
             </nav>
