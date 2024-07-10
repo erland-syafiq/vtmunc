@@ -17,7 +17,7 @@ export default function RegisterPage() {
 
                         <div className="group">
                             <h4>Dear Advisors and Independent Delegates,</h4>
-                            <p>Thank you for your registration for VTMUNC! For independent delegates that are staying in Blacksburg overnight, please contact Delaney Moran, our charge d'affairs on chargedaffaires@vtmunc.org, so we can send you a liability waiver form.</p>
+                            <p>Thank you for your registration for VTMUNC! For independent delegates that are staying in Blacksburg overnight, please contact Will Letvin, our charge d'affairs at vtmunconference@gmail.com, so we can send you a liability waiver form.</p>
                             <p>Note: * means a field is required</p>
                         </div>
 
