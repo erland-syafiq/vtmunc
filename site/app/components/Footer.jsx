@@ -14,7 +14,7 @@ function Footer() {
                         </div>
                         <p>
                             Virginia Tech, Blacksburg, VA 24061 <br/>
-                            chargedaffaires@vtmunc.org <br />
+                            vtmunconference@gmail.com <br />
                             <a href="https://www.inclusive.vt.edu/resources/land-acknowledgement-and-labor-recognition.html" target="_blank" className="footerLink" >
                             Land Acknowledgement</a>
                         </p>

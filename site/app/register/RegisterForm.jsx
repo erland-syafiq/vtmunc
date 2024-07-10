@@ -200,7 +200,7 @@ export default function RegisterForm() {
                 <p>
                     Please provide the following information about your school and organization. Independent delegates are kindly asked to list "Independent Delegate” under "School Name" and to use their personal address instead of a school address.<br />
 
-                    If, after submitting this form, you would like to add or drop delegates, please reach out to our Chargé d'Affaires, Delaney Moran, chargedaffaires@vtmunc.org <br />
+                    If, after submitting this form, you would like to add or drop delegates, please reach out to our Chargé d'Affaires, Will Letvin, vtmunconference@gmail.com <br />
                 </p>
 
                 <div className="row">
