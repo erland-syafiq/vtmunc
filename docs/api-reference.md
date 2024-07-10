@@ -5,3 +5,4 @@ Here are all of the APIs the VTMUNC website uses. Linked are more detailed api d
 ## Table of Contents
 - [/api/applicants](/docs/api/applicants.md)
 - [/api/login](/docs/api/login.md)
+- [/api/logout](/docs/api/logout.md)
