@@ -5,12 +5,14 @@ import { getHashedAdminPassword, isUserAdmin, encrypt } from "@/app/utils/AuthUt
 
 const { ADMIN_USERNAME } = process.env;
 
+const TOKEN_EXPIRATION_SHORT = 3 * 60 * 60 * 1000;      // 3 hours
+const TOKEN_EXPIRATION_LONG = 30 * 24 * 60 * 60 * 1000; // 30 days
 
 export async function POST(request) {
     try {
         // Get email and password for login
         const body = await request.json();
-        const { email, password } = body;
+        const { email, password, rememberMe = false } = body;
         
         // Used bcrypt module to stop timing attacks
         if (email !== ADMIN_USERNAME || !await bcrypt.compare(password, await getHashedAdminPassword())) {
@@ -18,8 +20,9 @@ export async function POST(request) {
         }
         
         // Create encrypted token with user email and expiration time
-        const expires = new Date(Date.now() + 3 * 60 * 60 * 1000);
-        const token = await encrypt({ email, expires });
+        const expiresIn = rememberMe ? TOKEN_EXPIRATION_LONG : TOKEN_EXPIRATION_SHORT;
+        const expires = new Date(Date.now() + expiresIn);
+        const token = await encrypt({ email, expires }, expires);
         
         // Set cookies 'vtmunc_admin' for admin access
         cookies().set("vtmunc_admin", token, { expires, httpOnly: true });

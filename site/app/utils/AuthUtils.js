@@ -46,14 +46,20 @@ export async function isUserAdmin(request) {
 }
 
 
-// Encrypt payload into token to be used in our cookie
-export async function encrypt(payload) {
-    const expirationTime = Math.floor(Date.now() / 1000) + (3 * 60 * 60);
-    return await new SignJWT(payload)
-      .setProtectedHeader({ alg: "HS256" }) 
-      .setIssuedAt() 
-      .setExpirationTime(expirationTime) 
-      .sign(key); 
+/**
+ * Encrypt payload into token to be used in our cookie
+ * 
+ * @param {Object} payload 
+ * @param {number} expirationTimeInMilliseconds 
+ * @returns 
+ */
+export async function encrypt(payload, expirationTimeInMilliseconds) {
+  const expirationTimeInSeconds = Math.floor(expirationTimeInMilliseconds / 1000);
+  return await new SignJWT(payload)
+    .setProtectedHeader({ alg: "HS256" }) 
+    .setIssuedAt() 
+    .setExpirationTime(expirationTimeInSeconds) 
+    .sign(key); 
 }
 
 // Decrypt key and return payload from an encrypted token

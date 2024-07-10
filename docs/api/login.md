@@ -14,10 +14,11 @@ The `/api/login` endpoint handles user authentication for admin access.
 Authenticate a user with email and password to generate an encrypted token stored in a cookie.
 
 #### Request Body
-| Field    | Type   | Description                          |
-|----------|--------|--------------------------------------|
-| `email`  | string | The email of the user.               |
-| `password`| string | The password of the user.            |
+| Field         | Type   | Description                          |
+|---------------|--------|--------------------------------------|
+| `email`       | string | The email of the user.               |
+| `password`    | string | The password of the user.            |
+| `rememberMe`  | bool   | Extends length of login session. (Optional; Default: false)    |
 
 #### Response Status Codes
 | Status Code | Description               |

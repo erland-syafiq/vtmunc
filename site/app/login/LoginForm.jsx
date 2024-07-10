@@ -24,7 +24,7 @@ export default function LoginForm() {
         if (!validateForm()) return;
 
         try {
-            await login(formData.email, formData.password);
+            await login(formData.email, formData.password, rememberMe);
             window.location.href = '/applicants';
         }
         catch(e) {
@@ -91,7 +91,6 @@ export default function LoginForm() {
                     checked={rememberMe}
                     onChange={(e) => setRememberMe(e.target.checked)}
                 />
-                {/* TODO: or delete */}
                 <label className="custom-control-label" htmlFor="rememberMe">
                     Remember me?
                 </label>

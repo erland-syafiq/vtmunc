@@ -7,6 +7,8 @@ const AuthContext = createContext();
 export default function AuthProvider({ children }) {
     const [user, setUser] = useState({});
 
+    const isAuthenticated = Object.keys(user).length > 0;
+
     // Attemps to auto login
     useEffect(() => {
         async function autoLogin() {
@@ -26,11 +28,11 @@ export default function AuthProvider({ children }) {
     }, [])
     
 
-    async function login(email, password) {
+    async function login(email, password, rememberMe = false) {
         const response = await fetch('/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify({ email, password, rememberMe }),
         });
         
         if (!response.ok) { 
@@ -53,7 +55,7 @@ export default function AuthProvider({ children }) {
         }
     }
 
-    const isAuthenticated = Object.keys(user).length > 0;
+    
 
     return (    
         <AuthContext.Provider value={{user, isAuthenticated, login, logout}}>
@@ -70,7 +72,7 @@ export default function AuthProvider({ children }) {
  *  username: string
  * }
  * 
- * login: (email: string, password: string) => ();
+ * login: (email: string, password: string, rememberMe?: boolean) => ();
  * Logs in user, doesn't automatically call setUser
  * Note: throws on server failure and on invalid email and password. Use with try catch statement to get error message
  * 
