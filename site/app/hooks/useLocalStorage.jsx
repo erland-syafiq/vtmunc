@@ -3,12 +3,11 @@
 import { useEffect, useState } from "react";
 
 /**
- * 
  * Hook to automatically save state to local storage.
  * 
  * @param {string} key - unique key for storage 
  * @param {any | Function} initialValue - initial value can be function
- * @returns the same values as setState
+ * @returns {[any, Function]} the same values as setState
  */
 export default function useLocalStorage(key, initialValue) {
     const [state, setState] = useState(initialValue);
