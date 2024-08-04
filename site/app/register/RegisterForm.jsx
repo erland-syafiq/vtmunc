@@ -3,25 +3,28 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getApplicantErrors } from '../utils/applicantUtils';
+import useLocalStorage from '../hooks/useLocalStorage';
+
+const initialFormData = {
+    advisorEmail: "",
+    advisorName: "",
+    advisorPhone: "",
+    advisorRelation: "",
+    advisorOtherInformation: "",
+    headDelegateEmail: "",
+    headDelegateName: "",
+    headDelegatePhone: "",
+    schoolName: "",
+    delegationSize: 0,
+    schoolMailingAddress: "",
+    delegateList: "",
+    isAgreeWithTerms: false,
+    commentsOrQuestions: ""
+};
 
 export default function RegisterForm() {
 
-    const [formData, setFormData] = useState({
-        advisorEmail: "",
-        advisorName: "",
-        advisorPhone: "",
-        advisorRelation: "",
-        advisorOtherInformation: "",
-        headDelegateEmail: "",
-        headDelegateName: "",
-        headDelegatePhone: "",
-        schoolName: "",
-        delegationSize: 0,
-        schoolMailingAddress: "",
-        delegateList: "",
-        isAgreeWithTerms: false,
-        commentsOrQuestions: ""
-    });
+    const [formData, setFormData] = useLocalStorage("registerForm", initialFormData);
 
     const [errors, setErrors] = useState({});
 
@@ -88,6 +91,7 @@ export default function RegisterForm() {
             });
             
             if (response.status === 200) {
+                setFormData(initialFormData);
                 router.push("/register/success");
             } else {
                 console.error(response);

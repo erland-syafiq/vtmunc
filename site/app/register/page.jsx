@@ -10,7 +10,7 @@ export const metadata = {
 export default function RegisterPage() {
     return (
         <main className="registerPage">
-            <div className="container mt-3">
+            <div className="container pt-3">
                 <div className="row">
                     <div className="col-md-12">
                         <h1>Registration</h1>
