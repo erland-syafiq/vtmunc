@@ -22,20 +22,26 @@ export default function RegisterPage() {
                         </div>
 
                         <div className="group">
-                            <h4>Payment Information,</h4>
+                            <h4>Payment Information</h4>
                             <p>
-                                Once you have completed this form, we will send you an invoice. Your delegation's registration will only be complete when you paid this invoice. Those invoices must be paid two weeks after the registration page.<br />
-                                Late registration: The latest to pay January 26th<br />
+                                Once you have completed this form, we will send you an invoice. An initial deposit will be due within <b>two weeks</b> that is the entire delegation fee and 50% of the cumulative fee for each delegate. A final deposit will be due upon signing in at the conference, and it will include the other 50% of the  cumulative fee for each delegate.<br />
                                 <br />
-                                Individual Delegates<br />
-                                Early Registration: September to October 29th $50<br />
-                                Normal Registration: October 30th to December 10th $60<br />
-                                Late Registration: December 11th to January 19th $70<br />
+                            </p>
+                            <h4>Fees</h4>
+                            <p>
+                                <b>Early Registration:</b> 
+                                    <br /> September 1st to October 18th 
+                                    <br /> For delegates: $50 per delegate, $60 delegation fee (waived for independent delegates)
+                                    <br /> For sponsors: FREE for the first advisor, $5 for each additional sponsor<br /><br />
+                                <b>Normal Registration:</b>
+                                    <br /> October 19th to December 15th 
+                                    <br /> For delegates: $70 per delegate, $70 delegation fee (waived for independent delegates)
+                                    <br /> For sponsors: $10 per sponsor<br /><br />
+                                <b>Late Registration:</b> 
+                                    <br /> December 16th to January 22nd 
+                                    <br /> For delegates: $80 per delegate, $80 delegation fee (waived for independent delegates)
+                                    <br /> For sponsors: $10 per sponsor<br /><br />
                                 <br />
-                                Delegation Fees (a group of more than 3 people)<br />
-                                Early: $60<br />
-                                Normal: $70<br />
-                                Late: $80<br />
                             </p>
                         </div>
 
