@@ -23,9 +23,6 @@ export default function useLocalStorage(key, initialValue) {
         if (savedValue) {
             setState(JSON.parse(savedValue))
         }
-        else {
-            localStorage.setItem(key, JSON.stringify(newState));
-        }
     }, [])
 
     return [state, setStoredState];
