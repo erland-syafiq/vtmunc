@@ -1,0 +1,16 @@
+.letterHeader {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #630031;
+}
+
+.gold-column {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10vw;
+    height: 100vmax;
+    background-color: var(--tertiary);
+    border-left: 5px solid var(--sextary);
+    z-index: -1;
+  }

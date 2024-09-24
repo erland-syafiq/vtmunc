@@ -24,7 +24,7 @@ async function AboutUs() {
             <section className= "container mt-3">
                 <div className="row justify-content-center">
                     <div className='col-10'>
-                        <div class="imageLine"></div>
+                        <div className="imageLine"></div>
                     </div>
                 </div>
                 <div className='row'>
@@ -53,7 +53,7 @@ async function AboutUs() {
                 </div>
                 <div className="row justify-content-center">
                     <div className='col-10'>
-                        <div class="imageLine"></div>
+                        <div className="imageLine"></div>
                     </div>
                 </div>
                 <div className="row">
