@@ -16,11 +16,11 @@ function Home() {
                     VTMUNC 2025
                 </h1>
                 <h4>
-                    The premier Model United Nations conference for high school students. We had over 300 students come in 2024, join us for next year!
+                    The premier Model United Nations conference for high school students, join us for next year!
                 </h4>
-                <Link href="/register">
+                <Link href="/letter">
                     <h4  className="btn btn-primary btn-lg heroBtn">
-                            Register Here
+                            Letter From Secretariat
                     </h4>
                 </Link>
             </div>

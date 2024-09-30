@@ -14,7 +14,7 @@ export default function RegisterSuccess() {
                             </div>
 
                             <div>
-                                <img className="registerImg" src={"/Images/AboutUsGroupPhoto.jpg"} />
+                                <img className="registerImg" src={"/../Images/AboutUsGroupPhoto.JPG"} />
                             </div>
 
                             <h5>We will begin processing your data as soon as possible. Please reach out to vtmunconference@gmail.com if you have any more questions.</h5>
