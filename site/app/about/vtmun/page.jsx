@@ -17,7 +17,7 @@ export default function AboutVtmun() {
                 </p>
             </div>
             <div className='col-md-4'>
-                <img className="whyImg" src={"/Images/hokiebird.png"} />
+                <img className="whyImg" src={"/../Images/hokiebird.png"} />
             </div>
             
             </div>

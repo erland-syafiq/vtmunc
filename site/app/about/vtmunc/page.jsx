@@ -13,7 +13,7 @@ export default function AboutVtmunc() {
                     </p>
                 </div>
                 <div className='col-md-7'>
-                    <img className="whyImg" src={"/Images/AboutUsGroupPhoto2.jpg"} />
+                    <img className="whyImg" src={"/../Images/AboutUsGroupPhoto2.JPG"} />
                 </div>
                 
             </div>

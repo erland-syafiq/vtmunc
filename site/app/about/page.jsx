@@ -18,7 +18,7 @@ async function AboutUs() {
                     <h1 className="aboutTitle">About Us</h1>
             </div>
             
-            <img className="aboutImg" src={"/Images/AboutUsGroupPhoto2.jpg"} />
+            <img className="aboutImg" src={"/Images/AboutUsGroupPhoto2.JPG"} />
 
 
             <section className= "container mt-3">
@@ -29,21 +29,21 @@ async function AboutUs() {
                 </div>
                 <div className='row'>
                     <div className='col-md-4'>
-                        <a href='about/vtmunc'>
+                        <a href='about/vtmunc' className='no-hover-effect'>
                             <div className='aboutCard1'>
                                 <h2 className="white-text">Why VTMUNC?</h2>
                             </div>
                         </a>
                     </div>                    
                     <div className='col-md-4'>
-                        <a href='about/vtmun'>
+                        <a href='about/vtmun' className='no-hover-effect'>
                             <div className='aboutCard2'>
                                 <h2 className="white-text">Virginia Tech Model UN</h2>
                             </div>
                         </a>
                     </div>
                     <div className='col-md-4'>
-                        <a href='about/blacksburg'>
+                        <a href='about/blacksburg' className='no-hover-effect'>
                             <div className='aboutCard3'>                            
                                 <h2 className="white-text">Virginia Tech & Blacksburg</h2>
                             </div>
@@ -64,7 +64,7 @@ async function AboutUs() {
                 <div className="row">
                     {
                     secretariat.map(({name, position, bio, email, image}, index) => 
-                         <UserCard colWidth={4} key={index} name={name} position={position} bio={bio} email={email} imagePath={"/Images/secretariat/" + image}/>
+                        <UserCard colWidth={4} key={index} name={name} position={position} bio={bio} email={email} imagePath={"/Images/secretariat/" + image}/>
                     )}
                 </div>
             </section>

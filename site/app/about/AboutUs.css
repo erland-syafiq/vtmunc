@@ -75,6 +75,11 @@
     color: #ffffff; /* or simply `color: white` */
 }
 
+.no-hover-effect:hover {
+    text-decoration: none;
+    color: #ffffff; 
+}
+
 .aboutBlueBackground {
     background: var(--quadrary); 
     padding: 20px;
