@@ -20,7 +20,6 @@ export async function GET() {
 }
 
 export async function POST(request) {
-    console.log("in post here");
     try {
         const body = await request.json();
         const philanthropy_data = {
@@ -31,7 +30,6 @@ export async function POST(request) {
         }
         
         await putSiteMetaData(philanthropy_data);
-        console.log(philanthropy_data);
         return Response.json(body);
     }
     catch (e) {

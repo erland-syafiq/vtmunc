@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Philanthropy.css';
 import { useAuth } from '../components/AuthProvider';
 
@@ -10,6 +10,20 @@ export default function Philanthropy() {
     const [amountRaisedChange, setAmountRaisedChange] = useState(0);
 
     const goal = 2000;
+
+    // GET from philanthropy funds and setAmountRaised to the value
+    useEffect(() => {
+        const getData = async () => {
+            const res = await fetch("/api/philanthropy", {cache: "no-store"});
+            const site_metadata = await res.json();
+            if (site_metadata[0]) {
+                setAmountRaised(site_metadata[0].fundsRaised)
+            } else {
+                setAmountRaised(0);
+            }            
+        }
+        getData();
+    }, []);
 
     const handleInputChange = (e) => {
         // Check input so it is between 0 and 2000
@@ -35,7 +49,6 @@ export default function Philanthropy() {
         } catch (error) {
             console.error('There was an error submitting philanthropy funds raised:', error);
         }
-
     }
 
     const percentageRaised = (amountRaised / goal) * 100;
@@ -62,7 +75,7 @@ export default function Philanthropy() {
                     ></div>
                 </div>
 
-                { !isAuthenticated && (                
+                { isAuthenticated && (                
                     <input 
                         type="number" 
                         value={amountRaisedChange} 
@@ -72,7 +85,7 @@ export default function Philanthropy() {
                         className="amountInput"
                     /> 
                 )}
-                { !isAuthenticated && ( 
+                { isAuthenticated && ( 
                     <button onClick={handleInputSubmit}>                    
                         Submit
                     </button>
