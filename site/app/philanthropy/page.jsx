@@ -6,14 +6,37 @@ import { useAuth } from '../components/AuthProvider';
 export default function Philanthropy() {
     const { isAuthenticated } = useAuth();
 
-    const [amountRaised, setAmountRaised] = useState(156);
+    const [amountRaised, setAmountRaised] = useState(0);
+    const [amountRaisedChange, setAmountRaisedChange] = useState(0);
+
     const goal = 2000;
 
     const handleInputChange = (e) => {
         // Check input so it is between 0 and 2000
         const value = Math.max(0, Math.min(goal, parseInt(e.target.value, 10) || 0));
-        setAmountRaised(value);
+        setAmountRaisedChange(value);
     };
+
+    const handleInputSubmit = async () => {
+        const philanthropy_data = {fundsRaised: amountRaisedChange};
+        console.log(philanthropy_data);
+        console.log(amountRaisedChange);
+        const URL = `/api/philanthropy`;
+        try {
+            const response = await fetch(URL, {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(philanthropy_data)
+            });
+
+        } catch (error) {
+            console.error('There was an error submitting philanthropy funds raised:', error);
+        }
+
+    }
 
     const percentageRaised = (amountRaised / goal) * 100;
     
@@ -39,14 +62,21 @@ export default function Philanthropy() {
                     ></div>
                 </div>
 
-                { isAuthenticated && (<input 
-                    type="number" 
-                    value={amountRaised} 
-                    onChange={handleInputChange} 
-                    min={0} 
-                    max={goal} 
-                    className="amountInput"
-                /> )}
+                { !isAuthenticated && (                
+                    <input 
+                        type="number" 
+                        value={amountRaisedChange} 
+                        onChange={handleInputChange} 
+                        min={0} 
+                        max={goal} 
+                        className="amountInput"
+                    /> 
+                )}
+                { !isAuthenticated && ( 
+                    <button onClick={handleInputSubmit}>                    
+                        Submit
+                    </button>
+                )}
 
                 <h4>Total Raised: ${amountRaised}</h4>
                 <p>Our goal for this conference is to raise $2,000. This is approximately the cost to support one family for one month. We are committed to donating 100% of merch sales and 50% of delegation fees to BRP.</p>

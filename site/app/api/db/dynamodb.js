@@ -8,6 +8,25 @@ AWS.config.update({
 
 const dynamoClient = new AWS.DynamoDB.DocumentClient();
 const TABLE_NAME = "vtmunc_applicants";
+const SITE_METADATA_TABLE_NAME = "site_metadata";
+
+export async function getSiteMetaData () {
+    const params = {
+        TableName: SITE_METADATA_TABLE_NAME
+    }
+
+    const res = await dynamoClient.scan(params).promise();
+    return res.Items;
+}
+
+export async function putSiteMetaData(data) {
+    const params = {
+        TableName: SITE_METADATA_TABLE_NAME,
+        Item: data
+    }
+
+    await dynamoClient.put(params).promise();
+}
 
 export async function getApplicants () {
     const params = {
