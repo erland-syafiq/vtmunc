@@ -19,5 +19,12 @@ export async function middleware(request) {
         }
     }
 
+    // Check if it is protected path '/philanthropy' for POST
+    if (pathname.toLowerCase() === '/api/philanthropy' && request.method == "POST") {
+        if (!await isUserAdmin(request)) {
+            return new Response("Unauthorized", {status: 401});
+        }
+    }
+
     return NextResponse.next();
 }

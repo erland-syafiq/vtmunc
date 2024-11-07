@@ -33,8 +33,6 @@ export default function Philanthropy() {
 
     const handleInputSubmit = async () => {
         const philanthropy_data = {fundsRaised: amountRaisedChange};
-        console.log(philanthropy_data);
-        console.log(amountRaisedChange);
         const URL = `/api/philanthropy`;
         try {
             const response = await fetch(URL, {
@@ -45,6 +43,7 @@ export default function Philanthropy() {
                 },
                 body: JSON.stringify(philanthropy_data)
             });
+            setAmountRaised(amountRaisedChange);
 
         } catch (error) {
             console.error('There was an error submitting philanthropy funds raised:', error);
