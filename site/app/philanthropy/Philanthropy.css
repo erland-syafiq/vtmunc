@@ -1,0 +1,95 @@
+.philanthropyPage {
+    text-align: center;
+    background-color: #290014;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.philanthropyTitle {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #F2F1E8;        
+}
+
+.brp1Img {
+    height: 525px;
+    width: auto;
+    margin: 20px;
+    position: relative;
+    border: 30px solid #F2F1E8;
+}
+
+.philanthropyBlurb {
+    padding: 20px;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.philanthropyBlurb p {
+    color: #F2F1E8;
+    text-align: left;
+    padding: 20px;
+    margin: 15px;
+}
+
+.fundTracker {
+    margin: 20px;
+    justify-items: center;
+}
+
+.fundTracker p {
+    color: #F2F1E8;
+    padding: 20px;
+}
+
+.fundTracker h4 {
+    color: #F2F1E8;
+}
+
+.philanthropyA {
+    color: #DEBB8F;
+}
+
+.philanthropyA:hover {
+    color: #CF4420;
+}
+
+.pictureRow {
+    background-color:  #F2F1E8
+}
+
+.philanthropyRowImg {
+    height: 300px;
+    width: auto;
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.progressBar {
+    width: 150px; 
+    background-color: #F2F1E8; 
+    border-radius: 10px; 
+    height: 400px; 
+    margin-bottom: 10px; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.progressFill {
+    width: 80%; 
+    background-color: #3A506B; 
+    border-radius: 5px; 
+    transition: height 0.3s ease; 
+}
+
+.amountInput {
+    width: 70px; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    background-color: #fff; 
+    color: #333; 
+}
