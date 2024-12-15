@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 async function AboutUs() {
-    const secretariat = await fetchStaticJSON("/app/data/secretariat.json");
+    const secretariat = await fetchStaticJSON("/app/data/secretariat_2.json");
 
     return (
         <main className="">
@@ -18,7 +18,7 @@ async function AboutUs() {
                     <h1 className="aboutTitle">About Us</h1>
             </div>
             
-            <img className="aboutImg" src={"/Images/AboutUsGroupPhoto2.JPG"} />
+            <img className="aboutImg" src={"/Images/About2.JPG"} />
 
 
             <section className= "container mt-3">
