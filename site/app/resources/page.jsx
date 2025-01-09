@@ -28,7 +28,7 @@ export default function Resources() {
             <div className='col-md-4'>
                 <a href='/Policy/VTMUNC_SUPPORT_FORM.pdf' target='_blank' className='no-hover-effect'>
                     <div className='resourceCard2'>
-                        <h2 className="white-text">Support Request Form</h2>
+                        <h2 className="white-text">VTMUNC Support Request Form</h2>
                     </div>
                 </a>
             </div>            
