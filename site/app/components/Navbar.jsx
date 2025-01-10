@@ -29,8 +29,8 @@ function Navbar() {
                         <Link className="nav-link" href="/about"> About Us </Link>
                         <Link className="nav-link" href="/committees/temp">Committees </Link>
                         <Link className="nav-link" href="/philanthropy">Philanthropy</Link>
-                        {/* <Link className="nav-link" href="/resources">Resources </Link>
-                        <Link className="nav-link" href="/sponsors"> Sponsors </Link> */}
+                        <Link className="nav-link" href="/resources">Resources </Link>
+                        {/* <Link className="nav-link" href="/sponsors"> Sponsors </Link> */}
                         <Link className="nav-link" href="/register"> Register </Link>
                         { isAuthenticated && (
                             <>

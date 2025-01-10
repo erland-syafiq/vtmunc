@@ -1,0 +1,65 @@
+.resourcesPage {
+    text-align: center;
+    /* background-color: #290014; */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.resourceTitle {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: var(--primary); 
+}
+
+.resourceGroup { 
+    justify-content: center;
+    
+}
+
+.resourceCard1 {
+    padding: 20px;
+    margin: 30px;
+    border: solid var(--tertiary);
+    border-width: 5px;
+    background: white;
+    align-content: center;
+    text-align: center;
+    height: 300px;
+}
+
+.resourceCard2 {
+    padding: 20px;
+    margin: 30px;
+    border: solid var(--tertiary);
+    border-width: 5px;
+    background: var(--quintary);
+    align-content: center;
+    text-align: center;
+    height: 300px;
+}
+
+.resourceCard3 {
+    padding: 20px;
+    margin: 30px;
+    border: solid var(--tertiary);
+    border-width: 5px;
+    background: var(--primary);
+    align-content: center;
+    text-align: center;
+    height: 300px;
+}
+
+
+
+.white-text {
+    color: #ffffff; 
+}
+
+.no-hover-effect:hover {
+    text-decoration: none;
+    color: #ffffff; 
+}
+
+.resourceCard1 > h2 {
+    color: black;
+}
