@@ -11,13 +11,13 @@ export default function Resources() {
 
         <div className='row resourceGroup'>
 
-            <div className='col-md-4'>
+            {/* <div className='col-md-4'>
                 <a href='/Policy/Conference_Policies.pdf' target='_blank' className='no-hover-effect'>
                     <div className='resourceCard3'>
                         <h2 className="white-text">Conference Policies</h2>
                     </div>
                 </a>
-            </div>  
+            </div>   */}
             <div className='col-md-4'>
                 <a href='/Policy/VTMUNC_Visa_Information_Form.pdf' target='_blank' className='no-hover-effect'>
                     <div className='resourceCard1'>
