@@ -1,0 +1,110 @@
+[
+    {
+        "group_name": "General Assembly",
+        "committees": [
+            {
+                "committee_name": "World City Forum",
+                "committee_image": "worldcities.jpeg",
+                "background_guide": "WorldCities_BG.pdf",
+                "chair_image": "nekhita.JPG",
+                "chair_name": "Nekhita Kassey",
+                "chair_position": "Co-Chair",
+                "chair_bio": "Nekhita Kassey graduated from Virginia Tech with dual degrees in Entrepreneurship, Innovation, and Technology Management (EIT), and International Studies with a minor in Spanish in May 2024. She co-founded VTMUNC as the Director General in February 2024. Currently, Nekhita works for the Federal Reserve Bank of Richmond, and is a candidate in the Master of Public Administration Program at George Mason University. She is dedicated to advancing sustainable and equitable urban development policies, and is excited to have delegates actively engage in shaping impactful solutions within the World Cities Form 2025. ",
+                "chair_email": "nekhitakassey@vt.edu",
+                "co_chair_image": "prince.JPEG",
+                "co_chair_name": "Prince Wang",
+                "co_chair_position": "Co-Chair",
+                "co_chair_bio": "Prince Wang graduated with dual degrees in Entrepreneurship, Innovation, and Technology Management (EIT), and International Relations. He co-founded VTMUNC as the Senior Advisor in February 2024. Prince is a Master of Science candidate at Johns Hopkins University and a Teach for America 2024 corps member. He is currently teaching English Language Development and Mathematics at the Academy for College and Career Exploration in Baltimore. Prince is incredibly passionate about this committee and is looking forward to delegates working on topics such as urban planning, innovation for social good, and cultural preservation.",
+                "co_chair_email": "prince.wang.24@tfacorps.org",
+                "cd_image": "jyo.jpg",
+                "cd_name": "Jyostna Rathinam",
+                "cd_position": "Co-Chair",
+                "cd_bio": "Jyotsna Rathinam graduated from Virginia Tech with dual degrees in International Relations and Economics with minors in French and Data and Decisions in May 2024. She served as the head chair for the Commission on the Status of Women (CSW) for VTMUNC I. Jyotsna is currently a fellow at Save the Children as part of the GenNext Humanitarian Fellowship Program. She is passionate about sustainable development and looks forward to welcoming you to our committee!",
+                "cd_email": "jyorathinam@vt.edu ",
+                "committee_bio": "The World City Forum convenes as an advanced committee session regarding the pressing challenges society faces with global city development. This forum is designed as a proactive space to address the complex and interconnected nature of these issues, while enabling delegates to develop practical and unique solutions. Delegates are tasked with proposing sustainable methods to manage natural resources and mitigate population pressures, but also formulating advanced strategies for the equitable distribution of resources and responsible urban expansion. This forum will also provide a platform for the exchange of data driven policies and cutting edge technologies, setting new standards for global governance. Delegates are encouraged to think creatively and ambitiously, leveraging technological advancements and interdisciplinary concepts that prioritize resilience, inclusivity, and sustainable growth. Through consensus building and strategic partnerships, this futuristic session aims to lay down a framework for a sustainable future and shaping a balanced thriving global society.",
+                "id": "world-cities"
+            },
+            {
+                "committee_name": "Disarmament and International Security Committee (DISEC)",
+                "committee_image": "disec.png",
+                "background_guide": "Disec_BG.pdf",
+                "chair_image": "sarahs.JPG",
+                "chair_name": "Sarah Sass",
+                "chair_position": "Head Chair",
+                "chair_bio": "Hi! My name is Sarah and I’m the head chair for this committee! I’m a junior in chemical engineering and I’ve done MUN since high school. I’m super excited to see you guys in committee soon, and to see lively debate and unique solutions. If you have any questions for me about the committee or model un in general, my email is sarahs04@vt.edu! See y’all soon!!",
+                "chair_email": "sarahs04@vt.edu",
+                "committee_bio": "The DISEC, or Disarmament and International Security Committee, is a general body under the United Nations that focuses on issues related to international security and disarmament. These can include regulating armaments of member states, working towards total disarmament, utilizing tools to protect civilians, maintaining global peace and security, and addressing threats to international peace. In this session, member states will be focusing on two major issues within the international security sector: the increased use of artificial intelligence and what it means for cybersecurity, and the expansion into space-travel and what implications that has on global surveillance. Delegates will discuss ways in which these new technologies can be regulated or expanded upon, maintaining global peace and country sovereignty in the process. This committee hopes to be a platform for delegates to explore their unique and innovative ideas for solutions to a rapidly growing issue. ",
+                "id": "disec"
+            }
+        ]
+    },
+    {
+        "group_name": "Crisis Committees",
+        "committees": [
+            {
+                "committee_name": "Dune",
+                "committee_image": "dune.png",
+                "committee_bio": "This committee will cover the first book of Dune and the two most recent movies, Dune: Part 1 (2021) and Dune: Part 2 (2024). The committee will start at the moment House Atreides lands on Arrakis, and delegates will represent members of House Atreides, the Fremen, the Bene Gesserit, and more. Delegates will have the opportunity to interact with major forces such as the Empire and House Harkonnen during the fight over Arrakis and its spice resources. We are so excited to take delegates on a journey through the galaxy, examining the inner workings of relations between the Houses, power over Spice, and the abilities of factions such as the Bene Gesserit and the Mentats. See you in February!",
+                "chair_image": "katy.png",
+                "chair_name": "Katy Colucci",
+                "chair_position": "Head Chair",
+                "chair_bio": "Hi everyone! My name is Katy Colucci and I am a sophomore studying Human Development with a minor in Leadership and Social Change. I am also planning to go to law school! I have been doing MUN with Virginia Tech during my two years here, and am on the Executive Board for the club team. I am so excited about the Dune Committee and cannot wait to share my love of this universe with you all!",
+                "chair_email": "ktcolucci@vt.edu",
+                "co_chair_image": "colin.png",
+                "co_chair_name": "Colin Larkin",
+                "co_chair_position": "Co-Chair",
+                "co_chair_bio": "Hello and welcome to our Dune committee! I’m so excited to be able to see such a great work of fiction come to life. My name is Colin Larkin and I am a Sophomore BioChemistry major with a minor in Data and Decisions. I am the treasurer for our Model United Nations club at Virginia Tech and so excited to be able to chair once again with such a dedicated team of people. Can’t wait to see y’all there.",
+                "co_chair_email": "larkinc@vt.edu",
+                "cd_image": "brooklyn.png",
+                "cd_name": "Brooklyn Oster",
+                "cd_position": "Crisis Director",
+                "cd_bio": "My name is Brooklyn and I'm from Fredericksburg, VA. I'm graduating this spring as a political science major with double minors in urban planning and peace studies, and I will be attending law school this fall! I'm currently serving as our club's Crisis Training Chair and as Secretary-General for our collegiate conference, BIRDMUNC. I'm a huge Dune fan and I'm very excited to be crisis directing a committee for it! ",
+                "cd_email": "brooklyn22@vt.edu",
+                "background_guide": "Dune_BG.pdf",
+                "id": "dune"
+            },
+            {
+                "committee_name": "Space Race",
+                "committee_image": "space_race.png",
+                "committee_bio": "As the days of World War II came to an end, both the United States and the Soviet Union began turning their sights onto a new horizon: space. The rapid growth of rocket technology in the last few decades spurred on by scientific ingenuity and military need has presented these global superpowers a new way to assert their influence on the world. Across both sides of the Iron Curtain, both of these countries raced to develop the technology necessary for space capabilities. However, when the Soviets launched Sputnik, this officially marked the dawn of the Space Race. The Americans proceeded to suffer from a mass panic surrounding the capabilities of the relatively unknown high-tech technologies that the Soviets seemed to have developed out of nowhere. The American government was now faced with the pressure to secure America’s position as a global leader in science and innovation, and President Eisenhower responded by convening this committee to chart a course for the nation’s response to this startling technological leap. Together, they must find a way forward that protects national security, inspires a generation, and propels the United States into the new frontier of space.",
+                "chair_image": "tanishqa.png",
+                "chair_name": "Tanishqa Gautam",
+                "chair_position": "Head Chair",
+                "chair_bio": "Welcome to VTMUNC II! My name is Tanishqa Gautam and I am a sophomore studying CMDA here at Tech! I am so excited to present this committee to you! I hope this committee is a memorable one for us all! Feel free to email me if you have any questions! See you guys at the conference!",
+                "chair_email": "tanishqa@vt.edu",
+                "co_chair_image": "vihaan.jpg",
+                "co_chair_name": "Vihaan Ambre",
+                "co_chair_position": "Crisis Director",
+                "co_chair_bio": "Hi! I’m Vihaan, and I’m Senior studying computer science and political science. I’m originally from India, but I lived in South America for a decade and now North Carolina for most of my life. Alongside VTMUNC, I also serve as the USG of our collegiate level conference, BIRDMUNC, and president of our umbrella organization, MUN@VT. I’ve been doing Model UN for the last 8 years, and I’ve grown a ton because of my experiences, and I hope that you feel the same way after VTMUNC II! I look forward to seeing you all in Blacksburg.",
+                "co_chair_email": "vambre9864@vt.edu",
+                "background_guide": "SpaceRace_BG.pdf",
+                "id": "space-race"
+            },
+            {
+                "committee_name": "Survivor",
+                "committee_image": "survivor.jpg",
+                "committee_bio": "Welcome to VTMUNC II’s Survivor Ad-Hoc Crisis Committee! Based on CBS' widely popular reality TV show, this committee will test delegates' abilities to adapt and cause a little chaos as they compete to win a million-dollar prize. Participants will embody former contestants and be split into two 'tribes' based on their past performance as either heroes or villains during their debut seasons. As either heroes or villains, they will have to navigate physical and mental challenges, forge alliances, and strategize their way to the coveted title of Sole Survivor. With twists like hidden immunity idols and game-changing advantages, delegates must outwit, outplay, and outlast their competitors in this dynamic committee. Do you have what it takes to survive?",
+                "chair_image": "madi.jpg",
+                "chair_name": "Madigan Voss",
+                "chair_position": "Head Chair",
+                "chair_bio": "Hi everyone! My name is Madigan Voss and I am a Junior  here at Virginia Tech. I have been doing MUN for about 2 and a half years, and I absolutely love it. As an International Relations major I have some super cool yet admittedly insane goals. If it was up to me I would 100% be the “leader of the universe.” However, I have accepted my fate and will hopefully be working for an NGO or the Government in the near future. But to be honest, I’m seriously considering a career as a high school history teacher. While chairing this committee I really hope to use my position of leadership to inspire the delegates towards increased diplomacy, kindness and compatibility. I am so very excited to meet every last one of you!",
+                "chair_email": "madiv26@vt.edu",
+                "co_chair_image": "saanvi.jpg",
+                "co_chair_name": "Saanvi Vemareddy",
+                "co_chair_position": "Co-Chair",
+                "co_chair_bio": "Hi, I’m Saanvi Vemareddy! I’m a freshman majoring in Biochemistry and I’m super excited to be your vice chair for this crisis committee! I’ve been participating in Model UN conferences since my freshman year of high school, and have always favored crisis committees. I can’t wait to meet everyone and see what you come up with in this exciting committee! ",
+                "co_chair_email": "saanviv@vt.edu",
+                "cd_image": "mahima.jpg",
+                "cd_name": "Mahima Suresh",
+                "cd_position": "Crisis Director",
+                "cd_bio": "Hello! My name is Mahima Suresh and I will be the Crisis Director for this committee. I am a junior at Virginia Tech pursuing dual degrees in National Security/Foreign Affairs and Spanish, and began Model UN in my freshman year of college. I have had the privilege of running committees for Model UN, and so look forward to seeing how our delegates utilize their creativity to be the last survivor! When not in class or competing in Model UN, I enjoy spending time with friends, testing out new foods in Blacksburg, and practicing Spanish as a tutor at the elementary school. I look forward to meeting you all in February!",
+                "cd_email": "msuresh@vt.edu",
+                "background_guide": "Survivor_BG.pdf",
+                "id": "survivor"
+            }
+
+        ]
+    }
+]
+
+

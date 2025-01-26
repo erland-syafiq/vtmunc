@@ -1,4 +1,4 @@
-const committeeGroups = require("./app/data/committees.json");
+const committeeGroups = require("./app/data/committees_2.json");
 
 function getOldSlugFromName(name) {
     const normalized = name.replace(/[:(),<>]/g, "");

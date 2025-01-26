@@ -6,7 +6,7 @@
 }
 
 .committeesTitle::after {
-    background-color: #DEBB8F;
+    /* background-color: #DEBB8F;
     content: '';
     position: absolute;
     left: 0;
@@ -14,5 +14,9 @@
     height: 100%;
     width: 140px;
     transform: translate(-10%, 5%);
-    z-index: -1;
+    z-index: -1; */
+}
+
+.committee-name { 
+    margin-bottom: 15px;
 }
