@@ -19,7 +19,7 @@ function findCommittee(committeeGroups, queryId) {
 }
 
 export async function generateMetadata({ params }) {
-    const committeeGroups = await fetchStaticJSON("/app/data/committees.json");
+    const committeeGroups = await fetchStaticJSON("/app/data/committees_2.json");
     const id = params.slug;
     const committee = findCommittee(committeeGroups, id);
 
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CommitteeDetailsPage({params}) {
-    const committeeGroups = await fetchStaticJSON("/app/data/committees.json");
+    const committeeGroups = await fetchStaticJSON("/app/data/committees_2.json");
     const id = params.slug;
 
     const committee = findCommittee(committeeGroups, id);
@@ -49,14 +49,17 @@ export default async function CommitteeDetailsPage({params}) {
         }
     }
 
+    const isTwoChair = committee.cd_name == null;
     const isOneChair = committee.co_chair_name == null;
+    const isNoChair = committee.chair_name == null; 
+
     
 
 
     return (
         <main className="container">
             <section className="committeeDetails">
-                <div className="row mt-3 d-flex justify-content-aroudn">
+                <div className="row mt-3 d-flex justify-content-aroud">
                     <div className="col-md-6 pb-5">
                         <div className="row">
                             <div className="col-md-3">
@@ -72,16 +75,29 @@ export default async function CommitteeDetailsPage({params}) {
                                 Background Guide
                             </h5>
                         </a>
-                    </div>       
-                    {
-                        isOneChair ? 
-                            <UserCard colWidth={6} name={committee.chair_name} position={committee.chair_position} bio={committee.chair_bio} email={committee.chair_email} imagePath={"/Images/Chair_Headshots/" + committee.chair_image}/>
-                        :
-                        <>
-                            <UserCard colWidth={3} name={committee.chair_name} position={committee.chair_position} bio={committee.chair_bio} email={committee.chair_email} imagePath={"/Images/Chair_Headshots/" + committee.chair_image}/> 
-                            <UserCard colWidth={3} name={committee.co_chair_name} position={committee.co_chair_position} bio={committee.co_chair_bio} email={committee.co_chair_email} imagePath={"/Images/Chair_Headshots/" + committee.co_chair_image}/> 
-                        </>
-                    } 
+                    </div> 
+                    <div className="col-md-6">
+                    { !isNoChair && (
+                            isOneChair ? 
+                                <UserCard colWidth={12} name={committee.chair_name} position={committee.chair_position} bio={committee.chair_bio} email={committee.chair_email} imagePath={"/Images/Chair_Headshots/" + committee.chair_image}/>
+                            :
+                            <>
+                                <div className='row'>
+                                    <UserCard colWidth={6} name={committee.chair_name} position={committee.chair_position} bio={committee.chair_bio} email={committee.chair_email} imagePath={"/Images/Chair_Headshots/" + committee.chair_image}/> 
+                                    <UserCard colWidth={6} name={committee.co_chair_name} position={committee.co_chair_position} bio={committee.co_chair_bio} email={committee.co_chair_email} imagePath={"/Images/Chair_Headshots/" + committee.co_chair_image}/> 
+                                </div>
+                                { !isTwoChair && (
+                                    <div className='row'>
+                                        <UserCard colWidth={6} name={committee.cd_name} position={committee.cd_position} bio={committee.cd_bio} email={committee.cd_email} imagePath={"/Images/Chair_Headshots/" + committee.cd_image}/> 
+                                    </div> 
+                                )
+                                }
+                                 
+                            </>
+                            )
+                        } 
+                    </div>
+                        
                 </div>
             </section>
         </main>
@@ -89,7 +105,7 @@ export default async function CommitteeDetailsPage({params}) {
 }
 
 export async function generateStaticParams() {
-    const committeeGroups = await fetchStaticJSON("/app/data/committees.json");
+    const committeeGroups = await fetchStaticJSON("/app/data/committees_2.json");
 
     const committees = []
 

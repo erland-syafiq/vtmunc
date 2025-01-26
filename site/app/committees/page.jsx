@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 async function Committees() {
-    const committeeGroups = await fetchStaticJSON("/app/data/committees.json");
+    const committeeGroups = await fetchStaticJSON("/app/data/committees_2.json");
 
     return (
         <main className="container">
@@ -28,7 +28,7 @@ async function Committees() {
                         <div key={groupIndex}>
                             <div className="row">
                                  <div className="col-12 text-center">
-                                     <h3 className="text-nowrap">{group.group_name}</h3>
+                                     <h3 className="text-nowrap committee-name">{group.group_name}</h3>
                                  </div>
                             </div>
                             <div className="row justify-content-around">
