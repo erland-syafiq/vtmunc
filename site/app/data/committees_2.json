@@ -3,7 +3,7 @@
         "group_name": "General Assembly",
         "committees": [
             {
-                "committee_name": "World City Forum",
+                "committee_name": "World City Forum 2025 (Double Delegation)",
                 "committee_image": "worldcities.jpeg",
                 "background_guide": "WorldCities_BG.pdf",
                 "chair_image": "nekhita.JPG",
@@ -25,7 +25,7 @@
                 "id": "world-cities-committee"
             },
             {
-                "committee_name": "Disarmament and International Security Committee (DISEC)",
+                "committee_name": "Disarmament and International Security Committee (DISEC) (Double Delegation)",
                 "committee_image": "disec.png",
                 "background_guide": "Disec_BG.pdf",
                 "chair_image": "sarahs.JPG",
@@ -42,7 +42,7 @@
         "group_name": "Crisis Committees",
         "committees": [
             {
-                "committee_name": "Dune",
+                "committee_name": "Fear is the Mind-Killer: Dune 10,191 AG",
                 "committee_image": "dune.png",
                 "committee_bio": "This committee will cover the first book of Dune and the two most recent movies, Dune: Part 1 (2021) and Dune: Part 2 (2024). The committee will start at the moment House Atreides lands on Arrakis, and delegates will represent members of House Atreides, the Fremen, the Bene Gesserit, and more. Delegates will have the opportunity to interact with major forces such as the Empire and House Harkonnen during the fight over Arrakis and its spice resources. We are so excited to take delegates on a journey through the galaxy, examining the inner workings of relations between the Houses, power over Spice, and the abilities of factions such as the Bene Gesserit and the Mentats. See you in February!",
                 "chair_image": "katy.png",
@@ -64,7 +64,7 @@
                 "id": "dune-committee"
             },
             {
-                "committee_name": "Space Race",
+                "committee_name": "The Space Race: 1963",
                 "committee_image": "space_race.png",
                 "committee_bio": "As the days of World War II came to an end, both the United States and the Soviet Union began turning their sights onto a new horizon: space. The rapid growth of rocket technology in the last few decades spurred on by scientific ingenuity and military need has presented these global superpowers a new way to assert their influence on the world. Across both sides of the Iron Curtain, both of these countries raced to develop the technology necessary for space capabilities. However, when the Soviets launched Sputnik, this officially marked the dawn of the Space Race. The Americans proceeded to suffer from a mass panic surrounding the capabilities of the relatively unknown high-tech technologies that the Soviets seemed to have developed out of nowhere. The American government was now faced with the pressure to secure America’s position as a global leader in science and innovation, and President Eisenhower responded by convening this committee to chart a course for the nation’s response to this startling technological leap. Together, they must find a way forward that protects national security, inspires a generation, and propels the United States into the new frontier of space.",
                 "chair_image": "tanishqa.png",
@@ -81,7 +81,7 @@
                 "id": "space-race-committee"
             },
             {
-                "committee_name": "Survivor",
+                "committee_name": "Survivor: Heroes vs Villains",
                 "committee_image": "survivor.jpg",
                 "committee_bio": "Welcome to VTMUNC II’s Survivor Ad-Hoc Crisis Committee! Based on CBS' widely popular reality TV show, this committee will test delegates' abilities to adapt and cause a little chaos as they compete to win a million-dollar prize. Participants will embody former contestants and be split into two 'tribes' based on their past performance as either heroes or villains during their debut seasons. As either heroes or villains, they will have to navigate physical and mental challenges, forge alliances, and strategize their way to the coveted title of Sole Survivor. With twists like hidden immunity idols and game-changing advantages, delegates must outwit, outplay, and outlast their competitors in this dynamic committee. Do you have what it takes to survive?",
                 "chair_image": "madi.jpg",

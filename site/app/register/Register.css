@@ -1,3 +1,15 @@
+.registration-end { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.registration-end h1 {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
 .registerPage h1 {
     color: var(--primary);
 }
