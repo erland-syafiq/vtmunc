@@ -39,6 +39,25 @@
         ]
     },
     {
+        "group_name": "Specialized",
+        "committees": [
+            {
+                "committee_name": "Under the Sea: Future Congress of the United States, 2100",
+                "committee_image": "congress.jpeg",
+                "background_guide": "FutureUSCongress_BG.pdf",                
+                "committee_bio": "This Committee focuses on the United States Senate in the year 2100 after cataclysmic climate events that caused the melting of the world's ice caps and a resulting rise in sea levels. This dramatic shift in both the climate and geography has caused a vast migration of Americans from coastal areas towards the more temperate interior of the continent to avoid further destruction by climate change. Predictably, new problems have arisen, such as cities seeing a dramatic increase in crime rates, a housing and food security crisis, as well as threats of secession from states who feel the reorganized federal government is no longer addressing their concerns. Delegates will have to work together to equitably allocate the government’s resources and fight to keep the country united, or if it is the senator’s prerogative, form a new country that more accurately reflects the state of the modern world. This committee will be structured as a General Assembly with crisis elements. Delegates will work to complete a resolution in blocs by the end of the conference but will have crisis updates and joint private directives.",
+                "id": "future-us-congress"
+            },
+            {
+                "committee_name": "The Guns of August, Prelude to War, 1914",
+                "committee_image": "ww1.jpg",
+                "background_guide": "GunsAugust_BG.pdf",                
+                "committee_bio": "The beginning of World War I is the story of many things. It is a story of imperial rivalry, the collapse of the balance of power system, and of powerful alliances. For the sake of our committee, we will be focusing on how these factors informed the decisions made by an interconnected web of elites through combatant nations. This will include family rivalries, personal vendettas, and quixotic characters representing the best and (primarily) the worst of humanity. While it is possible to trace the genesis of WWI in a linear fashion, it does a disservice to the maelstrom and chaos which characterized the early precessions. For this committee it is my hope to provide the conditions for this avalanche of events to unfold and to create a dynamic and fun environment for engaging debate and imaginative backroom arcs. ",
+                "id": "guns-august"
+            }
+        ]
+    },
+    {
         "group_name": "Crisis Committees",
         "committees": [
             {
