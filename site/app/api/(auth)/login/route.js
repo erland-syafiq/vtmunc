@@ -15,7 +15,7 @@ export async function POST(request) {
         const { email, password, rememberMe = false } = body;
         
         // Used bcrypt module to stop timing attacks
-        if (email !== ADMIN_USERNAME || !await bcrypt.compare(password, await getHashedAdminPassword())) {
+        if (email !== ADMIN_USERNAME || !(await bcrypt.compare(password, await getHashedAdminPassword()))) {
             return NextResponse.json({ message: "Unauthorized"}, { status: 401 });
         }
         
@@ -25,7 +25,7 @@ export async function POST(request) {
         const token = await encrypt({ email, expires }, expires);
         
         // Set cookies 'vtmunc_admin' for admin access
-        cookies().set("vtmunc_admin", token, { expires, httpOnly: true });
+        (await cookies()).set("vtmunc_admin", token, { expires, httpOnly: true });
         
         return NextResponse.json({ username: "Admin", email: email}, { status: 200 }); 
     }
@@ -35,7 +35,7 @@ export async function POST(request) {
 }
 
 export async function GET(request) {
-    if (!await isUserAdmin(request)) {
+    if (!(await isUserAdmin(request))) {
         return NextResponse.json({ message: "Invalid cookie"}, { status: 401 });
     }
 
