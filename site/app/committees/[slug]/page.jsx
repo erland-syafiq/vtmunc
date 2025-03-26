@@ -18,7 +18,8 @@ function findCommittee(committeeGroups, queryId) {
     return null;
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+    const params = await props.params;
     const committeeGroups = await fetchStaticJSON("/app/data/committees_2.json");
     const id = params.slug;
     const committee = findCommittee(committeeGroups, id);
@@ -36,7 +37,8 @@ export async function generateMetadata({ params }) {
     };
 }
 
-export default async function CommitteeDetailsPage({params}) {
+export default async function CommitteeDetailsPage(props) {
+    const params = await props.params;
     const committeeGroups = await fetchStaticJSON("/app/data/committees_2.json");
     const id = params.slug;
 
@@ -109,12 +111,13 @@ export async function generateStaticParams() {
 
     const committees = []
 
-    for (const group in committeeGroups) {
-        for (const committee in group) {
-            committees.push(committee)
+    for (const group of committeeGroups) {  
+        for (const committee of group.committees) { 
+            if (committee.id) {
+                committees.push({ slug: committee.id.toString() }); 
+            }
         }
     }
-    return committees.map((committee) => ({
-        slug: committee.id
-    }))
+
+    return committees;
 }
